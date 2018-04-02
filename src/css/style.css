@@ -19,7 +19,7 @@ body{
 	background:#FFFFFF;
 }
 .banner{
-    background: url(../src/images/3.jpg) no-repeat 0px 0px;
+    background: url(../images/3.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .agileinfo-dot{

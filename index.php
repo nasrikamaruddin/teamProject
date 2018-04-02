@@ -153,7 +153,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="ydec.php">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g1.jpg" alt=" " class="img-responsive" />
+                                                                                    <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>
 									</div>
@@ -202,7 +202,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="ydec.php">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g2.jpg" alt=" " class="img-responsive">
+                                                                                    <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive">
 											</figure>
 										</a>
 									</div>
@@ -251,9 +251,9 @@
 						</div>
 					</div>
 			</div>
-			<script src="js/jquery.tools.min.js"></script>
-			<script src="js/jquery.mobile.custom.min.js"></script>
-			<script src="js/jquery.cm-overlay.js"></script>
+			<script src="src/js/jquery.tools.min.js"></script>
+			<script src="src/js/jquery.mobile.custom.min.js"></script>
+			<script src="src/js/jquery.cm-overlay.js"></script>
 			<script>
 				$(document).ready(function(){
 					$('.cm-overlay').cmOverlay();
@@ -321,7 +321,7 @@
 								<h4>9<span>April 2018</span></h4>
 							</div>
 							<div class="date-text">
-								<a href="ydec.php" data-toggle="modal" data-target="#myModal"> YDEC 2018 <span class="blinking"><img src="images/new.png" alt="" /></span></a>
+								<a href="ydec.php" data-toggle="modal" data-target="#myModal"> YDEC 2018 <span class="blinking"><img src="src/images/new.png" alt="" /></span></a>
 								<p>The event is now opened for registration. Valid for Silver and Diamond membership only</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -449,7 +449,7 @@
 		})
 	</script>
 	<script src="src/js/responsiveslides.min.js"></script>
-	<script type="src/text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="src/js/move-top.js"></script>
 	<script type="text/javascript" src="src/js/easing.js"></script>
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
