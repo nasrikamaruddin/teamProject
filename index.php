@@ -90,7 +90,7 @@
 			<div class="w3layouts-banner-info">
 				<div class="container">
 					<div class="w3ls-text">
-						<h2> 1 MT </h2>
+						<h2> __ </h2>
 					</div>
                                     <!--Direct user to registration page-->
                                     <div class="w3-arrow bounce animated"><h2 style="color: white">Register Now</h2>
