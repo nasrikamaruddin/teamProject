@@ -9,26 +9,26 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="src/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
 <!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/plan.css" type="text/css" media="all" />
+<link rel="stylesheet" href="src/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="src/css/plan.css" type="text/css" media="all" />
 <!--// css -->
 <!-- gallery -->
-<link type="text/css" rel="stylesheet" href="css/cm-overlay.css" />
+<link type="text/css" rel="stylesheet" href="src/css/cm-overlay.css" />
 <!-- //gallery -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="src/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
 <!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/planTabs.js"></script>
-<script src="js/timer.js"></script>
+<script src="src/js/jquery-1.11.1.min.js"></script>
+<script src="src/js/bootstrap.js"></script>
+<script src="src/js/planTabs.js"></script>
+<script src="src/js/timer.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
@@ -38,8 +38,8 @@
 	});
 </script> 
 <!-- animation -->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
+<link href="src/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="src/js/wow.min.js"></script>
 	<script>
 		 new WOW().init();
 	</script>
@@ -65,7 +65,7 @@
 								<span class="icon-bar"></span>
 							</button>
 							<div class="agileits-logo">
-								<h1><a href="index.php"><img src="images/logo1.png" alt="" /> 1 Million Traders </a></h1>
+								<h1><a href="index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
 							</div>
 						</div>
 
@@ -153,7 +153,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="ydec.php">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/g1.jpg" alt=" " class="img-responsive" />
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g1.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>
 									</div>
@@ -165,7 +165,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="talk1.phpg">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/g2.jpg" alt=" " class="img-responsive" />
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g2.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>
 									</div>
@@ -181,7 +181,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="talk2.php">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="images/g4.jpg" alt=" " class="img-responsive" />
+										  <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g4.jpg" alt=" " class="img-responsive" />
 										</figure>
 										</a>
 									</div>
@@ -202,7 +202,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="ydec.php">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g2.jpg" alt=" " class="img-responsive">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g2.jpg" alt=" " class="img-responsive">
 											</figure>
 										</a>
 									</div>
@@ -219,7 +219,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="talk1.php">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g4.jpg" alt=" " class="img-responsive">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g4.jpg" alt=" " class="img-responsive">
 											</figure>
 										</a>
 									</div>
@@ -234,7 +234,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="talk2.php">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="images/g5.jpg" alt=" " class="img-responsive">
+											<figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g5.jpg" alt=" " class="img-responsive">
 											</figure>
 										</a>
 									</div>
@@ -438,8 +438,8 @@
 		</div>
 	</footer>
 	<!-- //footer -->
-	<script src="js/jarallax.js"></script>
-	<script src="js/SmoothScroll.min.js"></script>
+	<script src="src/js/jarallax.js"></script>
+	<script src="src/js/SmoothScroll.min.js"></script>
 	<script type="text/javascript">
 		/* init Jarallax */
 		$('.jarallax').jarallax({
@@ -448,9 +448,9 @@
 			imgHeight: 768
 		})
 	</script>
-	<script src="js/responsiveslides.min.js"></script>
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
+	<script src="src/js/responsiveslides.min.js"></script>
+	<script type="src/text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="src/js/easing.js"></script>
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
