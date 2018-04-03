@@ -1,7 +1,7 @@
 <?php
 //invite team member. by tee
-include 'db_connection.php';
-include 'invite_mailer.php';
+include '../connection/db_connection.php';
+include '../mailer/invite_mailer.php';
 
 $conn = OpenCon();
 session_start();

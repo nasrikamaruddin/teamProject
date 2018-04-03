@@ -4,7 +4,7 @@
  $dbHost = 'localhost';
  $dbUsername = 'root';
  $dbPassword = '';
- $dbName = '1mt';
+ $dbName = 'milliont_main';
  
  //connect with the database
  $conn = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);

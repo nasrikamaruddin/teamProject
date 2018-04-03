@@ -1,6 +1,6 @@
 <?php
 //temporary page to invite team member. by tee
-include 'db_connection.php';
+include '../connection/db_connection.php';
 
 $conn = OpenCon();
 session_start();
@@ -29,13 +29,13 @@ echo "
 no invitation yet ,Please invite your team
 <form action='team_invite.php' method='post'>
 
-<input type='text'  size='30' id='member1' name='member1'placeholder='Please Enter participant matrics number'>
+<input type='text'  size='30' id='matriks1' name='matriks1'placeholder='Please Enter participant matrics number'>
 
-<input type='text'  size='30' id='member2' name='member2' placeholder='Please Enter participant matrics number'>
+<input type='text'  size='30' id='matriks2' name='matriks2' placeholder='Please Enter participant matrics number'>
 
-<input type='text'  size='30' id='member3' name='member3' placeholder='Please Enter participant matrics number'>
+<input type='text'  size='30' id='matriks3' name='matriks3' placeholder='Please Enter participant matrics number'>
 
-<input type='text'  size='30' id='member4' name='member4' placeholder='Please Enter participant matrics number'>
+<input type='text'  size='30' id='matriks4' name='matriks4' placeholder='Please Enter participant matrics number'>
 
 
 <input type='submit' name='submitinvite' value='sendinvite' id='testbutton'>
@@ -57,7 +57,7 @@ echo" </table>";
 </body>
 <script>
 $(function() {
-    $( '#member1' ).autocomplete({
+    $( '#matriks1' ).autocomplete({
         source: 'searchuser.php'
     });
 });
@@ -65,7 +65,7 @@ $(function() {
 
 <script>
 $(function() {
-    $( '#member2' ).autocomplete({
+    $( '#matriks2' ).autocomplete({
         source: 'searchuser.php'
     });
 });
@@ -73,7 +73,7 @@ $(function() {
 
 <script>
 $(function() {
-    $( '#member3' ).autocomplete({
+    $( '#matriks3' ).autocomplete({
         source: 'searchuser.php'
     });
 });
@@ -81,7 +81,7 @@ $(function() {
 
 <script>
 $(function() {
-    $( '#member4' ).autocomplete({
+    $( '#matriks4' ).autocomplete({
         source: 'searchuser.php'
     });
 });

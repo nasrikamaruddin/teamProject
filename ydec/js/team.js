@@ -28,6 +28,7 @@ function getmemberdata(i) {
 
 }
 
+
 function getname(j) {
     var matrikn = j;
     var name = "";
@@ -65,6 +66,28 @@ function getfaculty(h) {
     return faculty;
 }
 
+
 function saveteam() {
+    createteam();
+    sendinvite();
+}
+
+function createteam() {
+    var teamname = $('#team_name').val();
+    var project = $('#project_name').val();
+    
+    $.ajax({
+        type: 'POST',
+        url: "../ajax/createteam.php",
+        data: { teamname: teamname , project : project },
+        
+        error: function (data) {
+            
+            alert(" Can't do because: " + data);
+        },
+        success: function(data) {
+            alert("team created"); 
+        }
+    });
 
 }

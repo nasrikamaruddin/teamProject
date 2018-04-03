@@ -1,13 +1,14 @@
 <?php
 //create team . by tee
-include 'db_connection.php';
+include '../connection/db_connection.php';
 
 $conn = OpenCon();
 session_start();
 //$loginuser = $_SESSION['loginid'];
 $loginuser=181666;
 
-if(isset($_POST['submit'])){
+if(isset($_POST['teamname'])){
+    
     $teamname = $_POST["teamname"];
     $title = $_POST["project"];
     $on = "on";
@@ -15,7 +16,7 @@ if(isset($_POST['submit'])){
     $teamid = getToken(7); 
     
     $createnewteam = "INSERT INTO ydecteam (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$on');";
-
+    
     if (mysqli_query($conn,$createnewteam) === TRUE) {
         $getuserpid = "select participantID from ydecparticipant where userID = $loginuser";
         $run_getuserpid= mysqli_query($conn,$getuserpid);
@@ -29,8 +30,9 @@ if(isset($_POST['submit'])){
             }
 
         else{
+            
         $_SESSION['teamid']=$teamid;
-        header("Location: inviteteam_page.php");
+        
             }
     }
 
@@ -39,7 +41,7 @@ if(isset($_POST['submit'])){
            
         }
 }
-else echo"nothing posted" ;
+else echo "failed to get parameter";
 
 function getToken($length)
 {

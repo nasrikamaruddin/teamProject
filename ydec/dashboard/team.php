@@ -1,3 +1,10 @@
+<?php 
+//temporary page to create team . by tee
+include '../connection/db_connection.php';
+$conn = OpenCon();
+session_start();
+$_SESSION['loginid']='181677';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,11 +68,23 @@
           <div class="box-body">
             <div class="row">
               <div class="container-fluid" align="center">
-                <h3>create your YDEC team here</h3>
+                <h3>create your YDEC team here , <?php 
+$loginuser = $_SESSION['loginid'];
+$get_name= "select fullname from 1milliontraders where userid='$loginuser'";
+	
+	$run_pro= mysqli_query($conn,$get_name);
+	if (!$run_pro) {
+    echo "Error: %s\n", mysqli_error($conn);
+    exit();
+}
+	while($row_pro=mysqli_fetch_array($run_pro)){
+		$fname = $row_pro['fullname'];}
+		
+						echo "$fname"; ?> , please select your team member and press save team to invite them.</h3>
                 <br>
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                  <form class="form-horizontal">
+                  <form class="form-horizontal" action="index.php"  onsubmit="teamcreation()">
                     <div class="form-group">
                       <label class="control-label col-sm-3" for="email">Team Name:</label>
                       <div class="col-sm-9">
@@ -153,7 +172,7 @@
                   </div>
                   <div class="container-fluid" align="center">
                     <br>
-                    <button type="button" class="btn btn-primary">save team</button>
+                    <button type="button" class="btn btn-primary" onclick="saveteam()">save team</button>
                   </div>
                 </div>
                 
@@ -205,5 +224,38 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../admin/adminlte/dist/js/demo.js"></script>
 <script src="../js/team.js"></script>
+<script src='//code.jquery.com/jquery-1.10.2.js'></script>
+<script src='//code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
+<script>
+$(function() {
+    $( '#matriks1' ).autocomplete({
+        source: 'searchuser.php'
+    });
+});
+</script>
+
+<script>
+$(function() {
+    $( '#matriks2' ).autocomplete({
+        source: 'searchuser.php'
+    });
+});
+</script>
+
+<script>
+$(function() {
+    $( '#matriks3' ).autocomplete({
+        source: 'searchuser.php'
+    });
+});
+</script>
+
+<script>
+$(function() {
+    $( '#matriks4' ).autocomplete({
+        source: 'searchuser.php'
+    });
+});
+</script>
 </body>
 </html>
