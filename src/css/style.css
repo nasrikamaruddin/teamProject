@@ -19,11 +19,11 @@ body{
 	background:#FFFFFF;
 }
 .banner{
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+    background: url(../images/3.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .agileinfo-dot{
-	background: url(../images/dott.png)repeat 0px 0px;
+    background: url(../images/dott.png)repeat 0px 0px;
     background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
@@ -154,17 +154,18 @@ body{
 }
 .w3ls-text{
     padding: 2em;
-    width: 31%;
+    width: 67%;
+    height:60%;
     margin: 0 auto;
     text-align: center;
-    border: solid 16px #8E793E;
+    border: solid transparent;
 }
 .w3ls-text h2{
     margin: 0;
     font-size: 5em;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: transparent;
     font-weight: 700;
     letter-spacing: 4px;
 }

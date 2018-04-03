@@ -22,8 +22,8 @@
 <link href="src/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
-<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="css/fontJosefinSans.css" />
+<link type="text/css" rel="stylesheet" href="css/fontRobotoCondensed.css" />
 <!-- //font -->
 <script src="src/js/jquery-1.11.1.min.js"></script>
 <script src="src/js/bootstrap.js"></script>
@@ -90,7 +90,7 @@
 			<div class="w3layouts-banner-info">
 				<div class="container">
 					<div class="w3ls-text">
-						<h2> 1 MT </h2>
+						<h2> __ </h2>
 					</div>
                                     <!--Direct user to registration page-->
                                     <div class="w3-arrow bounce animated"><h2 style="color: white">Register Now</h2>
@@ -153,7 +153,7 @@
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
 										<a href="ydec.php">
-										  <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g1.jpg" alt=" " class="img-responsive" />
+                                                                                    <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>
 									</div>
@@ -201,8 +201,8 @@
 							<div class="w3_tab_img">
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
-										<a href="ydec">
-											<figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/g2.jpg" alt=" " class="img-responsive">
+										<a href="ydec.php">
+                                                                                    <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive">
 											</figure>
 										</a>
 									</div>
@@ -251,9 +251,9 @@
 						</div>
 					</div>
 			</div>
-			<script src="js/jquery.tools.min.js"></script>
-			<script src="js/jquery.mobile.custom.min.js"></script>
-			<script src="js/jquery.cm-overlay.js"></script>
+			<script src="src/js/jquery.tools.min.js"></script>
+			<script src="src/js/jquery.mobile.custom.min.js"></script>
+			<script src="src/js/jquery.cm-overlay.js"></script>
 			<script>
 				$(document).ready(function(){
 					$('.cm-overlay').cmOverlay();
@@ -321,7 +321,7 @@
 								<h4>9<span>April 2018</span></h4>
 							</div>
 							<div class="date-text">
-								<a href="ydec.php" data-toggle="modal" data-target="#myModal"> YDEC 2018 <span class="blinking"><img src="images/new.png" alt="" /></span></a>
+								<a href="ydec.php" data-toggle="modal" data-target="#myModal"> YDEC 2018 <span class="blinking"><img src="src/images/new.png" alt="" /></span></a>
 								<p>The event is now opened for registration. Valid for Silver and Diamond membership only</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -449,7 +449,7 @@
 		})
 	</script>
 	<script src="src/js/responsiveslides.min.js"></script>
-	<script type="src/text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="src/js/move-top.js"></script>
 	<script type="text/javascript" src="src/js/easing.js"></script>
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
