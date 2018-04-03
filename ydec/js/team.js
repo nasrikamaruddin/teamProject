@@ -29,34 +29,37 @@ function getmemberdata(i) {
 }
 
 function getname(j) {
-    var matrik = j;
-    var data = matrik;
-
+    var matrikn = j;
+    var name = "";
     $.ajax({
-        type: "POST",
-        url: "getmemberdata.php",
-        data: data,
-        success: function(result) {
-            var name = result;
+        type: 'POST',
+        url: "../ajax/getmembername.php",
+        data: { matrikn: matrikn },
+        success: function(data) {
+            alert(data);
+            name = data;
         },
-        dataType: dataType
+        dataType: "text",
+        async: false
     });
 
-    return name;
+    return name
+
 }
 
 function getfaculty(h) {
-    var matrik = h;
-    var data = matrik;
-
+    var matrikf = h;
+    var faculty = "";
     $.ajax({
-        type: "POST",
-        url: "getmemberdata.php",
-        data: data,
-        success: function(result) {
-            var faculty = result;
+        type: 'POST',
+        url: "../ajax/getmemberfaculty.php",
+        data: { matrikf: matrikf },
+        success: function(data) {
+            alert(data);
+            faculty = data;
         },
-        dataType: dataType
+        dataType: "text",
+        async: false
     });
 
     return faculty;
