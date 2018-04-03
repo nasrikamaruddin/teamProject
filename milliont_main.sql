@@ -2,10 +2,10 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 03, 2018 at 12:05 AM
--- Server version: 5.6.38
--- PHP Version: 5.6.30
+-- Host: 127.0.0.1
+-- Generation Time: Apr 03, 2018 at 06:57 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,14 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `milliont_main`
 --
+CREATE DATABASE IF NOT EXISTS `milliont_main` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `milliont_main`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `1MillionTraders`
+-- Table structure for table `1milliontraders`
 --
 
-CREATE TABLE `1MillionTraders` (
+DROP TABLE IF EXISTS `1milliontraders`;
+CREATE TABLE `1milliontraders` (
   `userID` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `fullname` varchar(150) NOT NULL,
@@ -44,16 +47,24 @@ CREATE TABLE `1MillionTraders` (
   `programme` varchar(100) DEFAULT NULL,
   `code` varchar(50) DEFAULT NULL,
   `codeCount` int(8) NOT NULL,
-  `studentIDImg` blob NOT NULL
+  `studentIDImg` blob
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `1milliontraders`
+--
+
+INSERT INTO `1milliontraders` (`userID`, `username`, `fullname`, `contact`, `email`, `address`, `studentID`, `university`, `faculty`, `classification`, `password`, `userType`, `programme`, `code`, `codeCount`, `studentIDImg`) VALUES
+(181677, 'tee', 'teesy', '01002010012', 'tszenyew@gmail.com', 'tee address', 181677, 'upm', 'fsktm', 'student', '123123', 'gold', 'bac SE', NULL, 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `MembershipFees`
+-- Table structure for table `membershipfees`
 --
 
-CREATE TABLE `MembershipFees` (
+DROP TABLE IF EXISTS `membershipfees`;
+CREATE TABLE `membershipfees` (
   `feeID` int(11) NOT NULL,
   `transID` varchar(11) NOT NULL,
   `feeStatus` varchar(25) NOT NULL,
@@ -64,10 +75,11 @@ CREATE TABLE `MembershipFees` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECAcademicAdvisor`
+-- Table structure for table `ydecacademicadvisor`
 --
 
-CREATE TABLE `YDECAcademicAdvisor` (
+DROP TABLE IF EXISTS `ydecacademicadvisor`;
+CREATE TABLE `ydecacademicadvisor` (
   `mentorID` int(11) NOT NULL,
   `mentorName` varchar(150) NOT NULL,
   `university` varchar(100) NOT NULL,
@@ -78,10 +90,11 @@ CREATE TABLE `YDECAcademicAdvisor` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECFinalReportResult`
+-- Table structure for table `ydecfinalreportresult`
 --
 
-CREATE TABLE `YDECFinalReportResult` (
+DROP TABLE IF EXISTS `ydecfinalreportresult`;
+CREATE TABLE `ydecfinalreportresult` (
   `resultID` int(11) NOT NULL,
   `criteria` varchar(255) NOT NULL,
   `reportID` int(11) NOT NULL
@@ -90,10 +103,11 @@ CREATE TABLE `YDECFinalReportResult` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECFinancialResult`
+-- Table structure for table `ydecfinancialresult`
 --
 
-CREATE TABLE `YDECFinancialResult` (
+DROP TABLE IF EXISTS `ydecfinancialresult`;
+CREATE TABLE `ydecfinancialresult` (
   `resultID` int(11) NOT NULL,
   `criteria` varchar(255) NOT NULL,
   `month1` varchar(255) NOT NULL,
@@ -105,10 +119,11 @@ CREATE TABLE `YDECFinancialResult` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECIndustry`
+-- Table structure for table `ydecindustry`
 --
 
-CREATE TABLE `YDECIndustry` (
+DROP TABLE IF EXISTS `ydecindustry`;
+CREATE TABLE `ydecindustry` (
   `mentorID` int(11) NOT NULL,
   `mentorName` varchar(150) NOT NULL,
   `company` varchar(50) NOT NULL,
@@ -118,22 +133,38 @@ CREATE TABLE `YDECIndustry` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECParticipant`
+-- Table structure for table `ydecinvitation`
 --
 
-CREATE TABLE `YDECParticipant` (
+DROP TABLE IF EXISTS `ydecinvitation`;
+CREATE TABLE `ydecinvitation` (
+  `inviteID` int(11) NOT NULL,
+  `teamID` int(11) NOT NULL,
+  `participantID` int(11) NOT NULL,
+  `invite_status` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ydecparticipant`
+--
+
+DROP TABLE IF EXISTS `ydecparticipant`;
+CREATE TABLE `ydecparticipant` (
   `participantID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
-  `teamID` int(11) NOT NULL
+  `teamID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECPitchingVideo`
+-- Table structure for table `ydecpitchingvideo`
 --
 
-CREATE TABLE `YDECPitchingVideo` (
+DROP TABLE IF EXISTS `ydecpitchingvideo`;
+CREATE TABLE `ydecpitchingvideo` (
   `videoID` int(11) NOT NULL,
   `link` int(11) NOT NULL,
   `teamID` int(11) NOT NULL
@@ -142,10 +173,11 @@ CREATE TABLE `YDECPitchingVideo` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECPreliminaryResult`
+-- Table structure for table `ydecpreliminaryresult`
 --
 
-CREATE TABLE `YDECPreliminaryResult` (
+DROP TABLE IF EXISTS `ydecpreliminaryresult`;
+CREATE TABLE `ydecpreliminaryresult` (
   `resultID` int(11) NOT NULL,
   `criteria` varchar(255) NOT NULL,
   `videoID` int(11) NOT NULL,
@@ -155,10 +187,11 @@ CREATE TABLE `YDECPreliminaryResult` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECProposal`
+-- Table structure for table `ydecproposal`
 --
 
-CREATE TABLE `YDECProposal` (
+DROP TABLE IF EXISTS `ydecproposal`;
+CREATE TABLE `ydecproposal` (
   `proposalID` int(11) NOT NULL,
   `documentName` varchar(50) NOT NULL,
   `teamID` int(11) NOT NULL
@@ -167,10 +200,11 @@ CREATE TABLE `YDECProposal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECReport`
+-- Table structure for table `ydecreport`
 --
 
-CREATE TABLE `YDECReport` (
+DROP TABLE IF EXISTS `ydecreport`;
+CREATE TABLE `ydecreport` (
   `reportID` int(11) NOT NULL,
   `date` date NOT NULL,
   `reportType` varchar(255) NOT NULL,
@@ -181,10 +215,11 @@ CREATE TABLE `YDECReport` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `YDECTeam`
+-- Table structure for table `ydecteam`
 --
 
-CREATE TABLE `YDECTeam` (
+DROP TABLE IF EXISTS `ydecteam`;
+CREATE TABLE `ydecteam` (
   `teamID` int(11) NOT NULL,
   `teamName` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL,
@@ -192,92 +227,106 @@ CREATE TABLE `YDECTeam` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumping data for table `ydecteam`
+--
+
+INSERT INTO `ydecteam` (`teamID`, `teamName`, `status`, `projectTitle`) VALUES
+(634719, '123', 'on', 'aaa');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `1MillionTraders`
+-- Indexes for table `1milliontraders`
 --
-ALTER TABLE `1MillionTraders`
+ALTER TABLE `1milliontraders`
   ADD PRIMARY KEY (`userID`);
 
 --
--- Indexes for table `MembershipFees`
+-- Indexes for table `membershipfees`
 --
-ALTER TABLE `MembershipFees`
+ALTER TABLE `membershipfees`
   ADD PRIMARY KEY (`feeID`),
   ADD KEY `userFK` (`userID`);
 
 --
--- Indexes for table `YDECAcademicAdvisor`
+-- Indexes for table `ydecacademicadvisor`
 --
-ALTER TABLE `YDECAcademicAdvisor`
+ALTER TABLE `ydecacademicadvisor`
   ADD PRIMARY KEY (`mentorID`),
   ADD KEY `teamFK` (`teamID`);
 
 --
--- Indexes for table `YDECFinalReportResult`
+-- Indexes for table `ydecfinalreportresult`
 --
-ALTER TABLE `YDECFinalReportResult`
+ALTER TABLE `ydecfinalreportresult`
   ADD PRIMARY KEY (`resultID`),
   ADD KEY `reportFK` (`reportID`);
 
 --
--- Indexes for table `YDECFinancialResult`
+-- Indexes for table `ydecfinancialresult`
 --
-ALTER TABLE `YDECFinancialResult`
+ALTER TABLE `ydecfinancialresult`
   ADD PRIMARY KEY (`resultID`),
   ADD KEY `reportFinFK` (`reportID`);
 
 --
--- Indexes for table `YDECIndustry`
+-- Indexes for table `ydecindustry`
 --
-ALTER TABLE `YDECIndustry`
+ALTER TABLE `ydecindustry`
   ADD PRIMARY KEY (`mentorID`),
   ADD KEY `teamIndustryFK` (`teamID`);
 
 --
--- Indexes for table `YDECParticipant`
+-- Indexes for table `ydecinvitation`
 --
-ALTER TABLE `YDECParticipant`
+ALTER TABLE `ydecinvitation`
+  ADD KEY `FK_inviteparticipant` (`participantID`),
+  ADD KEY `FK_teaminvite` (`teamID`);
+
+--
+-- Indexes for table `ydecparticipant`
+--
+ALTER TABLE `ydecparticipant`
   ADD PRIMARY KEY (`participantID`),
   ADD KEY `participantUserFK` (`userID`),
   ADD KEY `participantTeamFK` (`teamID`);
 
 --
--- Indexes for table `YDECPitchingVideo`
+-- Indexes for table `ydecpitchingvideo`
 --
-ALTER TABLE `YDECPitchingVideo`
+ALTER TABLE `ydecpitchingvideo`
   ADD PRIMARY KEY (`videoID`),
   ADD KEY `PitchingTeamFK` (`teamID`);
 
 --
--- Indexes for table `YDECPreliminaryResult`
+-- Indexes for table `ydecpreliminaryresult`
 --
-ALTER TABLE `YDECPreliminaryResult`
+ALTER TABLE `ydecpreliminaryresult`
   ADD PRIMARY KEY (`resultID`),
   ADD KEY `PrelimVideoFK` (`videoID`),
   ADD KEY `PrelimProposalFK` (`proposalID`);
 
 --
--- Indexes for table `YDECProposal`
+-- Indexes for table `ydecproposal`
 --
-ALTER TABLE `YDECProposal`
+ALTER TABLE `ydecproposal`
   ADD PRIMARY KEY (`proposalID`),
   ADD KEY `ProposalTeamFK` (`teamID`);
 
 --
--- Indexes for table `YDECReport`
+-- Indexes for table `ydecreport`
 --
-ALTER TABLE `YDECReport`
+ALTER TABLE `ydecreport`
   ADD PRIMARY KEY (`reportID`),
   ADD KEY `reportTeamFK` (`teamID`),
   ADD KEY `reportMentorFK` (`mentorID`);
 
 --
--- Indexes for table `YDECTeam`
+-- Indexes for table `ydecteam`
 --
-ALTER TABLE `YDECTeam`
+ALTER TABLE `ydecteam`
   ADD PRIMARY KEY (`teamID`);
 
 --
@@ -285,33 +334,33 @@ ALTER TABLE `YDECTeam`
 --
 
 --
--- AUTO_INCREMENT for table `YDECFinalReportResult`
+-- AUTO_INCREMENT for table `ydecfinalreportresult`
 --
-ALTER TABLE `YDECFinalReportResult`
+ALTER TABLE `ydecfinalreportresult`
   MODIFY `resultID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `YDECPitchingVideo`
+-- AUTO_INCREMENT for table `ydecpitchingvideo`
 --
-ALTER TABLE `YDECPitchingVideo`
+ALTER TABLE `ydecpitchingvideo`
   MODIFY `videoID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `YDECPreliminaryResult`
+-- AUTO_INCREMENT for table `ydecpreliminaryresult`
 --
-ALTER TABLE `YDECPreliminaryResult`
+ALTER TABLE `ydecpreliminaryresult`
   MODIFY `resultID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `YDECProposal`
+-- AUTO_INCREMENT for table `ydecproposal`
 --
-ALTER TABLE `YDECProposal`
+ALTER TABLE `ydecproposal`
   MODIFY `proposalID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `YDECReport`
+-- AUTO_INCREMENT for table `ydecreport`
 --
-ALTER TABLE `YDECReport`
+ALTER TABLE `ydecreport`
   MODIFY `reportID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -319,67 +368,74 @@ ALTER TABLE `YDECReport`
 --
 
 --
--- Constraints for table `MembershipFees`
+-- Constraints for table `membershipfees`
 --
-ALTER TABLE `MembershipFees`
-  ADD CONSTRAINT `userFK` FOREIGN KEY (`userID`) REFERENCES `1MillionTraders` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `membershipfees`
+  ADD CONSTRAINT `userFK` FOREIGN KEY (`userID`) REFERENCES `1milliontraders` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECAcademicAdvisor`
+-- Constraints for table `ydecacademicadvisor`
 --
-ALTER TABLE `YDECAcademicAdvisor`
-  ADD CONSTRAINT `teamFK` FOREIGN KEY (`teamID`) REFERENCES `YDECTeam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecacademicadvisor`
+  ADD CONSTRAINT `teamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECFinalReportResult`
+-- Constraints for table `ydecfinalreportresult`
 --
-ALTER TABLE `YDECFinalReportResult`
-  ADD CONSTRAINT `reportFK` FOREIGN KEY (`reportID`) REFERENCES `YDECReport` (`reportID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecfinalreportresult`
+  ADD CONSTRAINT `reportFK` FOREIGN KEY (`reportID`) REFERENCES `ydecreport` (`reportID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECFinancialResult`
+-- Constraints for table `ydecfinancialresult`
 --
-ALTER TABLE `YDECFinancialResult`
-  ADD CONSTRAINT `reportFinFK` FOREIGN KEY (`reportID`) REFERENCES `YDECReport` (`reportID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecfinancialresult`
+  ADD CONSTRAINT `reportFinFK` FOREIGN KEY (`reportID`) REFERENCES `ydecreport` (`reportID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECIndustry`
+-- Constraints for table `ydecindustry`
 --
-ALTER TABLE `YDECIndustry`
-  ADD CONSTRAINT `teamIndustryFK` FOREIGN KEY (`teamID`) REFERENCES `YDECTeam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecindustry`
+  ADD CONSTRAINT `teamIndustryFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECParticipant`
+-- Constraints for table `ydecinvitation`
 --
-ALTER TABLE `YDECParticipant`
-  ADD CONSTRAINT `participantTeamFK` FOREIGN KEY (`teamID`) REFERENCES `YDECTeam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `participantUserFK` FOREIGN KEY (`userID`) REFERENCES `1MillionTraders` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecinvitation`
+  ADD CONSTRAINT `FK_inviteparticipant` FOREIGN KEY (`participantID`) REFERENCES `ydecparticipant` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_teaminvite` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECPitchingVideo`
+-- Constraints for table `ydecparticipant`
 --
-ALTER TABLE `YDECPitchingVideo`
-  ADD CONSTRAINT `PitchingTeamFK` FOREIGN KEY (`teamID`) REFERENCES `YDECTeam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecparticipant`
+  ADD CONSTRAINT `participantTeamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `participantUserFK` FOREIGN KEY (`userID`) REFERENCES `1milliontraders` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECPreliminaryResult`
+-- Constraints for table `ydecpitchingvideo`
 --
-ALTER TABLE `YDECPreliminaryResult`
-  ADD CONSTRAINT `PrelimProposalFK` FOREIGN KEY (`proposalID`) REFERENCES `YDECProposal` (`proposalID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `PrelimVideoFK` FOREIGN KEY (`videoID`) REFERENCES `YDECPitchingVideo` (`videoID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecpitchingvideo`
+  ADD CONSTRAINT `PitchingTeamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECProposal`
+-- Constraints for table `ydecpreliminaryresult`
 --
-ALTER TABLE `YDECProposal`
-  ADD CONSTRAINT `ProposalTeamFK` FOREIGN KEY (`teamID`) REFERENCES `YDECTeam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecpreliminaryresult`
+  ADD CONSTRAINT `PrelimProposalFK` FOREIGN KEY (`proposalID`) REFERENCES `ydecproposal` (`proposalID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `PrelimVideoFK` FOREIGN KEY (`videoID`) REFERENCES `ydecpitchingvideo` (`videoID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `YDECReport`
+-- Constraints for table `ydecproposal`
 --
-ALTER TABLE `YDECReport`
-  ADD CONSTRAINT `reportMentorFK` FOREIGN KEY (`mentorID`) REFERENCES `YDECIndustry` (`mentorID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `reportTeamFK` FOREIGN KEY (`teamID`) REFERENCES `YDECTeam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ydecproposal`
+  ADD CONSTRAINT `ProposalTeamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `ydecreport`
+--
+ALTER TABLE `ydecreport`
+  ADD CONSTRAINT `reportMentorFK` FOREIGN KEY (`mentorID`) REFERENCES `ydecindustry` (`mentorID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reportTeamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

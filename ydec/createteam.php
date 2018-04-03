@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     
     $teamid = getToken(7); 
     
-    $createnewteam = "INSERT INTO team (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$on');";
+    $createnewteam = "INSERT INTO ydecteam (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$on');";
 
     if (mysqli_query($conn,$createnewteam) === TRUE) {
         $getuserpid = "select participantID from ydecparticipant where userID = $loginuser";

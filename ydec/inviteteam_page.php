@@ -20,7 +20,7 @@ $teamid = $_SESSION['teamid'];
 <body>
 <?php 
 
-$sqlinvitation = "select * from invitation where teamid = '$teamid'";
+$sqlinvitation = "select * from ydecinvitation where teamid = '$teamid'";
 
     $result = mysqli_query($conn,$sqlinvitation);
     $i=4;
@@ -43,7 +43,7 @@ no invitation yet ,Please invite your team
     }
 else{
     echo"<table border ='1'>";
-    $get_invitation= " select * from invitation i inner join ydecparticipant y on i.teamID=y.teamID inner join 1milliontraders  
+    $get_invitation= " select * from ydecinvitation i inner join ydecparticipant y on i.teamID=y.teamID inner join 1milliontraders  
     on 1milliontraders.userID= y.userID where i.teamid = $teamid";
     $run_invite= mysqli_query($conn,$get_invitation);
     while($row_invite=mysqli_fetch_array($run_invite)){
