@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2018 at 06:57 AM
+-- Generation Time: Apr 03, 2018 at 11:29 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -55,6 +55,7 @@ CREATE TABLE `1milliontraders` (
 --
 
 INSERT INTO `1milliontraders` (`userID`, `username`, `fullname`, `contact`, `email`, `address`, `studentID`, `university`, `faculty`, `classification`, `password`, `userType`, `programme`, `code`, `codeCount`, `studentIDImg`) VALUES
+(181666, 'tet', 'tet tet', '0123123123', 'tet@gmail.com', 'tet address', 181666, 'upm ', 'fsktm', 'student', '123', 'gold', NULL, NULL, 0, NULL),
 (181677, 'tee', 'teesy', '01002010012', 'tszenyew@gmail.com', 'tee address', 181677, 'upm', 'fsktm', 'student', '123123', 'gold', 'bac SE', NULL, 0, '');
 
 -- --------------------------------------------------------
@@ -157,6 +158,14 @@ CREATE TABLE `ydecparticipant` (
   `teamID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `ydecparticipant`
+--
+
+INSERT INTO `ydecparticipant` (`participantID`, `userID`, `teamID`) VALUES
+(1, 181677, NULL),
+(2, 181666, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -225,13 +234,6 @@ CREATE TABLE `ydecteam` (
   `status` varchar(50) NOT NULL,
   `projectTitle` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `ydecteam`
---
-
-INSERT INTO `ydecteam` (`teamID`, `teamName`, `status`, `projectTitle`) VALUES
-(634719, '123', 'on', 'aaa');
 
 --
 -- Indexes for dumped tables
@@ -408,7 +410,7 @@ ALTER TABLE `ydecinvitation`
 -- Constraints for table `ydecparticipant`
 --
 ALTER TABLE `ydecparticipant`
-  ADD CONSTRAINT `participantTeamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `participantTeamFK` FOREIGN KEY (`teamID`) REFERENCES `ydecteam` (`teamID`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `participantUserFK` FOREIGN KEY (`userID`) REFERENCES `1milliontraders` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --

@@ -86,8 +86,61 @@ function createteam() {
             alert(" Can't do because: " + data);
         },
         success: function(data) {
-            alert("team created"); 
+            alert(data); 
         }
+    });
+
+}
+
+function sendinvite() {
+    
+    if($("#matriks1").val()){
+        var matriksi1 = $('#matriks1').val();
+        callmailer(matriksi1);
+    }
+    else (alert("member 1 is null"));
+    
+    
+    if($("#matriks2").val()){
+        var matriksi2 = $('#matriks2').val();
+        callmailer(matriksi2);
+    }
+    else (alert("member 2 is null"));
+
+    
+    if($("#matriks3").val()){
+        var matriksi3 = $('#matriks3').val();
+        callmailer(matriksi3);
+    }
+    else (alert("member 3 is null"));
+
+    
+    if($("#matriks4").val()){
+        var matriksi4 = $('#matriks4').val();
+        callmailer(matriksi4);
+    }
+    else (alert("member 4 is null"));
+
+
+
+}
+
+function callmailer(v) {
+    var matriksi = v;
+    
+    $.ajax({
+        type: 'POST',
+        url: "../ajax/team_invite.php",
+        data: { matriksi: matriksi },
+        error: function (data) {
+            
+            alert(" Can't send mail because: " + data);
+        },
+        success: function(data) {
+            alert("invite mail sent");
+            
+        },
+        
     });
 
 }

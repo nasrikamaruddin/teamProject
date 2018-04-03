@@ -4,9 +4,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require_once '../src/PHPMailer/src/PHPMailer.php';
-require_once '../src/PHPMailer/src/SMTP.php';
-require_once '../src/PHPMailer/src/Exception.php';
+require_once '../../src/PHPMailer/src/PHPMailer.php';
+require_once '../../src/PHPMailer/src/SMTP.php';
+require_once '../../src/PHPMailer/src/Exception.php';
 
 function sendmail($email , $link){
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions

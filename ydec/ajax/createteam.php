@@ -40,6 +40,7 @@ if(isset($_POST['teamname'])){
             echo "Error: " . $createnewteam . "<br>" . $conn->error;
            
         }
+echo "team creation sucess";
 }
 else echo "failed to get parameter";
 
