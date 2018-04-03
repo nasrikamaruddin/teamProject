@@ -7,10 +7,10 @@ $conn = OpenCon();
 session_start();
 
 //$loginuser = $_SESSION['loginid']; test with local value
-//$teamid = $_SESSION['teamid'];
+$teamid = $_SESSION['teamid'];
 $loginuser = 181677;
-$teamid = 111111;
-$joinlink = "localhost/teamproject/ydec/jointeam.php?joiningteam=$teamid" ;//link 
+
+$joinlink = "localhost/teamproject/ydec/ajax/jointeam.php?joiningteam=$teamid" ;//link 
 
 
 

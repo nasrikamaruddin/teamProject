@@ -18,15 +18,10 @@ if(isset($_POST['teamname'])){
     $createnewteam = "INSERT INTO ydecteam (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$on');";
     
     if (mysqli_query($conn,$createnewteam) === TRUE) {
-        $getuserpid = "select participantID from ydecparticipant where userID = $loginuser";
-        $run_getuserpid= mysqli_query($conn,$getuserpid);
-        $row_userpid=mysqli_fetch_array($run_getuserpid);
-        $userpid = $row_userpid['participantID'];
-        
-        $updateuserteam = "UPDATE `ydecparticipant` SET `teamID` = $teamid WHERE `participantID` = $userpid";
+        $updateuserteam = "UPDATE `ydecparticipant` SET `teamID` = $teamid WHERE `userID` = $loginuser";
         $run_updateuserteam= mysqli_query($conn,$updateuserteam);
         if (!$run_updateuserteam) {
-            echo "Error: %s\n", mysqli_error($conn);
+            echo "Error: no you are not ydec participant", mysqli_error($conn);
             }
 
         else{
