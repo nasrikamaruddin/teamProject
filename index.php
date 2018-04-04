@@ -94,7 +94,7 @@
 					</div>
                                     <!--Direct user to registration page-->
                                     <div class="w3-arrow bounce animated"><h2 style="color: white">Register Now</h2>
-						<a href="register.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+						<a href="registrationCategory.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>
