@@ -75,7 +75,7 @@
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan </a></li>
+									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
 									<li><a href="login.php" class="scroll">Log In</a></li>
 								</ul>
 							</nav>
@@ -93,96 +93,77 @@
 	<!-- profile -->
 	<div class="contact-form">
 		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Membership Plan for Non UPM Student</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
 			<div class="panel panel-info">
-            <div class="panel-body">
-				<div class="w3l-heading">
-					<h3>Member Profile</h3>
-					<div class="w3ls-border-custom"> </div>
-				</div></br>
-				<div class="row">
-					<div class="col-md-12"> 
-					  <table class="table table-user-information">
-						<tbody>
-						<tr>
-							<td>Username</td>
-							<td>:</td>
-							<td>nasrikamaruddin</td>
-						</tr>
-						<tr>
-							<td>Name</td>
-							<td>:</td>
-							<td>Muhammad Nasri Bin Kamaruddin</td>
-						</tr>
-						<tr>
-							<td>Phone Number</td>
-							<td>:</td>
-							<td>0133512296</td>
-						</tr>
-						<tr>
-							<td>Email</td>
-							<td>:</td>
-							<td>nasrikamaruddin@gmail.com</td>
-						</tr>
-						<tr>
-							<td>Address</td>
-							<td>:</td>
-							<td>No 46 Jalan Belakang Sekolah Leftenan Adnan,<br>Sungai Ramal Luar 43000 Kajang</td>
-						</tr>
-						</tbody>
-					  </table>
-					  
-					</div>
+				<div class="panel-body">
+					<!--row -->
+					<div class="row" style="margin:2px;">
+					  <!--Silver-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>SILVER</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
+							  <div class="block-footer">
+								  <a class="subscribe-now" href="#">Subscribe Now</a>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Gold-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks active-block">
+							  <div class="block-header">
+								  <h4>GOLD</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <a class="subscribe-now" href="#">Subscribe Now</a>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Diamond-->
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>DIAMOND</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <a class="subscribe-now" href="#">Subscribe Now</a>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+					<!-- // row -->
 				</div>
-				
-				
-            </div>
-                 
-        </div>
-		<div class="panel panel-info">
-            <div class="panel-body">
-				<div class="w3l-heading">
-					<h3>Student Profile</h3>
-					<div class="w3ls-border-custom"> </div>
-				</div></br>
-				
-				<div class="row">
-					<div class="col-md-12"> 
-					  <table class="table table-user-information">
-						<tbody>
-						<tr>
-							<td>Student ID</td>
-							<td>:</td>
-							<td>180000</td>
-						</tr>
-						<tr>
-							<td>University</td>
-							<td>:</td>
-							<td>Universiti Putra Malaysia</td>
-						</tr>
-						<tr>
-							<td>Faculty</td>
-							<td>:</td>
-							<td>Faculti Sains Komputer Dan Teknologi Maklumat</td>
-						</tr>
-						<tr>
-							<td>Programme</td>
-							<td>:</td>
-							<td>Bacelor Software Engineering</td>
-						</tr>
-						<tr>
-							<td>Classification</td>
-							<td>:</td>
-							<td>""""</td>
-						</tr>
-						</tbody>
-					  </table>
-					</div>
-				</div>
-				
-            </div>
-                 
-         </div>
+			</div>
 		</div>
+	</div>
 	<!-- //profile -->
 
 	<!-- footer -->
@@ -221,6 +202,7 @@
 								
 			});
 	</script>
+	
 <!-- //here ends scrolling icon -->
 </body>	
 </html>

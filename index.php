@@ -22,8 +22,8 @@
 <link href="src/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
-<link type="text/css" rel="stylesheet" href="css/fontJosefinSans.css" />
-<link type="text/css" rel="stylesheet" href="css/fontRobotoCondensed.css" />
+<link type="text/css" rel="stylesheet" href="src/css/fontJosefinSans.css" />
+<link type="text/css" rel="stylesheet" href="src/css/fontRobotoCondensed.css" />
 <!-- //font -->
 <script src="src/js/jquery-1.11.1.min.js"></script>
 <script src="src/js/bootstrap.js"></script>

@@ -75,7 +75,7 @@
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan </a></li>
+									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
 									<li><a href="login.php" class="scroll">Log In</a></li>
 								</ul>
 							</nav>
@@ -93,96 +93,78 @@
 	<!-- profile -->
 	<div class="contact-form">
 		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Category</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
 			<div class="panel panel-info">
-            <div class="panel-body">
-				<div class="w3l-heading">
-					<h3>Member Profile</h3>
-					<div class="w3ls-border-custom"> </div>
-				</div></br>
-				<div class="row">
-					<div class="col-md-12"> 
-					  <table class="table table-user-information">
-						<tbody>
-						<tr>
-							<td>Username</td>
-							<td>:</td>
-							<td>nasrikamaruddin</td>
-						</tr>
-						<tr>
-							<td>Name</td>
-							<td>:</td>
-							<td>Muhammad Nasri Bin Kamaruddin</td>
-						</tr>
-						<tr>
-							<td>Phone Number</td>
-							<td>:</td>
-							<td>0133512296</td>
-						</tr>
-						<tr>
-							<td>Email</td>
-							<td>:</td>
-							<td>nasrikamaruddin@gmail.com</td>
-						</tr>
-						<tr>
-							<td>Address</td>
-							<td>:</td>
-							<td>No 46 Jalan Belakang Sekolah Leftenan Adnan,<br>Sungai Ramal Luar 43000 Kajang</td>
-						</tr>
-						</tbody>
-					  </table>
-					  
+				<div class="panel-body">
+					<div class="row" style="margin:2px">
+					  <!--UPM STUDENT-->                  
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class="blocks">
+								<div class="block-header">
+									<h4>UPM STUDENT</h4>
+								</div>
+								<div class="block-container">
+									<p><img src="src/images/student.png" alt="upm student" width="150" height="150"></p>
+								</div>
+								<div class="block-footer">
+								  <a class="subscribe-now" href="registrationUPM.php">I'm UPM Student</a>
+								</div>
+							</div>
+						</div>
+					 
+					  <!--NON UPM STUDENT-->                  
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class="blocks">
+								<div class="block-header">
+									<h4>NON UPM STUDENT</h4>
+								</div>
+								<div class="block-container">
+									<p><img src="src/images/nonupmstudent.png" alt="non upm student" width="150" height="150"></p>
+								</div>
+								<div class="block-footer">
+								  <a class="subscribe-now" href="registrationNonUPM.php">I'm Non UPM Student</a>
+								</div>
+							</div>
+						</div>
+					  <!--Public-->
+						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class="blocks">
+								<div class="block-header">
+									<h4>PUBLIC</h4>
+								</div>
+								<div class="block-container">
+									<p><img src="src/images/public.png" alt="public" width="150" height="150"></p>
+								</div>
+								<div class="block-footer">
+								  <a class="subscribe-now" href="registrationPublic.php">I'm Public</a>
+								</div>
+							</div>
+						</div>
+					   <!--Senior-->
+					   <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+							<div class="blocks">
+								<div class="block-header">
+									<h4>SENIOR CITIZEN</h4>
+								</div>
+								<div class="block-container">
+									<p><img src="src/images/seniorcitizen.png" alt="senior" width="150" height="150"></p>
+								</div>
+								<div class="block-footer">
+								  <a class="subscribe-now" href="registrationSenior.php">I'm Senior Citizen</a>
+								</div>
+							</div>
+						</div>
+					 
 					</div>
 				</div>
-				
-				
-            </div>
-                 
-        </div>
-		<div class="panel panel-info">
-            <div class="panel-body">
-				<div class="w3l-heading">
-					<h3>Student Profile</h3>
-					<div class="w3ls-border-custom"> </div>
-				</div></br>
-				
-				<div class="row">
-					<div class="col-md-12"> 
-					  <table class="table table-user-information">
-						<tbody>
-						<tr>
-							<td>Student ID</td>
-							<td>:</td>
-							<td>180000</td>
-						</tr>
-						<tr>
-							<td>University</td>
-							<td>:</td>
-							<td>Universiti Putra Malaysia</td>
-						</tr>
-						<tr>
-							<td>Faculty</td>
-							<td>:</td>
-							<td>Faculti Sains Komputer Dan Teknologi Maklumat</td>
-						</tr>
-						<tr>
-							<td>Programme</td>
-							<td>:</td>
-							<td>Bacelor Software Engineering</td>
-						</tr>
-						<tr>
-							<td>Classification</td>
-							<td>:</td>
-							<td>""""</td>
-						</tr>
-						</tbody>
-					  </table>
-					</div>
-				</div>
-				
-            </div>
-                 
-         </div>
+			</div>
 		</div>
+	</div>
+	
 	<!-- //profile -->
 
 	<!-- footer -->
@@ -221,6 +203,7 @@
 								
 			});
 	</script>
+	
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
