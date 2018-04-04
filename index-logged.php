@@ -22,8 +22,8 @@
 <link href="src/css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome icons -->
 <!-- font -->
-<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="src/css/fontJosefinSans.css" />
+<link type="text/css" rel="stylesheet" href="src/css/fontRobotoCondensed.css" />
 <!-- //font -->
 <script src="src/js/jquery-1.11.1.min.js"></script>
 <script src="src/js/bootstrap.js"></script>
@@ -65,7 +65,7 @@
 								<span class="icon-bar"></span>
 							</button>
 							<div class="agileits-logo">
-								<h1><a href="index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
+								<h1><a href="index-logged.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
 							</div>
 						</div>
 
@@ -73,29 +73,27 @@
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-											<li><a href="#about" class="scroll">About</a></li>
+									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
 									<li><a href="#team" class="scroll">Plan & Upgrade</a></li>
 									<li><a class="scroll">
                                                                          
-                                           <?php 
-                                   if($_SESSION['logged']==true)
-                                    { 
-                       
-                                   echo $_SESSION["username"];
-                                      }
-                                      ?> </a>
-                                                                            <ul>
-                                                                            <li><a href="#" class="scroll">Profile</a></li>
-									                                        <li><a href="#" class="scroll">Invitation Code</a></li>
-									                                        <li><a href="#" class="scroll">Setting</a></li>
-									                                        <li><a href="#" class="scroll">Logout</a></li>
-                                                                            </ul>
-                                                                        </li>
-                    
-                
-                                                                </li>
+									<?php 
+										if($_SESSION['logged']==true)
+										{ 
+											echo $_SESSION["username"];
+										}
+                                    ?> </a>
+										<ul>
+										<li><a href="profile.php">Profile</a></li>
+										<li><a href="invitationCode.php" >Invitation Code</a></li>
+										<li><a href="#" class="scroll">Setting</a></li>
+										<li><a href="#" class="scroll">Logout</a></li>
+										</ul>
+									</li>
+
+
                                                                   
 								</ul>
 							</nav>
@@ -169,7 +167,7 @@
 							<div class="w3_tab_img">
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
-										<a href="ydec.php">
+										<a href="joinydec.php">
                                                                                     <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>
@@ -218,7 +216,7 @@
 							<div class="w3_tab_img">
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
-										<a href="ydec.php">
+										<a href="joinydec.php">
                                                                                     <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive">
 											</figure>
 										</a>

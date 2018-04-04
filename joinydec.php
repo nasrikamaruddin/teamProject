@@ -74,9 +74,23 @@
 								<ul class="nav navbar-nav">
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#team" class="scroll">Membership Registration</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="#team" class="scroll">Plan & Upgrade</a></li>
+									<li><a class="scroll">
+                                                                         
+									<?php 
+										if($_SESSION['logged']==true)
+										{ 
+											echo $_SESSION["username"];
+										}
+                                    ?> </a>
+										<ul>
+										<li><a href="profile.php">Profile</a></li>
+										<li><a href="invitationCode.php" >Invitation Code</a></li>
+										<li><a href="#" class="scroll">Setting</a></li>
+										<li><a href="#" class="scroll">Logout</a></li>
+										</ul>
+									</li>
 								</ul>
 							</nav>
 						</div>
