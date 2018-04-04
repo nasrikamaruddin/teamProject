@@ -202,7 +202,7 @@ body{
 }
 /*-- //w3layouts-banner-info --*/
 /*-- introduction --*/
-.introduction,.about,.gallery,.team-dot,.news,.contact{
+.introduction,.about,.gallery,.team-dot,.news,.contact,.profiles{
 	padding:4em 0;
 }
 .w3l-heading h3{
@@ -221,7 +221,11 @@ body{
     margin: 3em auto 0;
     height: 2px;
 }
-.introduction-info,.agileits-about-grids,.agileits-team-grids,.wthree-news-grids {
+.w3ls-border-custom{
+    margin: 3em auto 0;
+    height: 2px;
+}
+.introduction-info,.agileits-about-grids,.agileits-team-grids,.wthree-news-grids,.wthree-profiles-grids{
     margin: 4em 0 0 0;
 }
 .introduction-info p{
@@ -230,6 +234,14 @@ body{
     margin: 0 auto;
     line-height: 1.8em;
     width: 70%;
+    text-align: center;
+}
+.introduction-ydecRec p{
+    color: #231F20;
+    font-size: 1.4em;
+    margin: 0 auto;
+    line-height: 1.8em;
+    
     text-align: center;
 }
 .introduction-info h2{
@@ -399,12 +411,12 @@ body{
 /*-- //gallery --*/
 /*-- plan --*/
 .team{
-    background: url(../images/bg.jpg) repeat 0px 0px;
+    background: url(../images/bg.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .team-dot {
     background: url(../images/dott.png)repeat 0px 0px;
-    background-size: 5px;
+    background-size: 2px;
     -webkit-background-size: 2px;
     -moz-background-size: 2px;
     -o-background-size: 2px;
@@ -557,6 +569,9 @@ div#design {
 .contact-info p{
 	color:#FFFFFF;
 }
+.contact-valCode p{
+	color:#000000;
+}
 .contact-form-left{
     padding: 4em 0em 4em 13em;
 }
@@ -615,6 +630,10 @@ div#design {
     padding: 4em 13em 4em 4em;
     background: #e4e4e4;
 }
+.contact-form-center{
+    padding: 4em 4em 4em 4em;
+    background: #e4e4e4;
+}
 .contact-form-grid{
 	margin:4em 0 0 0;
 }
@@ -653,6 +672,7 @@ div#design {
     position: relative;
     float: left;
 }
+
 .styled-input:nth-child(1),.styled-input:nth-child(3){
 	margin-left:0;
 }
@@ -720,6 +740,62 @@ div#design {
     background:#D28D0D;
     color: #FFFFFF;
 	border: 2px solid #D28D0D;
+}
+
+.styled-input-profiles {
+	
+    margin: 2em 0 1em 1em;
+    position: relative;
+}
+.styled-input-profiles label {
+	color: #8c8c8c;
+    padding: 0.5em .9em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+    font-weight: 400;
+    font-size: .9em;
+    display: block;
+    line-height: 1em;
+}
+.styled-input-profiles input ~ span,.styled-input-profiles textarea ~ span {
+	display: block;
+    width: 0;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.125s;
+    -moz-transition: all 0.125s;
+    transition: all 0.125s;
+}
+.styled-input-profiles textarea ~ span { 
+    bottom: 5px; 
+}
+.styled-input-profiles input:focus.styled-input-profiles textarea:focus { 
+	outline: 0; 
+} 
+.styled-input-profiles input:focus ~ span,.styled-input-profiles textarea:focus ~ span {
+	width: 100%;
+	-webkit-transition: all 0.075s;
+	-moz-transition: all 0.075s;  
+	transition: all 0.075s; 
+} 
+/*-- input-effect --*/
+.styled-input-profiles input:focus ~ label, .styled-input-profiles input:valid ~ label,.styled-input-profiles textarea:focus ~ label ,.styled-input-profiles textarea:valid ~ label{
+    font-size: .9em;
+    color: #333333;
+    top: -1.3em;
+    -webkit-transition: all 0.125s;
+	-moz-transition: all 0.125s; 
+	-o-transition: all 0.125s;
+	-ms-transition: all 0.125s;
+    transition: all 0.125s;
 }
 /*-- //contact --*/
 /*-- footer --*/
@@ -1132,5 +1208,13 @@ footer p a:hover{
 		z-index: 99;
 	}
 }
-
+.box{
+	position:relative;
+	border-radius:3px;
+	background:#ffffff;
+	border-top:3px solid #d2d6de;
+	margin-bottom:20px;
+	width:100%;
+	box-shadow:0 1px 1px rgba(0,0,0,0.1)
+	}
 /*-- //responsive --*/
