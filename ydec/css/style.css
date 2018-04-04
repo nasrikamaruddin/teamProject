@@ -58,6 +58,7 @@ body{
 .agileits-logo h1 a img{
     width: 13%;
 }
+
 /*-- social-icons --*/
 .agileinfo-social-grids{
     float: left;
@@ -114,6 +115,8 @@ body{
 .navbar {
     margin-bottom: 0;
 }
+
+
 .navbar-collapse {
     padding: 0;
     box-shadow: none;
