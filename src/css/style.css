@@ -11,26 +11,12 @@ body a{
 	-moz-transition: 0.5s all;
 	-ms-transition: 0.5s all;
   }
-  .submit_btn{
-	  text-align: right;
-	  color: goldenrod;
-  }
+  
   .log{
 	  color: white;
 	  
   }
   
-  
-  .log  > li > a {
-	  font-size: 1em;
-	  padding: .5em 1em;
-	  margin-right: 5px;
-  }
-  .log  > .active > a, .log  > .active > a:hover, .log  > .active > a:focus {
-	  color: #ffffff;
-	  border: solid 4px #ffffff;
-	  background: none;
-  }
   html, body{
 	  font-size: 100%;
 	  font-family: 'Roboto Condensed', sans-serif;
@@ -62,6 +48,7 @@ body a{
   .header {
 	  margin: 2em 0 0 0;
   }
+  /*-- dropdown list--*/
   ul li ul li{
 	  display: none;
   }
