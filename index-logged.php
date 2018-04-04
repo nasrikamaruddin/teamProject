@@ -77,7 +77,7 @@
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
 									<li><a href="#team" class="scroll">Plan & Upgrade</a></li>
-									<li class="log">
+									<li><a class="scroll">
                                                                          
                                            <?php 
                                    if($_SESSION['logged']==true)
@@ -85,7 +85,7 @@
                        
                                    echo $_SESSION["username"];
                                       }
-                                  ?>
+                                      ?> </a>
                                                                             <ul>
                                                                             <li><a href="#" class="scroll">Profile</a></li>
 									                                        <li><a href="#" class="scroll">Invitation Code</a></li>
