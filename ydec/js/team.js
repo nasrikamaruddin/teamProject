@@ -75,51 +75,47 @@ function saveteam() {
 function createteam() {
     var teamname = $('#team_name').val();
     var project = $('#project_name').val();
-    
+
     $.ajax({
         type: 'POST',
         url: "../ajax/createteam.php",
-        data: { teamname: teamname , project : project },
-        
-        error: function (data) {
-            
+        data: { teamname: teamname, project: project },
+
+        error: function(data) {
+
             alert(" Can't do because: " + data);
         },
         success: function(data) {
-            alert(data); 
+            alert(data);
         }
     });
 
 }
 
 function sendinvite() {
-    
-    if($("#matriks1").val()){
+
+    if ($("#matriks1").val()) {
         var matriksi1 = $('#matriks1').val();
         callmailer(matriksi1);
-    }
-    else (alert("member 1 is null"));
-    
-    
-    if($("#matriks2").val()){
+    } else(alert("member 1 is null"));
+
+
+    if ($("#matriks2").val()) {
         var matriksi2 = $('#matriks2').val();
         callmailer(matriksi2);
-    }
-    else (alert("member 2 is null"));
+    } else(alert("member 2 is null"));
 
-    
-    if($("#matriks3").val()){
+
+    if ($("#matriks3").val()) {
         var matriksi3 = $('#matriks3').val();
         callmailer(matriksi3);
-    }
-    else (alert("member 3 is null"));
+    } else(alert("member 3 is null"));
 
-    
-    if($("#matriks4").val()){
+
+    if ($("#matriks4").val()) {
         var matriksi4 = $('#matriks4').val();
         callmailer(matriksi4);
-    }
-    else (alert("member 4 is null"));
+    } else(alert("member 4 is null"));
 
 
 
@@ -127,20 +123,20 @@ function sendinvite() {
 
 function callmailer(v) {
     var matriksi = v;
-    
+
     $.ajax({
         type: 'POST',
         url: "../ajax/team_invite.php",
         data: { matriksi: matriksi },
-        error: function (data) {
-            
+        error: function(data) {
+
             alert(" Can't send mail because: " + data);
         },
         success: function(data) {
             alert("invite mail sent");
-            
+
         },
-        
+
     });
 
 }
