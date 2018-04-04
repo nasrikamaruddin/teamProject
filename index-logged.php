@@ -87,10 +87,10 @@
                                       }
                                   ?>
                                                                             <ul>
-                                                                         <li><a href="#" class="log">Profile</a></li>
-									<li><a href="#" class="log">Invitation Code</a></li>
-									<li><a href="#" class="log">Setting</a></li>
-									<li><a href="#" class="log">Logout</a></li>
+                                                                            <li><a href="#" class="scroll">Profile</a></li>
+									                                        <li><a href="#" class="scroll">Invitation Code</a></li>
+									                                        <li><a href="#" class="scroll">Setting</a></li>
+									                                        <li><a href="#" class="scroll">Logout</a></li>
                                                                             </ul>
                                                                         </li>
                     
