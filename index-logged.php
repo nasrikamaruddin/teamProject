@@ -84,7 +84,7 @@
 										{ 
 											echo $_SESSION["username"];
 										}
-                                    ?> </a>
+                                    ?> <span class="fa fa-caret-down"></span></a>
 										<ul>
 										<li><a href="profile.php">Profile</a></li>
 										<li><a href="invitationCode.php" >Invitation Code</a></li>
