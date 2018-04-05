@@ -20,7 +20,7 @@
 			
 			else {
 			session_start();
-		$_SESSION['loginUser']= $_POST["loginEmail"]; 
+		$_SESSION['loginUser']= $_POST["loginUserID"]; 
 	
 		header("Location: http://localhost/teamProject/index.php");
 				}

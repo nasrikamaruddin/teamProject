@@ -1,3 +1,17 @@
+<?php
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
