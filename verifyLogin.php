@@ -10,7 +10,7 @@
 		if(count($_POST) > 0) {
 
 			
-			$result = mysqli_query($conn,"SELECT email, password FROM 1milliontraders WHERE email='" . $_POST["loginEmail"] . "' and password = '". md5($_POST["loginPassword"]) ."'");
+			$result = mysqli_query($conn,"SELECT userID, password FROM 1milliontraders WHERE userID='" . $_POST["loginUserID"] . "' and password = '". md5($_POST["loginPassword"]) ."'");
 
 			$count  = mysqli_num_rows($result);
 			if($count == 0) {
@@ -20,7 +20,7 @@
 			
 			else {
 			session_start();
-		$_SESSION['loginUser']= $_POST["loginEmail"]; 
+		$_SESSION['loginUser']= $_POST["loginUserID"]; 
 	
 		header("Location: http://localhost/teamProject/index.php");
 				}
