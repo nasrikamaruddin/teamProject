@@ -116,7 +116,7 @@
 								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
 								  <p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
 							  <div class="block-footer">
-								  <a class="subscribe-now" href="#">Subscribe Now</a>
+								  <button class="subscribe-now" href="#">Subscribe Now</button>
 							  </div>
 						  </div>
 					  </div>

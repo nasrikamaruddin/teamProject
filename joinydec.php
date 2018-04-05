@@ -1,3 +1,16 @@
+<?php
+//temporary page to invite team member. by tee
+include 'ydec/connection/db_connection.php';
+
+$conn = OpenCon();
+session_start();
+
+if(isset($_SESSION['loginid'])){
+$loginuser = $_SESSION['loginid'];} 
+
+else $loginuser = 181677;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +92,7 @@
 									<li><a class="scroll">
                                                                          
 									<?php 
-										if($_SESSION['logged']==true)
+										if(isset($loginuser))
 										{ 
 											echo $_SESSION["username"];
 										}
@@ -140,10 +153,32 @@
 									  <th>YDEC 2018</th>
 									</tr>
 									<tr>
-									  <td>Nasri Kamaruddin</td>
-									  <td>185697</td>
-									  <td>Gold</td>
-									  <td><button type="submit" class="btn btn-primary">JOIN YDEC</button></td>
+<?php 
+	if(isset($loginuser)){
+	$get_info= " select * from 1milliontraders where userID = $loginuser";
+    $run_info= mysqli_query($conn,$get_info);
+    $row_info=mysqli_fetch_array($run_info);
+        $name = $row_info['fullname'];
+		$matric = $row_info['studentID'];
+		$membertype = $row_info['userType'];
+		echo" 								
+									  <td id='1mtname'>$name</td>
+									  <td id='1mtstudentid'>$matric</td>
+									  <td id='1mtmembertype'>$membertype</td> ";
+		$get_info2= " select * from ydecparticipant where userID = $loginuser";
+		$run_info2= mysqli_query($conn,$get_info2);
+		
+		if(mysqli_num_rows($run_info2)==0){
+			
+			echo"<td><button id='joinbtn' class='btn btn-primary' onclick='joinydec()'>JOIN YDEC
+									  </button></td>
+									  ";
+		}
+		else
+		 echo"<td>JOINED</td>";
+	}
+?>
+									  
 									</tr>
 								  </table>
 								</div>
@@ -172,4 +207,30 @@
 	<!-- //footer -->
 	
 </body>	
+<script type="text/javascript">
+	function joinydec(){                                                                                                                                                                                                                                                                                                                              
+		
+		var studentid = $("#1mtstudentid").val();	
+		
+    $.ajax({
+        type: 'POST',
+        url: "ajax/joiningydec.php",
+		data: { studentid: studentid },
+		error: function(data) {
+		alert(" Can't do because: " + data);
+		},
+        success: function(data) {
+			alert(data);
+			$("#joinbtn").text("JOINED");
+			$('#joinbtn').prop('disabled', true);           
+        },
+        dataType: "text",
+        async: false
+    });
+
+
+		
+	}
+
+</script>
 </html>
