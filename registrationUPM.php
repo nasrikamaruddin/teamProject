@@ -1,3 +1,15 @@
+<?php
+
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,7 +111,7 @@
 			</div></br>
 			<div class="panel panel-info">
             <div class="panel-body">
-			<form action="membershipPlan.php">
+			<form action="signupUPM.php" method="POST" enctype="multipart/form-data">
 				
 				<div class="row">
 					<div class="col-md-12"> 
@@ -107,9 +119,15 @@
 						<tbody>
 						
 						<tr>
+							<td>User ID</td>
+							<td>:</td>
+							<td><input id="createcode" name="createcode" readonly="" style="text-align: left; background-color: #d4d8dd" value= "<?php echo createRandomPassword()?>"</input></td>
+						</tr>
+
+						<tr>
 							<td style="width:12em;">Name</td>
 							<td style="width:2em;">:</td>
-							<td  style="width:40em;"><input type="text" name="name" id="name" value="" class="form-control" placeholder="Name" required></td>
+							<td  style="width:40em;"><input type="text" name="fullname" id="fullname" value="" class="form-control" placeholder="Name" required></td>
 						</tr>
 						<tr>
 							<td>Contact Number</td>
@@ -134,7 +152,7 @@
 						<tr>
 							<td>University</td>
 							<td>:</td>
-							<td><input type="text" name="studentID" id="studentID" value="UPM" class="form-control" readonly required></td>
+							<td><input type="text" name="university" id="university" value="UPM" class="form-control" readonly required></td>
 						</tr>
 						<tr>
 							<td>Faculty</td>
@@ -150,6 +168,11 @@
 							<td>Classification</td>
 							<td>:</td>
 							<td><input type="text" name="classification" id="classification" value="" class="form-control" placeholder="Classification" required></td>
+						</tr>
+						<tr>
+							<td>Student ID Image</td>
+							<td>:</td>
+							<td><input type="file" name="studentIDImg" id="studentIDImg" value="" class="form-control" required></td>
 						</tr>
 						</tbody>
 					  </table>
@@ -176,6 +199,13 @@
 							<td>:</td>
 							<td><input type="password" name="cpassword" id="cpassword" value="" class="form-control" placeholder="Confirmation Password" required></td>
 						</tr>
+						<tr>
+							<td>Referral Code</td>
+							<td>:</td>
+							<td><input type="text" name="referralID" id="referralID" value="" class="form-control" placeholder="Referral Code"></td>
+						</tr>
+
+
 						</tbody>
 					  </table>
 					  
@@ -231,7 +261,7 @@
 								
 			});
 	</script>
-	<script type="text/javascript">
+<!--	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#submitStudentUPM").click(function() {
 			var name = $("#name").val();
@@ -263,6 +293,23 @@
 			});
 		});
 	</script>
+-->
+<?php
+function createRandomPassword() {
+    $chars = "0123456789";
+    srand((double)microtime()*1000000);
+    $i = 0;
+    $pass = '' ;
+    while ($i <= 5) {
+        $num = rand() % 6;
+        $tmp = substr($chars, $num, 1);
+        $pass = $pass . $tmp;
+        $i++;
+    }
+    return $pass;
+}
+?>
+
 <!-- //here ends scrolling icon -->
 </body>	
 </html>

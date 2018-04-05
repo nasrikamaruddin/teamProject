@@ -1,3 +1,20 @@
+<?php
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+  }
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +81,7 @@
 								<span class="icon-bar"></span>
 							</button>
 							<div class="agileits-logo">
-								<h1><a href="index-logged.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
+								<h1><a href="index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
 							</div>
 						</div>
 
@@ -75,22 +92,8 @@
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#team" class="scroll">Plan & Upgrade</a></li>
-									<li><a class="scroll">
-                                                                         
-									<?php 
-										if($_SESSION['logged']==true)
-										{ 
-											echo $_SESSION["username"];
-										}
-                                    ?> </a>
-										<ul>
-										<li><a href="profile.php" >Profile</a></li>
-										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#" class="scroll">Setting</a></li>
-										<li><a href="#" class="scroll">Logout</a></li>
-										</ul>
-									</li>
+									<li><a href="#news" class="scroll">Plan </a></li>
+									<li><a href="login.php" class="scroll">Log In</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -116,33 +119,74 @@
 				<div class="row">
 					<div class="col-md-12"> 
 					  <table class="table table-user-information">
-						<tbody>
+
+<?php
+$userID = $_SESSION['loginUser'];
+$get_info= "select * from 1milliontraders where userID='$userID'";
+	
+	$run_info= mysqli_query($conn,$get_info);
+	
+	$row_info=mysqli_fetch_array($run_info);
+		$info_userID = $row_info['userID'];
+		$info_userType = $row_info['userType'];
+		$info_codeCount = $row_info['codeCount'];
+		$info_username = $row_info['username'];
+		$info_fullname = $row_info['fullname'];
+		$info_contact = $row_info['contact'];
+		$info_email = $row_info['email'];
+		$info_address = $row_info['address'];
+		$info_studentID = $row_info['studentID'];
+		$info_university = $row_info['university'];
+		$info_faculty = $row_info['faculty'];
+		$info_programme = $row_info['programme'];
+		$info_classification = $row_info['classification'];
+		
+		echo "
+		
+                    <tbody>
+                    <tr>
+							<td>User ID</td>
+							<td>:</td>
+							<td>$info_userID</td>
+						</tr>
+						<tr>
+							<td>Membership</td>
+							<td>:</td>
+							<td>$info_userType</td>
+						</tr>
+						<tr>
+							<td>Point</td>
+							<td>:</td>
+							<td>$info_codeCount</td>
+						</tr>
 						<tr>
 							<td>Username</td>
 							<td>:</td>
-							<td>nasrikamaruddin</td>
+							<td>$info_username</td>
 						</tr>
 						<tr>
 							<td>Name</td>
 							<td>:</td>
-							<td>Muhammad Nasri Bin Kamaruddin</td>
+							<td>$info_fullname</td>
 						</tr>
 						<tr>
 							<td>Phone Number</td>
 							<td>:</td>
-							<td>0133512296</td>
+							<td>$info_contact</td>
 						</tr>
 						<tr>
 							<td>Email</td>
 							<td>:</td>
-							<td>nasrikamaruddin@gmail.com</td>
+							<td>$info_email</td>
 						</tr>
 						<tr>
 							<td>Address</td>
 							<td>:</td>
-							<td>No 46 Jalan Belakang Sekolah Leftenan Adnan,<br>Sungai Ramal Luar 43000 Kajang</td>
+							<td>$info_address</td>
 						</tr>
 						</tbody>
+						";?>
+
 					  </table>
 					  
 					</div>
@@ -162,33 +206,40 @@
 				<div class="row">
 					<div class="col-md-12"> 
 					  <table class="table table-user-information">
+					<?php
+					echo "
 						<tbody>
 						<tr>
 							<td>Student ID</td>
 							<td>:</td>
-							<td>180000</td>
+							<td>$info_studentID</td>
 						</tr>
 						<tr>
 							<td>University</td>
 							<td>:</td>
-							<td>Universiti Putra Malaysia</td>
+							<td>$info_university</td>
 						</tr>
 						<tr>
 							<td>Faculty</td>
 							<td>:</td>
-							<td>Faculti Sains Komputer Dan Teknologi Maklumat</td>
+							<td>$info_faculty</td>
 						</tr>
 						<tr>
 							<td>Programme</td>
 							<td>:</td>
-							<td>Bacelor Software Engineering</td>
+							<td>$info_programme</td>
 						</tr>
 						<tr>
 							<td>Classification</td>
 							<td>:</td>
-							<td>""""</td>
+							<td>$info_classification</td>
+							
 						</tr>
 						</tbody>
+						
+						";
+						?>
+						
 					  </table>
 					</div>
 				</div>
