@@ -111,7 +111,7 @@ echo "Connected Successfully";
 			</div></br>
 			<div class="panel panel-info">
             <div class="panel-body">
-			<form action="signupUPM.php" method="POST" enctype="multipart/form-data">
+			<form action="signupUPM.php" method="POST" onsubmit="return validation()" enctype="multipart/form-data">
 				
 				<div class="row">
 					<div class="col-md-12"> 
@@ -184,9 +184,12 @@ echo "Connected Successfully";
 					  <table class="table table-user-information">
 						<tbody>
 						<tr>
-							<td style="width:12em;">Username</td>
+							<td style="width:12em;" >Username </td>
 							<td style="width:2em;">:</td>
-							<td style="width:40em;"> <input type="text" name="username" id="username" value="" class="form-control" placeholder="Username" required></td>
+							<td style="width:40em;"> <input type="text" name="username" id="username" value="" class="form-control" 
+							oninput="checkdup()" placeholder="Username" required>
+							<small ><p id="duplabel"></p></small>
+						</td>
 						</tr>
 						<tr>
 							<td>Password</td>
@@ -213,7 +216,7 @@ echo "Connected Successfully";
 				</div>
 				<div class="row pull-right">
 					<div class="col-md-12">   
-						<button type="submit" name="submitStudentUPM" id="submitStudentUPM" class="btn btn-primary" style="width:10em;">Submit</button>					  
+						<button type="submit" name="submitStudentUPM"  id="submitStudentUPM" class="btn btn-primary" style="width:10em;">Submit</button>					  
 					</div>
 				</div>
 			</form>
@@ -261,9 +264,9 @@ echo "Connected Successfully";
 								
 			});
 	</script>
-<!--	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#submitStudentUPM").click(function() {
+<script type="text/javascript">
+	
+		function validation(){
 			var name = $("#name").val();
 			var contact = $("#contact").val();
 			var email = $("#email").val();
@@ -278,22 +281,59 @@ echo "Connected Successfully";
 			var username = $("#username").val();
 			var password = $("#password").val();
 			var cpassword = $("#cpassword").val();
+			var clabel = document.getElementById("duplabel").textContent;
+			var label = "Username is available";
 			
 			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			
 				if (name == '' || contact == '' || email == '' || address == '' || studentID == '' || university == '' || faculty == '' || programme == '' || classification == '' || username == '' || password == '' || cpassword == '') {
 				alert("Please fill all fields...!!!!!!");
+				return false;
+				
 				} else if (!mailformat.test(email)){
 				alert("please enter email format...!!!!!!");
+				return false;
+
+				} else if (!(clabel==label)) {
+				alert("Username has been used");
+				return false;
 				} else if ((password.length) < 8) {
 				alert("Password should atleast 8 character in length...!!!!!!");
-				} else if (!(password).match(password2)) {
+				return false;
+				} else if (!(password==cpassword)) {
 				alert("Your passwords don't match. Try again?");
+				return false;
 				}
-			});
-		});
+				else document.getElementById("regform").submit();
+			}
 	</script>
--->
+
+<script>
+function checkdup() {
+    var username = $("#username").val();
+	$.ajax({
+        type: 'POST',
+        url: "ajax/checkdup.php",
+        data: { username: username},
+
+        error: function(data) {
+
+            alert(" Can't do because: " + data);
+        },
+        success: function(data) {
+			if(data == "false"){
+			document.getElementById("duplabel").style.color = "green";
+			document.getElementById("duplabel").innerHTML = "Username is available";}
+			else if(data == "true"){
+			document.getElementById("duplabel").style.color = "red";
+			document.getElementById("duplabel").innerHTML = "Username is not available";}
+			
+        }
+	});
+	
+}
+</script>
+
 <?php
 function createRandomPassword() {
     $chars = "0123456789";

@@ -49,8 +49,7 @@ if ($conn->multi_query($sql) === TRUE) {
 	header("Location: http://localhost/milliont/teamProject/membershipPlan.php");
 	
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-	echo"<script> alert('This email has been used')</script>";
+	echo"alert('Error:'  . $sql . '<br>' . $conn->error')";
 	echo '<script>history.back();</script>';
 	
 }	
