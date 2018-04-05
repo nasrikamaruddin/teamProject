@@ -99,6 +99,7 @@
 			</div></br>
 			<div class="panel panel-info">
             <div class="panel-body">
+	
 			<form action="membershipPlanNonUPM.php" >
 				
 				<div class="row">
