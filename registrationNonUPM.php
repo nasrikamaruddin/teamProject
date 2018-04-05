@@ -1,3 +1,13 @@
+<?php
+
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,8 +109,12 @@
 			</div></br>
 			<div class="panel panel-info">
             <div class="panel-body">
+<<<<<<< HEAD
+			<form action="signupNonUPM.php" onsubmit="return validation()" method="POST" enctype="multipart/form-data">
+=======
 	
 			<form action="membershipPlanNonUPM.php" >
+>>>>>>> b89614b69d6bf4bf4106d820d8ead1ab33e5ab8e
 				
 				<div class="row">
 					<div class="col-md-12"> 
@@ -108,9 +122,15 @@
 						<tbody>
 						
 						<tr>
+							<td>User ID</td>
+							<td>:</td>
+							<td><input id="createcode" name="createcode" readonly="" style="text-align: left; background-color: #d4d8dd" value= "<?php echo createRandomPassword()?>"</input></td>
+						</tr>
+
+						<tr>
 							<td style="width:12em;">Name</td>
 							<td style="width:2em;">:</td>
-							<td  style="width:40em;"><input type="text" name="name" id="name" value="" class="form-control" placeholder="Name" required></td>
+							<td  style="width:40em;"><input type="text" name="fullname" id="fullname" value="" class="form-control" placeholder="Name" required></td>
 						</tr>
 						<tr>
 							<td>Contact Number</td>
@@ -137,7 +157,7 @@
 							<td>:</td>
 							<td>
 								<select name="university" class="form-control" id="university" onchange="showfield(this.options[this.selectedIndex].value)" required>
-									<option selected="selected">Please select ...</option>
+									<option selected="selected" value="">Please select ...</option>
 									<option value="UM">UM - Universiti Malaya, KL</option>
 									<option value="UKM">UKM - Universiti Kebangsaan Malaysia, Selangor</option>
 									<option value="UPM" >UPM - Universiti Putra Malaysia, Selangor</option>
@@ -202,8 +222,21 @@
 						<tr>
 							<td>Classification</td>
 							<td>:</td>
-							<td><input type="text" name="classification" id="classification" value="" class="form-control" placeholder="Classification" required></td>
+							<td><select name="classification" class="form-control" id="classification" required>
+								<option selected="selected" value="">Please select ...</option>
+								<option value="Freshman">Freshman</option>
+								<option value="Sophomore">Sophomore</option>
+								<option value="Junior" >Junior</option>
+								<option value="Senior">Senior</option>
+							</select>
+							</td>
 						</tr>
+						<tr>
+							<td>Student ID Image</td>
+							<td>:</td>
+							<td><input type="file" name="studentIDImg" id="studentIDImg" value="" class="form-control" required></td>
+						</tr>	
+
 						</tbody>
 					  </table>
 					</div>
@@ -214,9 +247,12 @@
 					  <table class="table table-user-information">
 						<tbody>
 						<tr>
-							<td style="width:12em;">Username</td>
+							<td style="width:12em;" >Username </td>
 							<td style="width:2em;">:</td>
-							<td style="width:40em;"> <input type="text" name="username" id="username" value="" class="form-control" placeholder="Username" required></td>
+							<td style="width:40em;"> <input type="text" name="username" id="username" value="" class="form-control" 
+							oninput="checkdup()" placeholder="Username" required>
+							<small ><p id="duplabel"></p></small>
+						</td>
 						</tr>
 						<tr>
 							<td>Password</td>
@@ -228,6 +264,11 @@
 							<td>Confirmation Password</td>
 							<td>:</td>
 							<td><input type="password" name="cpassword" id="cpassword" value="" class="form-control" placeholder="Confirmation Password" required></td>
+						</tr>
+						<tr>
+							<td>Referral Code</td>
+							<td>:</td>
+							<td><input type="text" name="referralID" id="referralID" value="" class="form-control" placeholder="Referral Code (Optional)"></td>
 						</tr>
 						</tbody>
 					  </table>
@@ -285,8 +326,8 @@
 			});
 	</script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#submitStudent").click(function() {
+	
+		function validation(){
 			var name = $("#name").val();
 			var contact = $("#contact").val();
 			var email = $("#email").val();
@@ -301,56 +342,71 @@
 			var username = $("#username").val();
 			var password = $("#password").val();
 			var cpassword = $("#cpassword").val();
+			var clabel = document.getElementById("duplabel").textContent;
+			var label = "Username is available";
 			
 			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			
 				if (name == '' || contact == '' || email == '' || address == '' || studentID == '' || university == '' || faculty == '' || programme == '' || classification == '' || username == '' || password == '' || cpassword == '') {
 				alert("Please fill all fields...!!!!!!");
+				return false;
+				
 				} else if (!mailformat.test(email)){
 				alert("please enter email format...!!!!!!");
+				return false;
+				} else if (!(clabel==label)) {
+				alert("Username has been used");
+				return false;
 				} else if ((password.length) < 8) {
 				alert("Password should atleast 8 character in length...!!!!!!");
-				} else if (!(password).match(password2)) {
+				return false;
+				} else if (!(password==cpassword)) {
 				alert("Your passwords don't match. Try again?");
+				return false;
 				}
-			});
-		});
+		}		
+	</script>
 
-		
-	function registeruser() {
-			var name = $("#name").val();
-			var contact = $("#contact").val();
-			var email = $("#email").val();
-			var address = $("#address").val();
-			
-			var studentID = $("#studentID").val();
-			var university = $("#university").val();
-			var faculty = $("#faculty").val();
-			var programme = $("#programme").val();
-			var classification = $("#classification").val();
-			
-			var cpassword = $("#cpassword").val();
-			
-			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-    	$.ajax({
-        	type: 'POST',
-        	url: "ajax/register.php",
-			   data: { name: name , contact:contact ,email:email , address:address ,studentID:studentID , 
-				university: university , faculty: faculty , programme: programme , classification: classification,
-				username: username , cpassword:cpassword },
-        	error: function(data) {
-				alert(" Can't register because: " + data);
+	<script>
+function checkdup() {
+    var username = $("#username").val();
+	$.ajax({
+        type: 'POST',
+        url: "ajax/checkdup.php",
+        data: { username: username},
+        error: function(data) {
+            alert(" Can't do because: " + data);
         },
         success: function(data) {
-            alert("account registered");
+			if(data == "false"){
+			document.getElementById("duplabel").style.color = "green";
+			document.getElementById("duplabel").innerHTML = "Username is available";}
+			else if(data == "true"){
+			document.getElementById("duplabel").style.color = "red";
+			document.getElementById("duplabel").innerHTML = "Username is not available";}
+			
+        }
+	});
+	
+}
+</script>
 
-        },
+<?php
+function createRandomPassword() {
+    $chars = "0123456789";
+    srand((double)microtime()*1000000);
+    $i = 0;
+    $pass = '' ;
+    while ($i <= 5) {
+        $num = rand() % 6;
+        $tmp = substr($chars, $num, 1);
+        $pass = $pass . $tmp;
+        $i++;
+    }
+    return $pass;
+}
+?>
 
-   	 	});
-
-	}
-	</script>
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
