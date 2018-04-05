@@ -82,7 +82,7 @@ $get_name= "select fullname from 1milliontraders where userid='$loginuser'";
 }
 	$row_pro=mysqli_fetch_array($run_pro);
 		$fname = $row_pro['fullname'];
-		
+	
 						echo $fname; ?> , please select your team member and press save team to invite them.</h3>
                 <br>
                 <div class="col-md-3"></div>

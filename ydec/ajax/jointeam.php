@@ -21,16 +21,26 @@ if (isset($_GET['joiningteam'])) {
         }
 
         $_SESSION['teamid']=$joiningteam;
-       // header("Location: index.php");
+       header("Location: ../dashboard/index.php");
 
     }
 
     else{
-       header("Location: ../login.php"); //redirect to login first
+       $_SESSION['teamtojoin']=$joiningteam;
+       header("Location: ../../login.php"); //redirect to login first
     }
 
 } 
-else {
-    echo "something wrong with the link";
+else if(isset($_SESSION['teamtojoin'])){
+    try{
+        $joiningteam = $_SESSION['teamtojoin'];
+        $thisuser = $_SESSION['loginUser'];
+        $sqljointeam = "UPDATE `ydecparticipant` SET `teamID` = $joiningteam WHERE userID = $thisuser";
+    $run_jointeam= mysqli_query($conn,$sqljointeam);
+    header("Location: ../dashboard/index.php");
+    }
+    catch(Exception $e){
+        echo $e;
+    }
 }
 ?>

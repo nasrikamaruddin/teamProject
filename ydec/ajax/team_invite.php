@@ -11,6 +11,10 @@ if(isset($_SESSION['loginUser'])){
     else $loginuser = 181666;
 $teamid = $_SESSION['teamid'];
 
+if(isset($_SESSION['username'])){
+    $username = $_SESSION['username'];} 
+    
+    else $username = "temp username";
 
 $joinlink = "localhost/teamproject/ydec/ajax/jointeam.php?joiningteam=$teamid" ;//link 
 
@@ -19,11 +23,12 @@ $joinlink = "localhost/teamproject/ydec/ajax/jointeam.php?joiningteam=$teamid" ;
 
     if(isset($_POST['matriksi'])){
         $memberid= $_POST['matriksi'];
-        $sqlgetmail = "select email from 1milliontraders where studentID = $memberid";
+        $sqlgetmail = "select * from 1milliontraders where studentID = $memberid";
         $run_getmail= mysqli_query($conn,$sqlgetmail);
         $row_invite=mysqli_fetch_array($run_getmail);
             $mail1 = $row_invite['email'];
-        sendmail($mail1,$joinlink);
+            $receivername = $row_invite['fullname'];
+        sendmail($mail1,$joinlink,$username,$receivername);
         
         
     }

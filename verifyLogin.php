@@ -20,11 +20,13 @@
 			
 			else {
 			session_start();
-		$_SESSION['loginUser']= $_POST["loginUserID"]; 
-	
-		header("Location: http://localhost/teamProject/index.php");
-				}
+			$_SESSION['loginUser']= $_POST["loginUserID"]; 
 			}
+		}		
+		if(isset($_SESSION['teamtojoin'])){
+		header("Location: ydec/ajax/jointeam.php");
+		}
+			
 		}
 	
 ?>

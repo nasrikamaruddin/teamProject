@@ -11,7 +11,7 @@
 
 $searchTerm = $_GET['term'];
 
-$query = $conn->query("SELECT * FROM 1milliontraders WHERE studentID LIKE '%".$searchTerm."%' ORDER BY studentID ASC");
+$query = $conn->query("SELECT * FROM 1milliontraders inner join ydecparticipant  y on 1milliontraders.userID=y.userID  WHERE studentID LIKE '%".$searchTerm."%' ORDER BY studentID ASC");
 while ($row = $query->fetch_assoc()) {
     $data[] = $row['studentID'];
 }
