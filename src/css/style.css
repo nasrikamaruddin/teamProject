@@ -1226,4 +1226,7 @@ body a{
 	-ms-transition: all 0.125s;
     transition: all 0.125s;
 }
+.contact-form-center2{
+    padding: 4em 4em 4em 4em;
+}
   /*-- //responsive --*/
