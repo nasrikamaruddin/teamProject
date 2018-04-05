@@ -3,6 +3,8 @@
 include '../connection/db_connection.php';
 $conn = OpenCon();
 session_start();
+
+
 $_SESSION['loginid']='181677';
 // $_SESSION['teamid']=123456;
 ?>

@@ -99,7 +99,7 @@
 			</div></br>
 			<div class="panel panel-info">
             <div class="panel-body">
-			<form action="membershipPlanNonUPM.php">
+			<form action="membershipPlanNonUPM.php" >
 				
 				<div class="row">
 					<div class="col-md-12"> 
@@ -314,6 +314,41 @@
 				}
 			});
 		});
+
+		
+	function registeruser() {
+			var name = $("#name").val();
+			var contact = $("#contact").val();
+			var email = $("#email").val();
+			var address = $("#address").val();
+			
+			var studentID = $("#studentID").val();
+			var university = $("#university").val();
+			var faculty = $("#faculty").val();
+			var programme = $("#programme").val();
+			var classification = $("#classification").val();
+			
+			var cpassword = $("#cpassword").val();
+			
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    	$.ajax({
+        	type: 'POST',
+        	url: "ajax/register.php",
+			   data: { name: name , contact:contact ,email:email , address:address ,studentID:studentID , 
+				university: university , faculty: faculty , programme: programme , classification: classification,
+				username: username , cpassword:cpassword },
+        	error: function(data) {
+				alert(" Can't register because: " + data);
+        },
+        success: function(data) {
+            alert("account registered");
+
+        },
+
+   	 	});
+
+	}
 	</script>
 <!-- //here ends scrolling icon -->
 </body>	
