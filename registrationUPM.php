@@ -1,13 +1,7 @@
 <?php
-
 include 'db_connection.php';
-
 $conn = OpenCon();
-
 echo "Connected Successfully";
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -167,7 +161,14 @@ echo "Connected Successfully";
 						<tr>
 							<td>Classification</td>
 							<td>:</td>
-							<td><input type="text" name="classification" id="classification" value="" class="form-control" placeholder="Classification" required></td>
+							<td><select name="classification" class="form-control" id="classification" required>
+								<option selected="selected">Please select ...</option>
+								<option value="Freshman">Freshman</option>
+								<option value="Sophomore">Sophomore</option>
+								<option value="Junior" >Junior</option>
+								<option value="Senior">Senior</option>
+							</select>
+							</td>
 						</tr>
 						<tr>
 							<td>Student ID Image</td>
@@ -216,7 +217,7 @@ echo "Connected Successfully";
 				</div>
 				<div class="row pull-right">
 					<div class="col-md-12">   
-						<button type="submit" name="submitStudentUPM"  id="submitStudentUPM" class="btn btn-primary" style="width:10em;">Submit</button>					  
+						<button type="submit" name="submitStudent"  id="submitStudent" class="btn btn-primary" style="width:10em;">Submit</button>					  
 					</div>
 				</div>
 			</form>
@@ -293,7 +294,6 @@ echo "Connected Successfully";
 				} else if (!mailformat.test(email)){
 				alert("please enter email format...!!!!!!");
 				return false;
-
 				} else if (!(clabel==label)) {
 				alert("Username has been used");
 				return false;
@@ -306,7 +306,6 @@ echo "Connected Successfully";
 				}
 				
 	</script>
-
 <script>
 function checkdup() {
     var username = $("#username").val();
@@ -314,9 +313,7 @@ function checkdup() {
         type: 'POST',
         url: "ajax/checkdup.php",
         data: { username: username},
-
         error: function(data) {
-
             alert(" Can't do because: " + data);
         },
         success: function(data) {
@@ -332,7 +329,6 @@ function checkdup() {
 	
 }
 </script>
-
 <?php
 function createRandomPassword() {
     $chars = "0123456789";
@@ -348,7 +344,6 @@ function createRandomPassword() {
     return $pass;
 }
 ?>
-
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
