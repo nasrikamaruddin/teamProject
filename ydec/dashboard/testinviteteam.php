@@ -6,7 +6,10 @@ $conn = OpenCon();
 session_start();
 
 
-$loginuser = $_SESSION['loginUser'];
+if(isset($_SESSION['loginUser'])){
+    $loginuser = $_SESSION['loginUser'];} 
+    
+    else $loginuser = 181666;
 
 ?>
 <html>

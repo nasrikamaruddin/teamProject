@@ -5,10 +5,10 @@ include 'ydec/connection/db_connection.php';
 $conn = OpenCon();
 session_start();
 
-if(isset($_SESSION['loginid'])){
-$loginuser = $_SESSION['loginid'];} 
+if(isset($_SESSION['loginUser'])){
+$loginuser = $_SESSION['loginUser'];} 
 
-else $loginuser = 181677;
+else $loginuser = 181666;
 ?>
 
 <!DOCTYPE html>

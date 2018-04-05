@@ -5,10 +5,12 @@ include '../mailer/invite_mailer.php';
 
 $conn = OpenCon();
 session_start();
-
-//$loginuser = $_SESSION['loginid']; test with local value
+if(isset($_SESSION['loginUser'])){
+    $loginuser = $_SESSION['loginUser'];} 
+    
+    else $loginuser = 181666;
 $teamid = $_SESSION['teamid'];
-$loginuser = 181677;
+
 
 $joinlink = "localhost/teamproject/ydec/ajax/jointeam.php?joiningteam=$teamid" ;//link 
 

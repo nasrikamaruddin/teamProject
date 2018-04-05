@@ -7,8 +7,8 @@ session_start();
 if (isset($_GET['joiningteam'])) {
     $joiningteam = $_GET['joiningteam'];
     
-    if(isset($_SESSION['loginid'])){
-        $thisuser = $_SESSION['loginid'];
+    if(isset($_SESSION['loginUser'])){
+        $thisuser = $_SESSION['loginUser'];
         echo $thisuser;
         try{
 

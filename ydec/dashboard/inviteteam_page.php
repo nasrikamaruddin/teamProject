@@ -5,8 +5,10 @@ include '../connection/db_connection.php';
 $conn = OpenCon();
 session_start();
 
-
-$loginuser = $_SESSION['loginid']; 
+if(isset($_SESSION['loginUser'])){
+    $loginuser = $_SESSION['loginUser'];} 
+    
+    else $loginuser = 181666;
 $teamid = $_SESSION['teamid'];
 
 

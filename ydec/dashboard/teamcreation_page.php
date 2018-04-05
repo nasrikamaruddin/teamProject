@@ -3,14 +3,17 @@
 include 'db_connection.php';
 $conn = OpenCon();
 session_start();
-$_SESSION['loginid']='181677';
+if(isset($_SESSION['loginUser'])){
+    $loginuser = $_SESSION['loginUser'];} 
+    
+    else $loginuser = 181666;
 ?>
 
 <html>
 
 <header>
 Hi , <?php 
-$loginuser = $_SESSION['loginid'];
+$loginuser = $_SESSION['loginUser'];
 $get_name= "select fullname from 1milliontraders where userid='$loginuser'";
 	
 	$run_pro= mysqli_query($conn,$get_name);

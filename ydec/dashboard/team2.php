@@ -1,5 +1,5 @@
 <?php 
-//temporary page to create team . by tee
+//backup to prevent clash merging team.php . by tee
 include '../connection/db_connection.php';
 $conn = OpenCon();
 session_start();

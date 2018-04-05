@@ -4,8 +4,10 @@ include '../connection/db_connection.php';
 
 $conn = OpenCon();
 session_start();
-//$loginuser = $_SESSION['loginid'];
-$loginuser=181666;
+if(isset($_SESSION['loginUser'])){
+    $loginuser = $_SESSION['loginUser'];} 
+    
+    else $loginuser = 181666;
 
 if(isset($_POST['teamname'])){
     
