@@ -135,7 +135,7 @@ $code = $_SESSION['referralID'];
 							</div>
 							<div class="block-footer">
 								<form action="signup.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userType" id="userType" value="silver">Subscribe Now</a>
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							</div>
 						</div>
@@ -156,7 +156,7 @@ $code = $_SESSION['referralID'];
 							</div>
 							<div class="block-footer">
 								<form action="signup.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userType" id="userType" value="gold">Subscribe Now</a>
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							</div>
 						</div>
@@ -177,7 +177,7 @@ $code = $_SESSION['referralID'];
 							</div>
 							<div class="block-footer">
 								<form action="signup.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userType" id="userType" value="diamond">Subscribe Now</a>
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							</div>
 						</div>

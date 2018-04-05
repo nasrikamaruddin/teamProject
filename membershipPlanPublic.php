@@ -1,3 +1,20 @@
+<?php
+
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+}
+
+$code = $_SESSION['referralID'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,7 +132,9 @@
 								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
 								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
 							  <div class="block-footer">
-								  <a class="subscribe-now" href="#">Subscribe Now</a>
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
+							</form>
 							  </div>
 						  </div>
 					  </div>
@@ -134,7 +153,9 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <a class="subscribe-now" href="#">Subscribe Now</a>
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
+							</form>
 							  </div>
 						  </div>
 					  </div>
@@ -153,7 +174,9 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>100<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <a class="subscribe-now" href="#">Subscribe Now</a>
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
 							  </div>
 						  </div>
 					  </div>

@@ -6,7 +6,7 @@ $conn = OpenCon();
 echo "Connected Successfully";
 
 
-if( isset($_POST["submitStudentUPM"]) ){
+if( isset($_POST["submitStudent"]) ){
 
 		$userID = $_POST["createcode"];
 		$fullname = $_POST["fullname"];
@@ -46,15 +46,11 @@ if ($conn->multi_query($sql) === TRUE) {
 	$_SESSION['loginUser'] =$userID;
 	$_SESSION['referralID'] = $code;
 	echo 'session create'.$_SESSION['loginUser'];
-	header("Location: http://localhost/teamProject/membershipPlan.php");
+	header("Location: http://localhost/teamProject/membershipPlanNonUPM.php");
 	
 } else {
-<<<<<<< HEAD
     echo "Error: " . $sql . "<br>" . $conn->error;
 
-=======
-	echo"alert('Error:'  . $sql . '<br>' . $conn->error')";
->>>>>>> b89614b69d6bf4bf4106d820d8ead1ab33e5ab8e
 	echo '<script>history.back();</script>';
 	
 }	
