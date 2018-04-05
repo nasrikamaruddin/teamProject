@@ -1,5 +1,6 @@
-<div>
+<div> 
 <?php
+// ************************TO HIDE DIV in HTML use <div style='display:none';>********************
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -23,8 +24,9 @@ try {
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
+    $mail->AddEmbeddedImage('MT Logo.png', '1mtlogo');
     $mail->setFrom('no-reply@1milliontraders.com', '1MillionTraders');
-    $mail->addAddress(/*INSERT YOUR EMAIL _POST here */);//htmlspecialchars($_POST['email']), '');     // Add a recipient
+    $mail->addAddress('jzlow132@gmail.com');//htmlspecialchars($_POST['email']), '');     // Add a recipient
     $mail->SMTPOptions = array(
     'ssl' => array(
         'verify_peer' => false,
@@ -34,9 +36,8 @@ try {
 );
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'RE: '. htmlspecialchars($_POST['replySubject']);
-    $mail->Body    = '<h2> Hello,'. htmlspecialchars($_POST['email']).'</h2><br>Thank You for your support. <br><br>'.htmlspecialchars($_POST['replymsg'])
-    .'<br><hr><br><h2><i><b>Always Fresh</b><br>Easy Peasy Customer Service</i></h2>'.'<br>email: easypeasyupm@gmail.com' ;
+    $mail->Subject = 'Welcome to 1MillionTraders';
+    $mail->Body    = '' ; //PASTE HTML BODY HERE!
 
 
     $mail->send();
