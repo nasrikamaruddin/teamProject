@@ -1229,4 +1229,10 @@ body a{
 .contact-form-center2{
     padding: 4em 4em 4em 4em;
 }
+.alert-success-signup {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+	text-align: center;
+}
   /*-- //responsive --*/

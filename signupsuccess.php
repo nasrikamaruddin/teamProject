@@ -112,13 +112,14 @@ if(isset($_SESSION['loginUser'])) {
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-12"> 
-						<div class="alert alert-success">
+						<div class="alert alert-success-signup">
 							<strong>Congratulations!</strong></br>
 							<p>You've signed up as one of our 1 Million Traders Members and thank you for your payment.</br>
 							Click Log In below to began a apart of 1 Million Traders.</p>
 						</div>
-						
-						<button type="button"  class="btn btn-success" style="width:10em;">Log In</button>	
+						<div>
+						<button type="button"  class="btn btn-success center-block" style="width:10em;">Log In</button>
+						</div>
 						</div>
 					</div>
 					</br>
