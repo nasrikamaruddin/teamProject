@@ -6,7 +6,7 @@
     text-align: center; 
     width: 100%; 
     padding: 8%; 
-    background: #EAEAEA; 
+    background: white; 
     color: #333333;
 }
 .block-container p:hover{background:white;}
@@ -24,7 +24,7 @@
 .block-footer{text-align: center; padding: 10%;}
 .subscribe-now{border: 1px solid #FF592D; padding: 15px; border-radius: 4%; color:#333333; font-weight: bold; }
 .subscribe-now:hover{text-decoration: none; background: #FF592D; color: #fff;}
-.active-block { box-shadow:0px 0px 10px #D9E0DB;}
+.active-block { box-shadow:0px 0px 10px white;}
 .active-block .block-header{ 
     background: #D28D0D;
     color: #fff;
@@ -34,7 +34,7 @@
 }
 .active-block .block-footer a{
     background: #D28D0D; 
-    color: #fff; 
+    color: white; 
     border:none;
 }
 .active-block .block-footer a:hover{ 
@@ -47,7 +47,7 @@
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 /* Style the buttons inside the tab */
@@ -64,7 +64,7 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: white;
 }
 
 /* Create an active/current tablink class */

@@ -25,7 +25,7 @@ body a{
 	  background:#FFFFFF;
   }
   .banner{
-	  background: url(../images/3.jpg) no-repeat 0px 0px;
+	  background: url(../images/1.jpg) no-repeat 0px 0px;
 	  background-size: cover;
   }
   .agileinfo-dot{
@@ -259,7 +259,7 @@ body a{
   /*-- //introduction --*/
   /*-- about --*/
   .about,.contact{
-	  background: #403F45;
+	  background: #333;
   }
   .about-heading h3{
 	  color:#FFFFFF;
@@ -419,12 +419,10 @@ body a{
 	  background-size: cover;
   }
   .team-dot {
-	  background: url(../images/dott.png)repeat 0px 0px;
-	  background-size: 5px;
-	  -webkit-background-size: 2px;
-	  -moz-background-size: 2px;
-	  -o-background-size: 2px;
-	  -ms-background-size: 2px;
+	  background: url(../images/dott.png) repeat 0px 0px;
+	  background-size: cover;
+          overflow: hidden;
+
   }
   .team-info{
 	  position: relative;
