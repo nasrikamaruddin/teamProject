@@ -11,7 +11,7 @@
   <fieldset>
     <h2 class="fs-title">Login</h2>
     <h3 class="fs-subtitle">Login into system</h3>
-	<input type="email" name="loginEmail" placeholder="Email" required>
+	<input type="text" name="loginUserID" placeholder="User ID" required>
     <input type="password" name="loginPassword" placeholder="Password" required>
 	<hr>
     <input type="submit" name="login" class="action-button-login" value="LOGIN" />
