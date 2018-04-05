@@ -304,6 +304,7 @@ echo "Connected Successfully";
 				alert("Your passwords don't match. Try again?");
 				return false;
 				}
+	}
 				
 	</script>
 
