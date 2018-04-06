@@ -1,3 +1,19 @@
+<?php
+
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+}
+$username = $_SESSION['username'];
+$code = $_SESSION['referralID'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +96,7 @@
 									<li><a class="scroll">
                                                                          
 									<?php 
-										if($_SESSION['logged']==true)
+										if($_SESSION['loginUser']==true)
 										{ 
 											echo $_SESSION["username"];
 										}
