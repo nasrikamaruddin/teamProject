@@ -1,7 +1,4 @@
 <?php
-<<<<<<< HEAD
-include 'db_connection.php';
-=======
 
 include 'db_connection.php';
 
@@ -17,7 +14,6 @@ $username = $_SESSION['username'];
 $code = $_SESSION['referralID'];
 
 ?>
->>>>>>> a7b2e28adef9a868d635ef0b69cd387c129f76b3
 
 $conn = OpenCon();
 
