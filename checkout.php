@@ -1,3 +1,20 @@
+<?php
+
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+}
+
+$code = $_SESSION['referralID'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,18 +125,36 @@
 		<form method="get">
 		<div class="form-group">
 		<div class = "row" align="center" style="margin-left: 110px;">
-			<div class="column" style="margin-left: 70px;"><label class="btn btn-primary"><img src="src/images/visa.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off"></label></div>
-			<div class="column"><label class="btn btn-primary"><img src="src/images/mastercard.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val2" class="hidden" autocomplete="off"></label></div>
-			<div class="column" ><label class="btn btn-primary"><img src="src/images/maybank2u.png" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val3" class="hidden" autocomplete="off"></label></div>
-		</div >
+			<div class="column" style="margin-left: 70px;">
+				<label class="btn btn-primary"><img src="src/images/visa.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="visa" onchange="if(this.checked){goTo('https://sandbox.molpay.com/MOLPay/pay/SB_upm/index.php?amount=10.00&orderid=IDEA2018-CC&cur=MYR&vcode=301185785c0b6c7282b9c4a544e20d0c&bill_desc=IDEA+2018')}" required ></label>
+				</div>
+
+			<div class="column">
+				<label class="btn btn-primary"><img src="src/images/mastercard.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="master" onchange="if(this.checked){goTo('https://sandbox.molpay.com/MOLPay/pay/SB_upm/index.php?amount=10.00&orderid=IDEA2018-CC&cur=MYR&vcode=301185785c0b6c7282b9c4a544e20d0c&bill_desc=IDEA+2018')}" required></label>
+			</div>
+			
+			<div class="column" >
+				<label class="btn btn-primary"><img src="src/images/maybank2u.png" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="maybank" onchange="if(this.checked){goTo('https://sandbox.molpay.com/MOLPay/pay/SB_upm/MB2u.php?amount=10.00&orderid=IDEA2018-M2U&cur=MYR&vcode=b3539fc84e54731280e7b6998538e455&bill_desc=IDEA+2018')}" required></label></div>
+			</div >
+
 		<div class = "row" align="center" style="margin-left: 350px;">
-			<div class="column" ><label class="btn btn-primary"><img src="src/images/cimb.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
-			<div class="column" ><label class="btn btn-primary"><img src="src/images/bi.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
+			<div class="column" >
+				<label class="btn btn-primary"><img src="src/images/cimb.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="cimb" onchange="if(this.checked){goTo('https://sandbox.molpay.com/MOLPay/pay/SB_upm/cimb.php?amount=10.00&orderid=IDEA2018-CIMB&cur=MYR&vcode=1e7fe1e54e010306c279e7b5b3d7012b&bill_desc=IDEA+2018')}" required></label>
+			</div>
+
+			<div class="column" >
+				<label class="btn btn-primary"><img src="src/images/bi.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="ism" onchange="if(this.checked){goTo('https://sandbox.molpay.com/MOLPay/pay/SB_upm/BIMB.php?amount=10.00&orderid=IDEA2018-BankIslam&cur=MYR&vcode=a794822e5c34a1ea1672d744db86d1ca&bill_desc=IDEA+2018')}" required></label>
+			</div>
 			</div>
 		</div >
 		<div class="clearfix"></div>
 		<br>
-		<input type="submit" value="Check Item" class="btn btn-success" style="center">
+		<input type="button" value="Proceed to payment" class="btn btn-primary" onclick="pay()">
 		<br>
 		</form>
 	</div>	
@@ -184,6 +219,16 @@
 	});
 	</script>
 
+<script type="text/javascript">
+/* <![CDATA[ */
+function pay() {
+window.location.href = chk1;
+}
+function goTo(URL) {
+chk1 = URL;
+} 
+/* ]]> */
+</script>
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
