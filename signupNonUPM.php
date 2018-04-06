@@ -29,34 +29,31 @@ if( isset($_POST["submitStudent"]) ){
 		$unique = uniqid('', true);
 		$uniq = substr($unique, strlen($unique) - 4, strlen($unique));
 		
-		
-	if (!empty($code)) {
- 
-$sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData'); INSERT INTO referral (userID, code) VALUES ('$userID', '$code');";
+		session_start();
+		$_SESSION['loginUser'] =$userID;
+		$_SESSION['fullname'] = $fullname;
+		$_SESSION['contact'] = $contact;
+		$_SESSION['email'] = $email;
+		$_SESSION['address'] = $address;
+		$_SESSION['studentid'] = $studentid;
+		$_SESSION['university'] = $university;
+		$_SESSION['faculty'] = $faculty;
+		$_SESSION['programme'] = $programme;
+		$_SESSION['classification'] = $classification;
+		$_SESSION['username'] = $username;
+		$_SESSION['password'] = $password;
+		$_SESSION['referralID'] = $code;
+		$_SESSION['imageName'] = $imageName;
+		$_SESSION['imageData'] = $imageData;
+		$_SESSION['imageType'] = $imageType;
 
 
-} else if ($code == ""){ 
-$sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData');";
-}
+header("Location: http://localhost/teamProject/membershipPlan.php");
 
-		
-if ($conn->multi_query($sql) === TRUE) {
-    echo "New record created successfully ";
-	session_start();
-	$_SESSION['loginUser'] =$userID;
-	$_SESSION['referralID'] = $code;
-	echo 'session create'.$_SESSION['loginUser'];
-	header("Location: http://localhost/teamProject/membershipPlanNonUPM.php");
-	
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-
-	echo '<script>history.back();</script>';
-	
-}	
 
 }
 
 
 $conn->close();
 ?>
+	

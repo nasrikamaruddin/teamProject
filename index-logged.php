@@ -15,16 +15,6 @@ $code = $_SESSION['referralID'];
 
 ?>
 
-$conn = OpenCon();
-
-echo "Connected Successfully";
-
-session_start();
-if(isset($_SESSION['loginUser'])) {
-  echo "Your session is running " . $_SESSION['loginUser'];
-  }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,11 +96,11 @@ if(isset($_SESSION['loginUser'])) {
 									<li><a class="scroll">
                                                                          
 									<?php 
-<<<<<<< HEAD
+
 										
-=======
+
 										if($_SESSION['loginUser']==true)
->>>>>>> a7b2e28adef9a868d635ef0b69cd387c129f76b3
+
 										{ 
 											echo "tempusername";
 										}
