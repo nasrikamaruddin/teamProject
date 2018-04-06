@@ -295,253 +295,342 @@ if(isset($_SESSION['loginUser'])) {
                                 <!--UPM Student Plan-->
                                 <div id="upm" class="tabcontent">
                                      <div class="row">
-              <!--Silver-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>SILVER</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;"></i>FREE</p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Gold-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks active-block">
-                      <div class="block-header">
-                          <h4>GOLD</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Diamond-->
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>DIAMOND</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
+<div class="contact-form">
+		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Membership Plan for Student</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
+			<div class="panel panel-info">
+            <div class="panel-body">
+
+				<div class="row" style="margin:2px;">
+				  <!--Silver-->                  
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="blocks">
+							<div class="block-header">
+							  <h4>SILVER</h4>
+							</div>
+							<div class="block-container">
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								<p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								<p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								<p class="price"><i style="font-size: 30px;"></i>FREE</p>
+							</div>
+							<div class="block-footer">
+								<form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
+							</form>
+							</div>
+						</div>
+					</div>
+				  <!--Gold-->                  
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="blocks active-block">
+							<div class="block-header">
+								<h4>GOLD</h4>
+							</div>
+							<div class="block-container">
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								<p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								<p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>
+							</div>
+							<div class="block-footer">
+								<form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
+							</form>
+							</div>
+						</div>
+					</div>
+				  <!--Diamond-->
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="blocks">
+							<div class="block-header">
+								<h4>DIAMOND</h4>
+							</div>
+							<div class="block-container">
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								<p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
+							</div>
+							<div class="block-footer">
+								<form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+		</div>
+		</div>
+		</div>
         </div><!--//upm student-->
         <!--Non upm-->                    
         <div id="nonupm" class="tabcontent">
                <div class="row">
-              <!--Silver-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>SILVER</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Gold-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks active-block">
-                      <div class="block-header">
-                          <h4>GOLD</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Diamond-->
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>DIAMOND</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-           </div><!--non upm-->
+              <div class="contact-form">
+		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Membership Plan for Non UPM Student</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
+			<div class="panel panel-info">
+				<div class="panel-body">
+					<!--row -->
+					<div class="row" style="margin:2px;">
+					  <!--Silver-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>SILVER</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Gold-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks active-block">
+							  <div class="block-header">
+								  <h4>GOLD</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Diamond-->
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>DIAMOND</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+					<!-- // row -->
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</div><!--non upm-->
            <!--public-->
                                 <div id="public" class="tabcontent">
                                                             <div class="row">
-              <!--Silver-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>SILVER</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Gold-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks active-block">
-                      <div class="block-header">
-                          <h4>GOLD</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Diamond-->
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>DIAMOND</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>100<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-                                </div><!--public-->
-                                <!--senior-->
-                                 <div id="senior" class="tabcontent">
+              					  					  <!--Silver-->                  
+					  	<div class="contact-form">
+		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Membership Plan for Public</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
+			<div class="panel panel-info">
+				<div class="panel-body">
+					<div class="row" style="margin:2px;">
+					  <!--Silver-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>SILVER</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Gold-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks active-block">
+							  <div class="block-header">
+								  <h4>GOLD</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Diamond-->
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>DIAMOND</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>100<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+                       </div>
+                </div>
+<div id="senior" class="tabcontent">
                                                             <div class="row">
-              <!--Silver-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>SILVER</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
-                         <p class="price"><i style="font-size: 30px;"></i>FREE</p>
-                    </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Gold-->                  
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks active-block">
-                      <div class="block-header">
-                          <h4>GOLD</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-              <!--Diamond-->
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="blocks">
-                      <div class="block-header">
-                          <h4>DIAMOND</h4>
-                      </div>
-                      <div class="block-container">
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
-                          <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
-                          <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
-                      </div>
-                      <div class="block-footer">
-                          <a class="subscribe-now" href="#">Subscribe Now</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-                                </div>
+	<div class="contact-form">
+		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Membership Plan for Senior</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
+			<div class="panel panel-info">
+				<div class="panel-body">
+					<div class="row" style="margin:2px">
+					  <!--Silver-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>SILVER</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								 <p class="price"><i style="font-size: 30px;"></i>FREE</p>
+							</div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+						</div>
+					 
+					  <!--Gold-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks active-block">
+							  <div class="block-header">
+								  <h4>GOLD</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Diamond-->
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>DIAMOND</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="signup.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
                        </div>
                 </div>
 </div>
-				
+</div>	
+</div>	
+</div>	
 	<!-- //Membership Plan -->
 	<!-- news -->
 	<div class="news" id="news">
