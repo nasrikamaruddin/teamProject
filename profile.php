@@ -3,16 +3,16 @@ include 'db_connection.php';
 
 $conn = OpenCon();
 
-echo "Connected Successfully";
+//echo "Connected Successfully";
 
 session_start();
 if(isset($_SESSION['loginUser'])) {
-  echo "Your session is running " . $_SESSION['loginUser'];
+ // echo "Your session is running " . $_SESSION['loginUser'];
   }
-
-
-
-
+$userIDD = $_SESSION['loginUser'];
+$query22 = mysqli_query($conn,"select username from 1milliontraders where userID='$userIDD'");						
+$row22 = mysqli_fetch_array($query22);
+$username = $row22['username'];
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ if(isset($_SESSION['loginUser'])) {
 								<span class="icon-bar"></span>
 							</button>
 							<div class="agileits-logo">
-								<h1><a href="index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
+								<h1><a href="index-logged.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
 							</div>
 						</div>
 
@@ -89,11 +89,24 @@ if(isset($_SESSION['loginUser'])) {
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan </a></li>
-									<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="index-logged.php">About</a></li>
+									<li><a href="index-logged.php">Events</a></li>
+									<li><a href="index-logged.php">News</a></li>
+									<li><a href="index-logged.php">Plan & Upgrade</a></li>
+									<li><a class="scroll">
+                                                                         
+									<?php 
+										if($_SESSION['loginUser']==true){ 
+											echo $username;
+										}
+                                    ?> <span class="fa fa-caret-down"></span></a>
+										<ul>
+										<li><a href="profile.php">Profile</a></li>
+										<li><a href="invitationCode.php" >Invitation Code</a></li>
+										<li><a href="#" class="scroll">Setting</a></li>
+										<li><a href="logout.php">Logout</a></li>
+										</ul>
+									</li>                     
 								</ul>
 							</nav>
 						</div>
@@ -145,9 +158,9 @@ $get_info= "select * from 1milliontraders where userID='$userID'";
 		
                     <tbody>
                     <tr>
-							<td>User ID</td>
-							<td>:</td>
-							<td>$info_userID</td>
+							<td style='width:12em;'>User ID</td>
+							<td style='width:2em;'>:</td>
+							<td style='width:40em;'>$info_userID</td>
 						</tr>
 						<tr>
 							<td>Membership</td>
@@ -212,9 +225,9 @@ $get_info= "select * from 1milliontraders where userID='$userID'";
 					echo "
 						<tbody>
 						<tr>
-							<td>Student ID</td>
-							<td>:</td>
-							<td>$info_studentID</td>
+							<td style='width:12em;'>Student ID</td>
+							<td style='width:2em;'>:</td>
+							<td style='width:40em;'>$info_studentID</td>
 						</tr>
 						<tr>
 							<td>University</td>

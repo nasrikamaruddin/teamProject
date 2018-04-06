@@ -8,7 +8,10 @@ session_start();
 if(isset($_SESSION['loginUser'])){
 $loginuser = $_SESSION['loginUser'];} 
 
-else $loginuser = 181666;
+$userIDD = $_SESSION['loginUser'];
+$query22 = mysqli_query($conn,"select username from 1milliontraders where userID='$userIDD'");						
+$row22 = mysqli_fetch_array($query22);
+$username = $row22['username'];
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +80,7 @@ else $loginuser = 181666;
 								<span class="icon-bar"></span>
 							</button>
 							<div class="agileits-logo">
-								<h1><a href="index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
+								<h1><a href="index-logged.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
 							</div>
 						</div>
 
@@ -85,23 +88,22 @@ else $loginuser = 181666;
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#team" class="scroll">Plan & Upgrade</a></li>
+									<li><a href="index-logged.php">About</a></li>
+									<li><a href="index-logged.php">Events</a></li>
+									<li><a href="index-logged.php">News</a></li>
+									<li><a href="index-logged.php">Plan & Upgrade</a></li>
 									<li><a class="scroll">
                                                                          
 									<?php 
-										if(isset($loginuser))
-										{ 
-											echo $_SESSION["username"];
+										if($_SESSION['loginUser']==true){ 
+											echo $username;
 										}
-                                    ?> </a>
+                                    ?> <span class="fa fa-caret-down"></span></a>
 										<ul>
 										<li><a href="profile.php">Profile</a></li>
 										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#" class="scroll">Setting</a></li>
-										<li><a href="#" class="scroll">Logout</a></li>
+										<li><a href="#">Setting</a></li>
+										<li><a href="logout.php">Logout</a></li>
 										</ul>
 									</li>
 								</ul>
