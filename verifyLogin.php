@@ -21,6 +21,7 @@
 			else {
 			session_start();
 			$_SESSION['loginUser']= $_POST["loginUserID"]; 
+			header("Location: index-logged.php");
 			}
 		}		
 		if(isset($_SESSION['teamtojoin'])){
