@@ -4,11 +4,11 @@ include 'db_connection.php';
 
 $conn = OpenCon();
 
-echo "Connected Successfully";
+//echo "Connected Successfully";
 
 session_start();
 if(isset($_SESSION['loginUser'])) {
-  echo "Your session is running " . $_SESSION['loginUser'];
+ // echo "Your session is running " . $_SESSION['loginUser'];
 }
 
 $code = $_SESSION['referralID'];
@@ -42,8 +42,6 @@ $code = $_SESSION['referralID'];
 <link type="text/css" rel="stylesheet" href="src/css/fontJosefinSans.css" />
 <link type="text/css" rel="stylesheet" href="src/css/fontRobotoCondensed.css" />
 <!-- //font -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="src/js/jquery-1.11.1.min.js"></script>
 <script src="src/js/bootstrap.js"></script>
@@ -93,11 +91,11 @@ $code = $_SESSION['referralID'];
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
-									<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="index.php">About</a></li>
+									<li><a href="index.php">Events</a></li>
+									<li><a href="index.php">Membership Registration</a></li>
+									<li><a href="index.php">News</a></li>
+									<li><a href="login.php">Log In</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -110,7 +108,7 @@ $code = $_SESSION['referralID'];
 	<!-- //banner -->
         	
 	<div class="contact-form">
-		<div class="contact-form-center">
+		<div class="contact-form-center" style="height: 100%; ">
 			<div class="w3l-heading">
 				<h3>Payment Options</h3>
 				<div class="w3ls-border"> </div>
@@ -171,7 +169,7 @@ $code = $_SESSION['referralID'];
 	<!-- //profile -->
 
 	<!-- footer -->
-	<footer>
+	<footer style="position: fixed;left: 0;bottom: 0;width: 100%; text-align: center;">
 		<div class="container">
 			<p>© 2018 1MillionTraders . All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a> </p>
 		</div>

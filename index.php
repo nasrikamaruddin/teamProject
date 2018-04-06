@@ -1,14 +1,3 @@
-<?php
-include 'db_connection.php';
-
-$conn = OpenCon();
-
-echo "Connected Successfully";
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,13 +72,11 @@ echo "Connected Successfully";
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-																		<li><a href="#about" class="scroll">About</a></li>
-
-<li><a href="#events" class="scroll">Events</a></li>
-		
-<li><a href="#team" class="scroll">Membership Registration</a></li>
+									<li><a href="#about" class="scroll">About</a></li>
+									<li><a href="#events" class="scroll">Events</a></li>
+									<li><a href="#team" class="scroll">Membership Registration</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-																		<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="login.php">Log In</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -273,7 +260,7 @@ echo "Connected Successfully";
 	</div>
 <!-- //Events -->
 	<!-- Membership Plan -->
-<div class="team jarallax" id="team">
+<div class="team jarallax" id="team" name="team">
 		<div class="team-dot">
                     
 			<div class="container">
@@ -287,6 +274,7 @@ echo "Connected Successfully";
                                 <button class="tablinks" onclick="openCity(event, 'nonupm')">Non UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'public')">Public</button>
                                 <button class="tablinks" onclick="openCity(event, 'senior')">Senior Citizen</button>
+
                                 </div>
                                 <!--UPM Student Plan-->
                                 <div id="upm" class="tabcontent">
@@ -546,7 +534,6 @@ echo "Connected Successfully";
 		<div class="contact-form-center">
 			<div class="w3l-heading">
 				<h3>Membership Plan for Senior</h3>
-				<center><p>Age 60 and above</p></center>
 				<div class="w3ls-border"> </div>
 			</div></br>
 			
@@ -716,8 +703,8 @@ echo "Connected Successfully";
 						<i class="fa fa-map-marker" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-                                            <p>C-1-30, Block C, Faculty of Computer Science & Information Technology, <br>Universiti Putra Malaysia, 43400 UPM Serdang, Selangor, Malaysia.<br><br>D-9-3, Block D, Setiawalk, Persiaran Wawasan, Pusat Bandar Puchong, 47100 Puchong, Selangor, Malaysia.
-						</p>
+                                            <p><b>C-1-30, Block C, Faculty of Computer Science & Information Technology, <br>Universiti Putra Malaysia, 43400 UPM Serdang, Selangor, Malaysia.<br><br>D-9-3, Block D, Setiawalk, Persiaran Wawasan, Pusat Bandar Puchong, 47100 Puchong, Selangor, Malaysia.
+						</b></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -726,9 +713,9 @@ echo "Connected Successfully";
 						<i class="fa fa-phone" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-						<p>+603 – 89471799 (Office)<br>
-						+6013 – 3884778 (Mobile)</p>
-					</div>
+						<p><b>+603 – 89471799 (Office)<br>
+						+6013 – 3884778 (Mobile)<b></p>
+ 					</div>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="address-grid">
@@ -736,7 +723,7 @@ echo "Connected Successfully";
 						<i class="fa fa-envelope" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-						<p><a href="mailto:twkoh@upm.edu.my">Dr. Koh Tieng Wei <br> twkoh@upm.edu.my</a></p>
+						<p><b><a href="mailto:twkoh@upm.edu.my">Dr. Koh Tieng Wei <br> twkoh@upm.edu.my</a></b></p>
 					</div>
 					<div class="clearfix"> </div>
                                 </div><br>
@@ -745,8 +732,8 @@ echo "Connected Successfully";
 						<i class="fa fa-calendar" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-                                            <p>Monday-Friday: 9:00AM–5:00PM <br>
-                                               Saturday, Sunday & Public Holiday: Off</p>
+                                            <p><b>Monday-Friday: 9:00AM–5:00PM <br>
+                                               Saturday, Sunday & Public Holiday: Off</b></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
