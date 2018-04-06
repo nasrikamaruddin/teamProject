@@ -49,7 +49,7 @@ if( isset($_POST["submitStudentUPM"]) ){
 		$_SESSION['imageType'] = $imageType;
 
 
-header("Location: http://localhost/milliont/teamProject/membershipPlan.php");
+header("Location: http://localhost/teamProject/membershipPlan.php");
 
 
 }
