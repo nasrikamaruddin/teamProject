@@ -20,13 +20,13 @@ if (!empty($code)) {
       $codeCount = $res['codeCount'];
       if ($codeCount < 10) {
        
-         $sql = "UPDATE 1milliontraders SET userType = 'silver' WHERE userID = '$code'";
+         $sql = "UPDATE 1milliontraders SET userType = 'Silver' WHERE userID = '$code'";
       } else if ($codeCount < 20) {
       
-        $sql = "UPDATE 1milliontraders SET userType = 'gold' WHERE userID = '$code'";
+        $sql = "UPDATE 1milliontraders SET userType = 'Gold' WHERE userID = '$code'";
       } else if ($codeCount >= 20) {
       
-        $sql = "UPDATE 1milliontraders SET userType = 'diamond' WHERE userID = '$code'";
+        $sql = "UPDATE 1milliontraders SET userType = 'Diamond' WHERE userID = '$code'";
       }
 
 }

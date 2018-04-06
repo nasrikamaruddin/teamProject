@@ -49,12 +49,12 @@ if ($conn->multi_query($sql) === TRUE) {
 	header("Location: http://localhost/teamProject/membershipPlan.php");
 	
 } else {
-<<<<<<< HEAD
+
     echo "Error: " . $sql . "<br>" . $conn->error;
 
-=======
+
 	echo"alert('Error:'  . $sql . '<br>' . $conn->error')";
->>>>>>> b89614b69d6bf4bf4106d820d8ead1ab33e5ab8e
+
 	echo '<script>history.back();</script>';
 	
 }	

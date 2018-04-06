@@ -30,10 +30,10 @@ if (!empty($code)) {
 if ($userType == 'Silver') {
 	
 $sql = "UPDATE 1milliontraders SET userType = 'Silver' WHERE userID = '$userID' ;UPDATE 1milliontraders SET codeCount = codeCount+1 WHERE userID =  '$code'"; 
-}   else if ($userType == 'gold') {
+}   else if ($userType == 'Gold') {
 
 $sql = "UPDATE 1milliontraders SET userType = 'Gold' , codeCount = '10' WHERE userID = '$userID';UPDATE 1milliontraders SET codeCount = codeCount+2 WHERE userID =  '$code'";	
- }   else if ($userType == 'diamond') {
+ }   else if ($userType == 'Diamond') {
 
 $sql = "UPDATE 1milliontraders SET userType = 'Diamond' , codeCount = '20' WHERE userID = '$userID';UPDATE 1milliontraders SET codeCount = codeCount+10 WHERE userID =  '$code'";
 } 
@@ -44,10 +44,10 @@ $sql = "UPDATE 1milliontraders SET userType = 'Diamond' , codeCount = '20' WHERE
 	if ($userType == 'Silver') {
 	
 $sql = "UPDATE 1milliontraders SET userType = 'Silver' WHERE userID = '$userID'"; 
-}   else if ($userType == 'gold') {
+}   else if ($userType == 'Gold') {
 
 $sql = "UPDATE 1milliontraders SET userType = 'Gold' , codeCount = '10' WHERE userID = '$userID'";	
- }   else if ($userType == 'diamond') {
+ }   else if ($userType == 'Diamond') {
 
 $sql = "UPDATE 1milliontraders SET userType = 'Diamond' , codeCount = '20' WHERE userID = '$userID'";
 } 

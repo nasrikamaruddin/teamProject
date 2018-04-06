@@ -109,12 +109,9 @@ echo "Connected Successfully";
 			</div></br>
 			<div class="panel panel-info">
             <div class="panel-body">
-<<<<<<< HEAD
+
 			<form action="signupNonUPM.php" onsubmit="return validation()" method="POST" enctype="multipart/form-data">
-=======
-	
-			<form action="membershipPlanNonUPM.php" >
->>>>>>> b89614b69d6bf4bf4106d820d8ead1ab33e5ab8e
+
 				
 				<div class="row">
 					<div class="col-md-12"> 
