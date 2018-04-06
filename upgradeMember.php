@@ -1,4 +1,5 @@
 <?php
+
 include 'db_connection.php';
 
 $conn = OpenCon();
@@ -8,10 +9,9 @@ echo "Connected Successfully";
 session_start();
 if(isset($_SESSION['loginUser'])) {
   echo "Your session is running " . $_SESSION['loginUser'];
-  }
+}
 
-
-
+$code = $_SESSION['referralID'];
 
 ?>
 
@@ -92,7 +92,7 @@ if(isset($_SESSION['loginUser'])) {
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan </a></li>
+									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
 									<li><a href="login.php" class="scroll">Log In</a></li>
 								</ul>
 							</nav>
@@ -110,147 +110,82 @@ if(isset($_SESSION['loginUser'])) {
 	<!-- profile -->
 	<div class="contact-form">
 		<div class="contact-form-center">
+			<div class="w3l-heading">
+				<h3>Membership Plan for Student</h3>
+				<div class="w3ls-border"> </div>
+			</div></br>
+			
 			<div class="panel panel-info">
             <div class="panel-body">
-				<div class="w3l-heading">
-					<h3>Member Profile</h3>
-					<div class="w3ls-border-custom"> </div>
-				</div></br>
-				<div class="row">
-					<div class="col-md-12"> 
-					  <table class="table table-user-information">
 
-<?php
-$userID = $_SESSION['loginUser'];
-$get_info= "select * from 1milliontraders where userID='$userID'";
-	
-	$run_info= mysqli_query($conn,$get_info);
-	
-	$row_info=mysqli_fetch_array($run_info);
-		$info_userID = $row_info['userID'];
-		$info_userType = $row_info['userType'];
-		$info_codeCount = $row_info['codeCount'];
-		$info_username = $row_info['username'];
-		$info_fullname = $row_info['fullname'];
-		$info_contact = $row_info['contact'];
-		$info_email = $row_info['email'];
-		$info_address = $row_info['address'];
-		$info_studentID = $row_info['studentID'];
-		$info_university = $row_info['university'];
-		$info_faculty = $row_info['faculty'];
-		$info_programme = $row_info['programme'];
-		$info_classification = $row_info['classification'];
-		
-		echo "
-		
-                    <tbody>
-                    	<tr>
-							<td>User ID</td>
-							<td>:</td>
-							<td>$info_userID</td>
-						</tr>
-						<tr>
-							<td>Membership</td>
-							<td>:</td>
-							<td>$info_userType</td>
-						</tr>
-						<tr>
-							<td>Point</td>
-							<td>:</td>
-							<td>$info_codeCount</td>
-						</tr>
-						<tr>
-							<td>Username</td>
-							<td>:</td>
-							<td>$info_username</td>
-						</tr>
-						<tr>
-							<td>Name</td>
-							<td>:</td>
-							<td>$info_fullname</td>
-						</tr>
-						<tr>
-							<td>Phone Number</td>
-							<td>:</td>
-							<td>$info_contact</td>
-						</tr>
-						<tr>
-							<td>Email</td>
-							<td>:</td>
-							<td>$info_email</td>
-						</tr>
-						<tr>
-							<td>Address</td>
-							<td>:</td>
-							<td>$info_address</td>
-						</tr>
-					</tbody>
-						";?>
-
-					  </table>
-					  <form action="upgradeMember.php" method="POST">
-					  <input type="submit" id="upgrade" name="upgrade" style="float:right;" value="Upgrade Membership" class="btn btn-primary">
-					</form>
+				<div class="row" style="margin:2px;">
+				  <!--Silver-->                  
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="blocks">
+							<div class="block-header">
+							  <h4>SILVER</h4>
+							</div>
+							<div class="block-container">
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								<p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								<p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								<p class="price"><i style="font-size: 30px;"></i>FREE</p>
+							</div>
+							<div class="block-footer">
+								<form action="upgrade.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userTypeUp" id="userType" value="Silver">Subscribe Now</a>
+							</form>
+							</div>
+						</div>
+					</div>
+				  <!--Gold-->                  
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="blocks active-block">
+							<div class="block-header">
+								<h4>GOLD</h4>
+							</div>
+							<div class="block-container">
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								<p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								<p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>
+							</div>
+							<div class="block-footer">
+								<form action="upgrade.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userTypeUp" id="userType" value="Gold">Subscribe Now</a>
+							</form>
+							</div>
+						</div>
+					</div>
+				  <!--Diamond-->
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="blocks">
+							<div class="block-header">
+								<h4>DIAMOND</h4>
+							</div>
+							<div class="block-container">
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								<p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								<p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
+							</div>
+							<div class="block-footer">
+								<form action="upgrade.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userTypeUp" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
+							</div>
+						</div>
 					</div>
 				</div>
-				
-				
-            </div>
-                 
+			</div>
         </div>
-
-
-		<div class="panel panel-info">
-            <div class="panel-body">
-				<div class="w3l-heading">
-					<h3>Student Profile</h3>
-					<div class="w3ls-border-custom"> </div>
-				</div></br>
-				
-				<div class="row">
-					<div class="col-md-12"> 
-					  <table class="table table-user-information">
-					<?php
-					echo "
-						<tbody>
-						<tr>
-							<td>Student ID</td>
-							<td>:</td>
-							<td>$info_studentID</td>
-						</tr>
-						<tr>
-							<td>University</td>
-							<td>:</td>
-							<td>$info_university</td>
-						</tr>
-						<tr>
-							<td>Faculty</td>
-							<td>:</td>
-							<td>$info_faculty</td>
-						</tr>
-						<tr>
-							<td>Programme</td>
-							<td>:</td>
-							<td>$info_programme</td>
-						</tr>
-						<tr>
-							<td>Classification</td>
-							<td>:</td>
-							<td>$info_classification</td>
-							
-						</tr>
-						</tbody>
-						
-						";
-						?>
-						
-					  </table>
-					</div>
-				</div>
-				
-            </div>
-                 
-         </div>
+		</div>
 		</div>
 	<!-- //profile -->
 
@@ -290,6 +225,7 @@ $get_info= "select * from 1milliontraders where userID='$userID'";
 								
 			});
 	</script>
+	
 <!-- //here ends scrolling icon -->
 </body>	
 </html>

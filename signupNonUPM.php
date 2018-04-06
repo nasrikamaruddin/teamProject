@@ -48,7 +48,7 @@ if( isset($_POST["submitStudent"]) ){
 		$_SESSION['imageType'] = $imageType;
 
 
-header("Location: http://localhost/teamProject/membershipPlan.php");
+header("Location: http://localhost/teamProject/membershipPlanNonUPM.php");
 
 
 }

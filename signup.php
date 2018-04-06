@@ -10,7 +10,7 @@ if(isset($_SESSION['loginUser'])) {
   echo "Your session is running " . $_SESSION['loginUser'];
   }
 
-$userType = $_POST['userType'];
+		$userType = $_POST['userType'];
 		$userID = $_SESSION['loginUser'];
 		$fullname = $_SESSION['fullname'];
 		$contact = $_SESSION['contact'];
@@ -39,7 +39,6 @@ if (!empty($code)) {
       $codeCount = $res['codeCount'];  
 
 
-	
  if ($userType == 'Silver') {
 $sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType'); INSERT INTO referral (userID, code) VALUES ('$userID', '$code'); UPDATE 1milliontraders SET codeCount = codeCount+1 WHERE userID =  '$code';";
 } else if ($userType == 'Gold') {
