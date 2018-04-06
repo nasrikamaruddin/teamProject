@@ -716,8 +716,8 @@ echo "Connected Successfully";
 						<i class="fa fa-map-marker" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-                                            <p>C-1-30, Block C, Faculty of Computer Science & Information Technology, <br>Universiti Putra Malaysia, 43400 UPM Serdang, Selangor, Malaysia.<br><br>D-9-3, Block D, Setiawalk, Persiaran Wawasan, Pusat Bandar Puchong, 47100 Puchong, Selangor, Malaysia.
-						</p>
+                                            <p><b>C-1-30, Block C, Faculty of Computer Science & Information Technology, <br>Universiti Putra Malaysia, 43400 UPM Serdang, Selangor, Malaysia.<br><br>D-9-3, Block D, Setiawalk, Persiaran Wawasan, Pusat Bandar Puchong, 47100 Puchong, Selangor, Malaysia.
+						</b></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -726,9 +726,9 @@ echo "Connected Successfully";
 						<i class="fa fa-phone" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-						<p>+603 – 89471799 (Office)<br>
-						+6013 – 3884778 (Mobile)</p>
-					</div>
+						<p><b>+603 – 89471799 (Office)<br>
+						+6013 – 3884778 (Mobile)<b></p>
+ 					</div>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="address-grid">
@@ -736,7 +736,7 @@ echo "Connected Successfully";
 						<i class="fa fa-envelope" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-						<p><a href="mailto:twkoh@upm.edu.my">Dr. Koh Tieng Wei <br> twkoh@upm.edu.my</a></p>
+						<p><b><a href="mailto:twkoh@upm.edu.my">Dr. Koh Tieng Wei <br> twkoh@upm.edu.my</a></b></p>
 					</div>
 					<div class="clearfix"> </div>
                                 </div><br>
@@ -745,8 +745,8 @@ echo "Connected Successfully";
 						<i class="fa fa-calendar" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-                                            <p>Monday-Friday: 9:00AM–5:00PM <br>
-                                               Saturday, Sunday & Public Holiday: Off</p>
+                                            <p><b>Monday-Friday: 9:00AM–5:00PM <br>
+                                               Saturday, Sunday & Public Holiday: Off</b></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>

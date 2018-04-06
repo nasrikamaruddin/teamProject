@@ -426,9 +426,7 @@ body a{
 	  background-size: cover;
   }
   .team-dot {
-	  background: url(../images/dott.png) repeat 0px 0px;
-	  background-size: cover;
-          overflow: hidden;
+	  background-color: black;
 
   }
   .team-info{
@@ -595,7 +593,7 @@ body a{
   }
   .address-icon{
 	  float:left;
-	  width:15%;
+	  width:5%;
   }
   .address-icon i.fa.fa-map-marker,.address-icon i.fa.fa-phone,.address-icon i.fa.fa-envelope,.address-icon i.fa.fa-calendar{
 	  color: #ffffff;
