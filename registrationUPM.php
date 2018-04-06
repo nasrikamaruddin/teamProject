@@ -168,7 +168,14 @@ echo "Connected Successfully";
 						<tr>
 							<td>Classification</td>
 							<td>:</td>
-							<td><input type="text" name="classification" id="classification" value="" class="form-control" placeholder="Classification" required></td>
+								<td><select name="classification" class="form-control" id="classification" required>
+								<option selected="selected" value="">Please select ...</option>
+								<option value="Freshman">Freshman</option>
+								<option value="Sophomore">Sophomore</option>
+								<option value="Junior">Junior</option>
+								<option value="Senior">Senior</option>
+							</select>
+							</td>
 						</tr>
 						<tr>
 							<td>Student ID Image</td>

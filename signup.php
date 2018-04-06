@@ -27,29 +27,29 @@ if (!empty($code)) {
       
       $codeCount = $res['codeCount'];  
 
-if ($userType == 'silver') {
+if ($userType == 'Silver') {
 	
-$sql = "UPDATE 1milliontraders SET userType = 'silver' WHERE userID = '$userID' ;UPDATE 1milliontraders SET codeCount = codeCount+1 WHERE userID =  '$code'"; 
+$sql = "UPDATE 1milliontraders SET userType = 'Silver' WHERE userID = '$userID' ;UPDATE 1milliontraders SET codeCount = codeCount+1 WHERE userID =  '$code'"; 
 }   else if ($userType == 'gold') {
 
-$sql = "UPDATE 1milliontraders SET userType = 'gold' , codeCount = '10' WHERE userID = '$userID';UPDATE 1milliontraders SET codeCount = codeCount+2 WHERE userID =  '$code'";	
+$sql = "UPDATE 1milliontraders SET userType = 'Gold' , codeCount = '10' WHERE userID = '$userID';UPDATE 1milliontraders SET codeCount = codeCount+2 WHERE userID =  '$code'";	
  }   else if ($userType == 'diamond') {
 
-$sql = "UPDATE 1milliontraders SET userType = 'diamond' , codeCount = '20' WHERE userID = '$userID';UPDATE 1milliontraders SET codeCount = codeCount+10 WHERE userID =  '$code'";
+$sql = "UPDATE 1milliontraders SET userType = 'Diamond' , codeCount = '20' WHERE userID = '$userID';UPDATE 1milliontraders SET codeCount = codeCount+10 WHERE userID =  '$code'";
 } 
 
 }
 
 } else if (empty($code)) {
-	if ($userType == 'silver') {
+	if ($userType == 'Silver') {
 	
-$sql = "UPDATE 1milliontraders SET userType = 'silver' WHERE userID = '$userID'"; 
+$sql = "UPDATE 1milliontraders SET userType = 'Silver' WHERE userID = '$userID'"; 
 }   else if ($userType == 'gold') {
 
-$sql = "UPDATE 1milliontraders SET userType = 'gold' , codeCount = '10' WHERE userID = '$userID'";	
+$sql = "UPDATE 1milliontraders SET userType = 'Gold' , codeCount = '10' WHERE userID = '$userID'";	
  }   else if ($userType == 'diamond') {
 
-$sql = "UPDATE 1milliontraders SET userType = 'diamond' , codeCount = '20' WHERE userID = '$userID'";
+$sql = "UPDATE 1milliontraders SET userType = 'Diamond' , codeCount = '20' WHERE userID = '$userID'";
 } 
 }
 
@@ -62,7 +62,7 @@ if ($conn->multi_query($sql) === TRUE) {
 	$_SESSION['loginUser'] =$userID ;
 	$_SESSION['referralID'] = $code;
 	echo 'session create'.$_SESSION['loginUser'];
-	header("Location: http://localhost/milliont/teamProject/checkout.php");
+	header("Location: http://localhost/teamProject/checkout.php");
 	
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
