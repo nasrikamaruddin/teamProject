@@ -185,7 +185,7 @@ $code = $_SESSION['referralID'];
 				</div>
 			</div>
         </div>
-		
+		</div>
 		</div>
 	<!-- //profile -->
 

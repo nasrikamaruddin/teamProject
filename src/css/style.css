@@ -58,6 +58,13 @@ body a{
   ul li a{
 	  color:white;
   }
+  ul li ul li a:hover, ul li ul li a:focus {
+	color: #ffffff;
+	
+	background: none;
+		
+}
+/*-- dropdown list finish--*/
   .agileits-logo h1{
 	  margin:0;
   }

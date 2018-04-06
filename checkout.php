@@ -1,3 +1,20 @@
+<?php
+
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+}
+
+$code = $_SESSION['referralID'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,21 +122,39 @@
 				<div class="row" style="margin:2px;center">
 				  <div class="container">
 	<div class="row" align="center">
-		<form method="get">
+		<form action="signupsuccess.php" method="POST">
 		<div class="form-group">
 		<div class = "row" align="center" style="margin-left: 110px;">
-			<div class="column" style="margin-left: 70px;"><label class="btn btn-primary"><img src="src/images/visa.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off"></label></div>
-			<div class="column"><label class="btn btn-primary"><img src="src/images/mastercard.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val2" class="hidden" autocomplete="off"></label></div>
-			<div class="column" ><label class="btn btn-primary"><img src="src/images/maybank2u.png" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val3" class="hidden" autocomplete="off"></label></div>
-		</div >
+			<div class="column" style="margin-left: 70px;">
+				<label class="btn btn-primary"><img src="src/images/visa.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="visa" required ></label>
+				</div>
+
+			<div class="column">
+				<label class="btn btn-primary"><img src="src/images/mastercard.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="master" required></label>
+			</div>
+			
+			<div class="column" >
+				<label class="btn btn-primary"><img src="src/images/maybank2u.png" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="maybank" required></label></div>
+			</div >
+
 		<div class = "row" align="center" style="margin-left: 350px;">
-			<div class="column" ><label class="btn btn-primary"><img src="src/images/cimb.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
-			<div class="column" ><label class="btn btn-primary"><img src="src/images/bi.jpg" alt="..." class="img-thumbnail img-check" style="width: 210px;height: 120px;"><input type="radio" name="chk1" id="item4" value="val4" class="hidden" autocomplete="off"></label></div>
+			<div class="column" >
+				<label class="btn btn-primary"><img src="src/images/cimb.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="cimb" required></label>
+			</div>
+
+			<div class="column" >
+				<label class="btn btn-primary"><img src="src/images/bi.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="ism" required></label>
+			</div>
 			</div>
 		</div >
 		<div class="clearfix"></div>
 		<br>
-		<input type="submit" value="Check Item" class="btn btn-success" style="center">
+		<input type="submit" id="payment" name="payment" value="Proceed to payment" class="btn btn-primary">
 		<br>
 		</form>
 	</div>	
