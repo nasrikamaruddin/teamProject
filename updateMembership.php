@@ -41,7 +41,7 @@ if ($conn->multi_query($sql) === TRUE) {
  
 
 
-  header("Location: http://localhost/milliont/teamProject/signupsuccess.php");
+  header("Location: http://localhost/teamProject/signupsuccess.php");
   
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
