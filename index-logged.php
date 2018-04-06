@@ -1,3 +1,19 @@
+<?php
+include 'db_connection.php';
+
+$conn = OpenCon();
+
+//echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])) {
+ // echo "Your session is running " . $_SESSION['loginUser'];
+  }
+$userIDD = $_SESSION['loginUser'];
+$query22 = mysqli_query($conn,"select username from 1milliontraders where userID='$userIDD'");						
+$row22 = mysqli_fetch_array($query22);
+$username = $row22['username'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,10 +88,10 @@
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 							<ul class="nav navbar-nav">
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#team" class="scroll">Plan & Upgrade</a></li>
+									<li><a href="index-logged.php">About</a></li>
+									<li><a href="index-logged.php">Events</a></li>
+									<li><a href="index-logged.php">News</a></li>
+									<li><a href="index-logged.php">Plan & Upgrade</a></li>
 									<li><a class="scroll">
                                                                          
 									<?php 
@@ -89,10 +105,7 @@
 										<li><a href="#" class="scroll">Setting</a></li>
 										<li><a href="logout.php">Logout</a></li>
 										</ul>
-									</li>
-
-
-                                                                  
+									</li>                     
 								</ul>
 							</nav>
 						</div>
