@@ -1,14 +1,3 @@
-<?php
-include 'db_connection.php';
-
-$conn = OpenCon();
-
-echo "Connected Successfully";
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,13 +72,11 @@ echo "Connected Successfully";
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-																		<li><a href="#about" class="scroll">About</a></li>
-
-<li><a href="#events" class="scroll">Events</a></li>
-		
-<li><a href="#team" class="scroll">Membership Registration</a></li>
+									<li><a href="#about" class="scroll">About</a></li>
+									<li><a href="#events" class="scroll">Events</a></li>
+									<li><a href="#team" class="scroll">Membership Registration</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-																		<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="login.php">Log In</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -273,7 +260,7 @@ echo "Connected Successfully";
 	</div>
 <!-- //Events -->
 	<!-- Membership Plan -->
-<div class="team jarallax" id="team">
+<div class="team jarallax" id="team" name="team">
 		<div class="team-dot">
                     
 			<div class="container">

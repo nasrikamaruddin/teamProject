@@ -4,7 +4,7 @@ include 'db_connection.php';
 
 $conn = OpenCon();
 
-echo "Connected Successfully";
+//echo "Connected Successfully";
 
 ?>
 
@@ -82,11 +82,11 @@ echo "Connected Successfully";
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
-									<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="index.php">About</a></li>
+									<li><a href="index.php">Events</a></li>
+									<li><a href="index.php">Membership Registration</a></li>
+									<li><a href="index.php">News</a></li>
+									<li><a href="login.php">Log In</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -121,7 +121,7 @@ echo "Connected Successfully";
 						<tr>
 							<td>User ID</td>
 							<td>:</td>
-							<td><input id="createcode" name="createcode" readonly="" style="text-align: left; background-color: #d4d8dd" value= "<?php echo createRandomPassword()?>"</input></td>
+							<td><input type="text" id="createcode" name="createcode" class="form-control" readonly value= "<?php echo createRandomPassword();?>"><small class="text-danger">User ID for Log In session. Take note your User ID!</small></td>
 						</tr>
 
 						<tr>

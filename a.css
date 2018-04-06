@@ -1,20 +1,8 @@
-/*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
 * {margin: 0; padding: 0;}
 
-html {
-	
-	
-	/*background = gradient + image pattern combo*/
-	background: 
-		linear-gradient(rgba(1, 16, 21, 1), rgba(173, 151, 79, 1));
-}
 
-body {
-	font-family: montserrat, arial, verdana;
-}
 /*form styles*/
 #msform {
 	width: 400px;
@@ -47,9 +35,7 @@ body {
 	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
-	font-family: montserrat;
-	color: #2C3E50;
-	font-size: 13px;
+	
 }
 /*buttons*/
 #msform .action-button {
@@ -96,14 +82,14 @@ body {
 }
 /*headings*/
 .fs-title {
-	font-size: 15px;
+	font-size: 2em;
 	text-transform: uppercase;
 	color: #2C3E50;
 	margin-bottom: 10px;
 }
 .fs-subtitle {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 1em;
 	color: #666;
 	margin-bottom: 20px;
 }
