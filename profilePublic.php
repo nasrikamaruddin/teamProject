@@ -1,17 +1,18 @@
 <?php
-
 include 'db_connection.php';
 
 $conn = OpenCon();
 
 echo "Connected Successfully";
-?>
 
-<?php
 session_start();
 if(isset($_SESSION['loginUser'])) {
   echo "Your session is running " . $_SESSION['loginUser'];
-}
+  }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +92,7 @@ if(isset($_SESSION['loginUser'])) {
 									<li><a href="#about" class="scroll">About</a></li>
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
+									<li><a href="#news" class="scroll">Plan </a></li>
 									<li><a href="login.php" class="scroll">Log In</a></li>
 								</ul>
 							</nav>
@@ -103,46 +104,137 @@ if(isset($_SESSION['loginUser'])) {
 		</div>
 	</div>
 	<!-- //banner -->
-		<div class="contact-form-center2">
-			<div class="w3l-heading">
-				<h3>1 Million Traders Registration</h3>
-				<div class="w3ls-border"> </div>
-			</div></br>
+        	
+	
+	
+	<!-- profile -->
+	<div class="contact-form">
+		<div class="contact-form-center">
 			<div class="panel panel-info">
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-md-12"> 
-						<div class="alert alert-success-signup">
-							<strong>Congratulations!</strong></br>
-							<p>You've signed up as one of our 1 Million Traders Members and thank you for your payment.</br>
-							Click Log In below to began a apart of 1 Million Traders.</p>
-						</div>
-						<div>
-						<button type="button" onclick="location.href = 'login.php';" class="btn btn-success center-block" style="width:10em;">Log In</button>
-						</div>
-						</div>
-					</div>
-					</br>
-				</div>
-			</div>
-		</div>
+            <div class="panel-body">
+				<div class="w3l-heading">
+					<h3>Member Profile</h3>
+					<div class="w3ls-border-custom"> </div>
+				</div></br>
+				<div class="row">
+					<div class="col-md-12"> 
+					  <table class="table table-user-information">
 
-	<!-- //profile -->
+<?php
+$userID = $_SESSION['loginUser'];
+$get_info= "select * from 1milliontraders where userID='$userID'";
+	
+	$run_info= mysqli_query($conn,$get_info);
+	
+	$row_info=mysqli_fetch_array($run_info);
+		$info_userID = $row_info['userID'];
+		$info_userType = $row_info['userType'];
+		$info_codeCount = $row_info['codeCount'];
+		$info_username = $row_info['username'];
+		$info_fullname = $row_info['fullname'];
+		$info_contact = $row_info['contact'];
+		$info_email = $row_info['email'];
+		$info_address = $row_info['address'];
+		$info_studentID = $row_info['studentID'];
+		$info_university = $row_info['university'];
+		$info_faculty = $row_info['faculty'];
+		$info_programme = $row_info['programme'];
+		$info_classification = $row_info['classification'];
+		
+		echo "
+		
+                    <tbody>
+                    <tr>
+							<td>User ID</td>
+							<td>:</td>
+							<td>$info_userID</td>
+						</tr>
+						<tr>
+							<td>Membership</td>
+							<td>:</td>
+							<td>$info_userType</td>
+						</tr>
+						<tr>
+							<td>Point</td>
+							<td>:</td>
+							<td>$info_codeCount</td>
+						</tr>
+						<tr>
+							<td>Username</td>
+							<td>:</td>
+							<td>$info_username</td>
+						</tr>
+						<tr>
+							<td>Name</td>
+							<td>:</td>
+							<td>$info_fullname</td>
+						</tr>
+						<tr>
+							<td>Phone Number</td>
+							<td>:</td>
+							<td>$info_contact</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>:</td>
+							<td>$info_email</td>
+						</tr>
+						<tr>
+							<td>Address</td>
+							<td>:</td>
+							<td>$info_address</td>
+						</tr>
+						</tbody>
+						";?>
+
+					  </table>
+					  
+					</div>
+				</div>
+				
+				
+            </div>
+                 
+        </div>
+
+
 
 	<!-- footer -->
-	<footer style="position: fixed;left: 0;bottom: 0;width: 100%; text-align: center;">
+	<footer>
 		<div class="container">
 			<p>© 2018 1MillionTraders . All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a> </p>
 		</div>
 	</footer>
 	<!-- //footer -->
+	<script src="src/js/jarallax.js"></script>
 	<script src="src/js/SmoothScroll.min.js"></script>
-
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
 	<script src="src/js/responsiveslides.min.js"></script>
 	<script type="text/javascript" src="src/js/move-top.js"></script>
 	<script type="text/javascript" src="src/js/easing.js"></script>
-
-	
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
