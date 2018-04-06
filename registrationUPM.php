@@ -133,8 +133,7 @@ echo "Connected Successfully";
 						<tr>
 							<td>Contact Number</td>
 							<td>:</td>
-							<td><input type="text" name="contact" id="contact" value="" class="form-control" placeholder="Contact Number" required></td>
-						</tr>
+							<td><input type="text" name="contact" id="contact" value="" class="form-control" placeholder="Contact Number"  onkeyup="validatephone(this);" required><small class="text-danger">eg - 0123456789</small></td>
 						<tr>
 							<td>Email</td>
 							<td>:</td>
@@ -341,7 +340,21 @@ function checkdup() {
 	
 }
 </script>
-
+<script>
+function validatephone(phone) 
+{
+    var maintainplus = '';
+    var numval = phone.value
+    if ( numval.charAt(0)=='+' )
+    {
+        var maintainplus = '';
+    }
+    curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
+    phone.value = maintainplus + curphonevar;
+    var maintainplus = '';
+    phone.focus;
+}
+</script>
 <?php
 function createRandomPassword() {
     $chars = "0123456789";
