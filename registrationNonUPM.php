@@ -153,7 +153,7 @@ echo "Connected Successfully";
 							<td>University</td>
 							<td>:</td>
 							<td>
-								<select name="university" class="form-control" id="university" onchange="showfield(this.options[this.selectedIndex].value)" required>
+								<select name="university" class="form-control" id="university" onchange="showfield(this.options[this.selectedIndex].value);" required>
 									<option selected="selected" value="">Please select ...</option>
 									<option value="UM">UM - Universiti Malaya, KL</option>
 									<option value="UKM">UKM - Universiti Kebangsaan Malaysia, Selangor</option>
@@ -199,13 +199,18 @@ echo "Connected Successfully";
 									<option value="INTI">INTI IU - Universiti Antarabangsa INTI, Negeri Sembilan</option>
 									<option value="Other">Other</option>
 									<script type="text/javascript">
-										function showfield(name){
-										if(name=='Other')document.getElementById('div1').innerHTML='<input type="text" name="other" class="form-control" style="margin-top: 10px;" required />';
+function showfield(name){
+if(name=='Other')document.getElementById('div1').innerHTML='<input type="text" name="other" class="form-control" style="margin-top: 10px;" required />';
 										else document.getElementById('div1').innerHTML='';}
 									</script>
 								</select>
+								<div class="form-group" id="div1"></div>
 							</td>
-						</tr>
+						</tr> 
+
+
+
+
 						<tr>
 							<td>Faculty</td>
 							<td>:</td>
