@@ -290,7 +290,6 @@ if(isset($_SESSION['loginUser'])) {
                                 <button class="tablinks" onclick="openCity(event, 'nonupm')">Non UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'public')">Public</button>
                                 <button class="tablinks" onclick="openCity(event, 'senior')">Senior Citizen</button>
-
                                 </div>
                                 <!--UPM Student Plan-->
                                 <div id="upm" class="tabcontent">
@@ -550,6 +549,7 @@ if(isset($_SESSION['loginUser'])) {
 		<div class="contact-form-center">
 			<div class="w3l-heading">
 				<h3>Membership Plan for Senior</h3>
+				<center><p>Age 60 and above</p></center>
 				<div class="w3ls-border"> </div>
 			</div></br>
 			
