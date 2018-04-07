@@ -1,5 +1,9 @@
 <?php
 
+session_destroy();
+?>
+<?php
+
 include 'db_connection.php';
 
 $conn = OpenCon();
