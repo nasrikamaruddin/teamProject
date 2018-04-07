@@ -703,8 +703,8 @@
 						<i class="fa fa-map-marker" aria-hidden="true"></i>
 					</div>	
 					<div class="address-info">
-                       <p><b><a href="https://www.google.com/maps/place/Faculty+of+Computer+Science+and+Information+Technology/@2.9995885,101.7102268,19.71z/data=!4m12!1m6!3m5!1s0x31cdca7f18a908b7:0xe28aef92d5f28bf4!2sUniversiti+Putra+Malaysia+(UPM)!8m2!3d2.991686!4d101.71629!3m4!1s0x31cdca795e21d3d3:0x161498ff5a9f8500!8m2!3d2.9996237!4d101.7103408" target="_blank">C-1-30, Block C, Faculty of Computer Science & Information Technology, <br>Universiti Putra Malaysia, 43400 UPM Serdang, Selangor, Malaysia.<br></a><br>D-9-3, Block D, Setiawalk, Persiaran Wawasan, Pusat Bandar Puchong, 47100 Puchong, Selangor, Malaysia.
-						</b></p>
+                       <p><b><a href="https://www.google.com/maps/place/Faculty+of+Computer+Science+and+Information+Technology/@2.9995885,101.7102268,19.71z/data=!4m12!1m6!3m5!1s0x31cdca7f18a908b7:0xe28aef92d5f28bf4!2sUniversiti+Putra+Malaysia+(UPM)!8m2!3d2.991686!4d101.71629!3m4!1s0x31cdca795e21d3d3:0x161498ff5a9f8500!8m2!3d2.9996237!4d101.7103408" target="_blank">C-1-30, Block C, Faculty of Computer Science & Information Technology, <br>Universiti Putra Malaysia, 43400 UPM Serdang, Selangor, Malaysia.<br></a><br><a href ="https://www.google.com/maps/place/Newman+Business+Centre/@3.030331,101.6150168,17z/data=!4m8!1m2!2m1!1sD-9-3,+Block+D,+Setiawalk,+Persiaran+Wawasan,+Pusat+Bandar+Puchong,+47100+Puchong,+Selangor,+Malaysia.!3m4!1s0x31cdb4a9ff52ba9b:0xe3e7675674b62615!8m2!3d3.029431!4d101.6161299" target="_blank">D-9-3, Block D, Setiawalk, Persiaran Wawasan, Pusat Bandar Puchong, 47100 Puchong, Selangor, Malaysia.
+						</a></b></p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
