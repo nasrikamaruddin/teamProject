@@ -10,9 +10,10 @@ if(isset($_SESSION['loginUser'])) {
  // echo "Your session is running " . $_SESSION['loginUser'];
   }
 $userIDD = $_SESSION['loginUser'];
-$query22 = mysqli_query($conn,"select username from 1milliontraders where userID='$userIDD'");						
+$query22 = mysqli_query($conn,"select * from 1milliontraders where userID='$userIDD'");						
 $row22 = mysqli_fetch_array($query22);
 $username = $row22['username'];
+$userID = $row22['userID'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +132,11 @@ $username = $row22['username'];
 				<p><b>Invitation Code </b> created specialise for member. Share your Invite Code and find out how to Upgrade Package.<p>
 				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
-						<li class="active"><a style="font-weight: bold">muhvure3</a></li>
+						<li class="active"><a style="font-weight: bold"><?php 
+										if($_SESSION['loginUser']==true){ 
+											echo $userID;
+										}
+                                    ?></a></li>
 						
 					</ul>
 				</div>
@@ -154,37 +159,38 @@ $username = $row22['username'];
 							
 							<!-- /.box-header -->
 							<div class="box-body table-responsive no-padding">
-							  <table class="table table-hover">
-								<tr>
-								  <th>ID</th>
-								  <th>Username</th>
-								  <th>Package</th>
-								  <th>Status</th>
-								</tr>
-								<tr>
-								  <td>183</td>
-								  <td>John Doe</td>
-								  <td>Silver</td>
-								  <td><span class="label label-success">Active</span></td>
-								</tr>
-								<tr>
-								  <td>219</td>
-								  <td>Alexander Pierce</td>
-								  <td>Silver</td>
-								  <td><span class="label label-success">Active</span></td>
-								</tr>
-								<tr>
-								  <td>657</td>
-								  <td>Bob Doe</td>
-								  <td>Silver</td>
-								  <td><span class="label label-success">Active</span></td>
-								</tr>
-								<tr>
-								  <td>175</td>
-								  <td>Mike Doe</td>
-								  <td>Silver</td>
-								  <td><span class="label label-danger">Denied</span></td>
-								</tr>
+							  <table class="table table-hover" style="text-align: center">
+							  	  <tr>
+    
+    <th style="text-align: center">Downline&nbsp;User ID</th>
+  
+   
+   
+  </tr>
+								<?php
+$userID = $_SESSION['loginUser'];
+$get_info= "select referral.userID from referral inner join 1milliontraders on referral.code = 1millionTraders.userID WHERE referral.code = '$userID'";
+	
+	$run_info= mysqli_query($conn,$get_info);
+	
+//	$row_info=mysqli_fetch_array($run_info);
+	//	$info_userID = $row_info['userID'];
+	//	$info_code = $row_info['code'];
+	//	$info_fullname = $row_info['fullname'];
+		
+		
+	
+		
+                    while($row_info = mysqli_fetch_array($run_info)) {
+      echo "<tr height='50px'>";
+      
+      echo "<td>".$row_info['userID']."</td>";
+      
+   
+  
+      echo "</tr>";
+    }
+						;?>
 							  </table>
 							</div>
 							<!-- /.box-body -->
