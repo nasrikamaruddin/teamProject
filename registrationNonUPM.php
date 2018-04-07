@@ -110,7 +110,7 @@ $conn = OpenCon();
 			<div class="panel panel-info">
             <div class="panel-body">
 
-			<form action="signupNonUPM.php" onsubmit="return validation()" method="POST" enctype="multipart/form-data">
+			<form action="membershipPlanNonUPM.php" onsubmit="return validation()" method="POST" enctype="multipart/form-data">
 
 				
 				<div class="row">
