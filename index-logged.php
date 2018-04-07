@@ -341,7 +341,7 @@ $username = $_SESSION['username'];
 							}
 							else {
 								echo "<form action='signup.php' method='POST'>
-								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Silver'>Subscribe Now</a>
+								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Silver'>Upgrade now</a>
 							</form>";}
 							?>
 							</div>
@@ -370,7 +370,7 @@ $username = $_SESSION['username'];
 							}
 							else {
 								echo "<form action='signup.php' method='POST'>
-								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Gold'>Subscribe Now</a>
+								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Gold'>Upgrade now</a>
 							</form>";}
 							?>
 							</div>
@@ -397,7 +397,7 @@ $username = $_SESSION['username'];
 							}
 							else {
 								echo "<form action='signup.php' method='POST'>
-								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Gold'>Subscribe Now</a>
+								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Diamond'>Upgrade Now</a>
 							</form>";}
 							?>
 							</div>
