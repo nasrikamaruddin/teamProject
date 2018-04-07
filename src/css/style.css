@@ -25,8 +25,8 @@ body a{
 	  background:#FFFFFF;
   }
   .banner{
-	  background: url(../images/1.jpg) no-repeat 0px 0px;
-	  background-size: cover;
+	  background: url(../images/webbanner.jpg) no-repeat;
+
   }
   .agileinfo-dot{
 	  background: url(../images/dott.png)repeat 0px 0px;
