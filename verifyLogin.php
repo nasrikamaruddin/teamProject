@@ -10,11 +10,11 @@
 		if(count($_POST) > 0) {
 
 			
-			$result = mysqli_query($conn,"SELECT userID, password FROM 1milliontraders WHERE userID='" . $_POST["loginUserID"] . "' and password = '". md5($_POST["loginPassword"]) ."'");
+			$result = mysqli_query($conn,"SELECT username, password FROM 1milliontraders WHERE userID='" . $_POST["loginUsername"] . "' and password = '". md5($_POST["loginPassword"]) ."'");
 
 			$count  = mysqli_num_rows($result);
 			if($count == 0) {
-				echo "<script>alert('Invalid login email or password');</script>";
+				echo "<script>alert('Invalid login username or password');</script>";
 				echo "<script>history.back();</script>";
 			}
 			
