@@ -304,7 +304,7 @@
 								<p class="price"><i style="font-size: 30px;"></i>FREE</p>
 							</div>
 							<div class="block-footer">
-								<form action="signup.php" method="POST">
+								<form action="registrationUPM.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							</div>
@@ -325,7 +325,7 @@
 								<p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>
 							</div>
 							<div class="block-footer">
-								<form action="signup.php" method="POST">
+								<form action="registrationUPM.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							</div>
@@ -346,7 +346,7 @@
 								<p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
 							</div>
 							<div class="block-footer">
-								<form action="signup.php" method="POST">
+								<form action="registrationUPM.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							</div>
@@ -387,7 +387,7 @@
 								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
 								  <p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationNonUPM.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							  </div>
@@ -408,7 +408,7 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationNonUPM.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							  </div>
@@ -429,7 +429,7 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationNonUPM.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							  </div>
@@ -471,7 +471,7 @@
 								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
 								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>                      </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationPublic.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							  </div>
@@ -492,7 +492,7 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationPublic.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							  </div>
@@ -513,7 +513,7 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>100<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationPublic.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							  </div>
@@ -555,7 +555,7 @@
 								 <p class="price"><i style="font-size: 30px;"></i>FREE</p>
 							</div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationSenior.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							  </div>
@@ -577,7 +577,7 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationSenior.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							  </div>
@@ -598,7 +598,7 @@
 								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="registrationSenior.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							  </div>
