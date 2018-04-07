@@ -298,12 +298,11 @@ $username = $row22['username'];
 					<div class="w3ls-border"> </div>
 				</div>
                                 <!--create tabs for multiple categories-->
-                                <div class="tab">
-                                <button class="tablinks" onclick="openCity(event, 'upm')">UPM Student</button>
+                                <div class="tab" style="width: 471px;margin-left: 350px;">
+                                <button class="tablinks" onclick="openCity(event, 'upm')" id="defaultOpen">UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'nonupm')">Non UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'public')">Public</button>
                                 <button class="tablinks" onclick="openCity(event, 'senior')">Senior Citizen</button>
-
                                 </div>
                                 <!--UPM Student Plan-->
                                 <div id="upm" class="tabcontent">
@@ -563,6 +562,7 @@ $username = $row22['username'];
 		<div class="contact-form-center">
 			<div class="w3l-heading">
 				<h3>Membership Plan for Senior</h3>
+				<center><p>Age 60 and above</p></center>
 				<div class="w3ls-border"> </div>
 			</div></br>
 			
@@ -768,7 +768,6 @@ $username = $row22['username'];
 				</div>
 			</div>
 		</div>
-		
 		<div class="clearfix"> </div>
 	</div>
 	<!-- //contact -->
@@ -808,6 +807,10 @@ $username = $row22['username'];
 								
 			});
 	</script>
+	<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
