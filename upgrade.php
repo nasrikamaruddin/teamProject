@@ -13,7 +13,7 @@ if(isset($_SESSION['loginUser'])) {
 if (isset($_POST['userTypeUp'])) {
 
 		$userTypeUp = $_POST['userTypeUp'];
-		$username = $_SESSION['loginUser'];
+		$userID = $_SESSION['loginUser'];
 		
 
 
@@ -25,9 +25,9 @@ if (isset($_POST['userTypeUp'])) {
 
 
  if ($userTypeUp == 'Gold') {
-      $sql = "UPDATE 1milliontraders set userType = 'Gold', codeCount = codeCount+10 WHERE username = '$username';";
+      $sql = "UPDATE 1milliontraders set userType = 'Gold', codeCount = codeCount+10 WHERE userID = '$userID';";
 } else if ($userTypeUp == 'Diamond') {
-	 $sql = "UPDATE 1milliontraders set userType = 'Diamond', codeCount = codeCount+20 WHERE username = '$username';";
+	 $sql = "UPDATE 1milliontraders set userType = 'Diamond', codeCount = codeCount+20 WHERE userID = '$userID';";
 }
 
 
