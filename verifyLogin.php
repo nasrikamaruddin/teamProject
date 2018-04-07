@@ -10,7 +10,7 @@
 		if(count($_POST) > 0) {
 
 			
-			$result = mysqli_query($conn,"SELECT username, password FROM 1milliontraders WHERE username='" . $_POST["loginUsername"] . "' and password = '". md5($_POST["loginPassword"]) ."'");
+			$result = mysqli_query($conn,"SELECT userID, username, password FROM 1milliontraders WHERE username='" . $_POST["loginUsername"] . "' and password = '". md5($_POST["loginPassword"]) ."'");
 
 			$count  = mysqli_num_rows($result);
 			if($count == 0) {
@@ -19,9 +19,11 @@
 			}
 			
 			else {
+			$res = mysqli_fetch_array($result);
+			$loginid = $res['userID']; 
 			session_start();
-			
-			$_SESSION['loginUser']= $_POST["loginUsername"]; 
+			$_SESSION['loginUser']= $loginid;
+			$_SESSION['username']= $_POST["loginUsername"]; 
 			header("Location: index-logged.php");
 
 		}		
