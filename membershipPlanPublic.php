@@ -27,8 +27,6 @@ if( isset($_POST["submitPublic"]) ){
 		
 		$unique = uniqid('', true);
 		$uniq = substr($unique, strlen($unique) - 4, strlen($unique));
-		
-		session_start();
 		$_SESSION['loginUser'] =$userID;
 		$_SESSION['fullname'] = $fullname;
 		$_SESSION['contact'] = $contact;
