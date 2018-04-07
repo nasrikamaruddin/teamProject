@@ -28,9 +28,9 @@ if(isset($_SESSION['loginUser'])) {
  if ($userType == 'Silver') {
       $sql = "UPDATE 1milliontraders set userType = 'Silver' WHERE userID = '$userID';";
 } else if ($userType == 'Gold') {
-	 $sql = "UPDATE 1milliontraders set userType = 'Gold' WHERE userID = '$userID';";
+	 $sql = "UPDATE 1milliontraders set userType = 'Gold', codeCount = 10 WHERE userID = '$userID';";
 } else if ($userType == 'Diamond') {
-		 $sql = "UPDATE 1milliontraders set userType = 'Diamond' WHERE userID = '$userID';";
+		 $sql = "UPDATE 1milliontraders set userType = 'Diamond', codeCount = 20 WHERE userID = '$userID';";
 }
 
 

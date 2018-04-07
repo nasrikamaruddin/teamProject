@@ -188,7 +188,9 @@ $get_info= "select * from 1milliontraders where userID='$userID'";
 						";?>
 
 					  </table>
-					  
+					  <form action="upgradeMember.php" method="POST">
+					  <input type="submit" id="upgrade" name="upgrade" style="float:right;" value="Upgrade Membership" class="btn btn-primary">
+					</form>
 					</div>
 				</div>
 				
