@@ -66,7 +66,7 @@ if ($conn->multi_query($sql) === TRUE) {
 	$_SESSION['loginUser'] =$userID ;
 	$_SESSION['referralID'] = $code;
 	echo 'session create'.$_SESSION['loginUser'];
-	header("Location: http://localhost/teamProject/checkout.php");
+	header("Location: http://localhost/test2/teamProject/checkout.php");
 	
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
