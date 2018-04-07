@@ -9,8 +9,8 @@ session_start();
 if(isset($_SESSION['loginUser'])) {
  // echo "Your session is running " . $_SESSION['loginUser'];
   }
-$userIDD = $_SESSION['loginUser'];
-$query22 = mysqli_query($conn,"select username from 1milliontraders where userID='$userIDD'");						
+$username = $_SESSION['loginUser'];
+$query22 = mysqli_query($conn,"select username from 1milliontraders where username='$username'");						
 $row22 = mysqli_fetch_array($query22);
 $username = $row22['username'];
 ?>
@@ -134,8 +134,8 @@ $username = $row22['username'];
 					  <table class="table table-user-information">
 
 <?php
-$userID = $_SESSION['loginUser'];
-$get_info= "select * from 1milliontraders where userID='$userID'";
+$username = $_SESSION['loginUser'];
+$get_info= "select * from 1milliontraders where username='$username'";
 	
 	$run_info= mysqli_query($conn,$get_info);
 	
