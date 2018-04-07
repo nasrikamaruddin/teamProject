@@ -6,8 +6,6 @@ $conn = OpenCon();
 
 //echo "Connected Successfully";
 
-
-
 ?>
 
 <!DOCTYPE html>

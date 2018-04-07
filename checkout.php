@@ -120,7 +120,7 @@ $code = $_SESSION['referralID'];
 				<div class="row" style="margin:2px;center">
 				  <div class="container">
 	<div class="row" align="center">
-		<form action="signupsuccess.php" method="POST">
+		<form action="updateMembership.php" method="POST">
 		<div class="form-group">
 		<div class = "row" align="center" style="margin-left: 110px;">
 			<div class="column" style="margin-left: 70px;">
