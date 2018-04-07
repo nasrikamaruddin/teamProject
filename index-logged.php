@@ -88,10 +88,10 @@ $username = $row22['username'];
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 							<ul class="nav navbar-nav">
-									<li><a href="index-logged.php">About</a></li>
-									<li><a href="index-logged.php">Events</a></li>
-									<li><a href="index-logged.php">News</a></li>
-									<li><a href="index-logged.php">Plan & Upgrade</a></li>
+									<li><a href="#about">About</a></li>
+									<li><a href="#events">Events</a></li>
+									<li><a href="#news">News</a></li>
+									<li><a href="#team">Plan & Upgrade</a></li>
 									<li><a class="scroll">
                                                                          
 									<?php 

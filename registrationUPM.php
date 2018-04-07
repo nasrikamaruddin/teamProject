@@ -213,7 +213,7 @@ $conn = OpenCon();
 						<tr>
 							<td>Referral Code</td>
 							<td>:</td>
-							<td><input type="text" name="referralID" id="referralID" value="" class="form-control" placeholder="Referral Code"></td>
+							<td><input type="text" name="referralID" id="referralID" value="" class="form-control" placeholder="Referral Code (Optional)"></td>
 						</tr>
 
 
