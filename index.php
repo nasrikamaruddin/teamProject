@@ -534,6 +534,7 @@
 		<div class="contact-form-center">
 			<div class="w3l-heading">
 				<h3>Membership Plan for Senior</h3>
+				<center><p>Age 60 and above</p></center>
 				<div class="w3ls-border"> </div>
 			</div></br>
 			
