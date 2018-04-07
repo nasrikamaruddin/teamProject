@@ -270,7 +270,7 @@
 				</div>
                                 <!--create tabs for multiple categories-->
                                 <div class="tab" style="width: 471px;margin-left: 350px;">
-                                <button class="tablinks" onclick="openCity(event, 'upm')">UPM Student</button>
+                                <button class="tablinks" onclick="openCity(event, 'upm')" id="defaultOpen">UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'nonupm')">Non UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'public')">Public</button>
                                 <button class="tablinks" onclick="openCity(event, 'senior')">Senior Citizen</button>
@@ -739,7 +739,6 @@
 				</div>
 			</div>
 		</div>
-		
 		<div class="clearfix"> </div>
 	</div>
 	<!-- //contact -->
@@ -779,6 +778,10 @@
 								
 			});
 	</script>
+	<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 <!-- //here ends scrolling icon -->
 </body>	
 </html>
