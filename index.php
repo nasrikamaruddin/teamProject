@@ -269,12 +269,11 @@
 					<div class="w3ls-border"> </div>
 				</div>
                                 <!--create tabs for multiple categories-->
-                                <div class="tab">
+                                <div class="tab" style="width: 471px;margin-left: 350px;">
                                 <button class="tablinks" onclick="openCity(event, 'upm')">UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'nonupm')">Non UPM Student</button>
                                 <button class="tablinks" onclick="openCity(event, 'public')">Public</button>
                                 <button class="tablinks" onclick="openCity(event, 'senior')">Senior Citizen</button>
-
                                 </div>
                                 <!--UPM Student Plan-->
                                 <div id="upm" class="tabcontent">
