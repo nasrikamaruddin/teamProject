@@ -305,7 +305,7 @@ $username = $_SESSION['username'];
 <div class="contact-form">
 		<div class="contact-form-center">
 			<div class="w3l-heading">
-				<h3>Membership Plan for Student</h3>
+				<h3>Membership Plan for UPM Student</h3>
 				<div class="w3ls-border"> </div>
 			</div></br>
 			
@@ -328,9 +328,22 @@ $username = $_SESSION['username'];
 								<p class="price"><i style="font-size: 30px;"></i>FREE</p>
 							</div>
 							<div class="block-footer">
-								<form action="signup.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
-							</form>
+							<?php 
+							$loginuser = $_SESSION['loginUser'];
+							$result2 = mysqli_query($conn, "SELECT userType FROM 1milliontraders WHERE userID =$loginuser ");
+							$res = mysqli_fetch_array($result2);
+							$usertype = $res['userType'];
+							
+							if($usertype === "Silver"){
+								echo "Your current Package";
+							}
+							else if ($usertype === "Gold"|| $usertype === "Diamond"){
+							}
+							else {
+								echo "<form action='signup.php' method='POST'>
+								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Silver'>Subscribe Now</a>
+							</form>";}
+							?>
 							</div>
 						</div>
 					</div>
@@ -349,9 +362,17 @@ $username = $_SESSION['username'];
 								<p class="price"><i style="font-size: 30px;">RM</i>10<sub><small class="renew-price">for Lifetime</small></sub></p>
 							</div>
 							<div class="block-footer">
-								<form action="signup.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
-							</form>
+							<?php 
+							if($usertype === "Gold"){
+								echo "Your current Package";
+							}
+							else if ($usertype === "Diamond"){
+							}
+							else {
+								echo "<form action='signup.php' method='POST'>
+								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Gold'>Subscribe Now</a>
+							</form>";}
+							?>
 							</div>
 						</div>
 					</div>
@@ -370,9 +391,15 @@ $username = $_SESSION['username'];
 								<p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
 							</div>
 							<div class="block-footer">
-								<form action="signup.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
-							</form>
+							<?php 
+							if($usertype === "Diamond"){
+								echo "Your current Package";
+							}
+							else {
+								echo "<form action='signup.php' method='POST'>
+								<button type='submit' class='subscribe-now' name='userType' id='userType' value='Gold'>Subscribe Now</a>
+							</form>";}
+							?>
 							</div>
 						</div>
 					</div>
