@@ -12,10 +12,11 @@ if(isset($_SESSION['loginUser'])) {
 }
 
 $code = $_SESSION['referralID'];
-
 $conn->close();
-
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -91,11 +92,11 @@ $conn->close();
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<nav>
 								<ul class="nav navbar-nav">
-									<li><a href="#about" class="scroll">About</a></li>
-									<li><a href="#events" class="scroll">Events</a></li>
-									<li><a href="#news" class="scroll">News</a></li>
-									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
-									<li><a href="login.php" class="scroll">Log In</a></li>
+									<li><a href="index.php">About</a></li>
+									<li><a href="index.php">Events</a></li>
+									<li><a href="index.php">Membership Registration</a></li>
+									<li><a href="index.php">News</a></li>
+									<li><a href="login.php">Log In</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -113,49 +114,83 @@ $conn->close();
 	<div class="contact-form">
 		<div class="contact-form-center">
 			<div class="w3l-heading">
-				<h3>Membership Plan for Student</h3>
+				<h3>Membership Plan for Senior</h3>
 				<div class="w3ls-border"> </div>
 			</div></br>
 			
 			<div class="panel panel-info">
-            <div class="panel-body">
-
-				<div class="row" style="margin:2px;">
-				  <!--Silver-->                  
-					<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
-						<div class="blocks">
-							<div class="block-header">
-							  <h4>Upgrade to GOLD?</h4>
-							  <p>Pay RM50 to upgrade</p>
+				<div class="panel-body">
+					<div class="row" style="margin:2px">
+					  <!--Silver-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>SILVER</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>No payment fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>50% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>NOT ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>VERY Limited Access to all Online Resource</p>
+								 <p class="price"><i style="font-size: 30px;"></i>FREE</p>
 							</div>
-							
-							<div class="block-footer">
-								<form action="upgrade.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userTypeUp" id="userTypeUp" value="Gold">Upgrade Now</button>
+							  <div class="block-footer">
+								  <form action="upgrade.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
-							</div>
+							  </div>
+						  </div>
 						</div>
-					</div>
-				  <!--Gold-->                  
-					<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
-						<div class="blocks">
-							<div class="block-header">
-								<h4>Upgrade to DIAMOND?</h4>
-								<p>Pay RM100 to upgrade</p>
-							</div>
-							
-							<div class="block-footer">
-								<form action="upgrade.php" method="POST">
-								<button type="submit" class="subscribe-now" name="userTypeUp" id="userTypeUp" value="Diamond">Upgrade Now</button>
+					 
+					  <!--Gold-->                  
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks active-block">
+							  <div class="block-header">
+								  <h4>GOLD</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>80% off - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p><span class="glyphicon glyphicon-remove" data-unicode="e013" style="color:red;"> </span>LIMITED Access to all Online Resource</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="upgrade.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
-							</div>
-						</div>
+							  </div>
+						  </div>
+					  </div>
+					  <!--Diamond-->
+					  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						  <div class="blocks">
+							  <div class="block-header">
+								  <h4>DIAMOND</h4>
+							  </div>
+							  <div class="block-container">
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>Once in a lifetime membership fee</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - 1MillionTraders training or workshop event</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE - University or national competition</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>FREE access to all online resources</p>
+								  <p><span class="glyphicon glyphicon-ok" data-unicode="e013" style="color:#45BA76;"> </span>ELIGIBLE to join YDEC 2018</p>
+								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
+							  </div>
+							  <div class="block-footer">
+								  <form action="upgrade.php" method="POST">
+								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
+							</form>
+							  </div>
+						  </div>
+					  </div>
 					</div>
 				</div>
 			</div>
-        </div>
 		</div>
-		</div>
+	</div>
+	
 	<!-- //profile -->
 
 	<!-- footer -->

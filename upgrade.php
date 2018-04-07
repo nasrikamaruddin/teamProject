@@ -10,11 +10,10 @@ if(isset($_SESSION['loginUser'])) {
   echo "Your session is running " . $_SESSION['loginUser'];
   }
 
+if (isset($_POST['userTypeUp'])) {
 
-
-
-		$userType = $_POST['userTypeUp'];
-		$userID = $_SESSION['loginUser'];
+		$userTypeUp = $_POST['userTypeUp'];
+		$username = $_SESSION['loginUser'];
 		
 
 
@@ -25,12 +24,10 @@ if(isset($_SESSION['loginUser'])) {
    
 
 
- if ($userType == 'Silver') {
-      $sql = "UPDATE 1milliontraders set userType = 'Silver' WHERE userID = '$userID';";
-} else if ($userType == 'Gold') {
-	 $sql = "UPDATE 1milliontraders set userType = 'Gold', codeCount = 10 WHERE userID = '$userID';";
-} else if ($userType == 'Diamond') {
-		 $sql = "UPDATE 1milliontraders set userType = 'Diamond', codeCount = 20 WHERE userID = '$userID';";
+ if ($userTypeUp == 'Gold') {
+      $sql = "UPDATE 1milliontraders set userType = 'Gold', codeCount = codeCount+10 WHERE username = '$username';";
+} else if ($userTypeUp == 'Diamond') {
+	 $sql = "UPDATE 1milliontraders set userType = 'Diamond', codeCount = codeCount+20 WHERE username = '$username';";
 }
 
 
@@ -40,7 +37,7 @@ if(isset($_SESSION['loginUser'])) {
 if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully ";
 	session_start();
-	$_SESSION['loginUser'] =$userID ;
+	$_SESSION['loginUser'] =$userID;
 	$_SESSION['referralID'] = $code;
 	echo 'session create'.$_SESSION['loginUser'];
 	header("Location: http://localhost/teamProject/checkout.php");
@@ -51,7 +48,7 @@ if ($conn->multi_query($sql) === TRUE) {
 //	echo '<script>history.back();</script>';
 	
 }	
-
+}
 
 $conn->close();
 ?>
