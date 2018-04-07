@@ -11,9 +11,41 @@ if(isset($_SESSION['loginUser'])) {
   //echo "Your session is running " . $_SESSION['loginUser'];
 }
 
-$code = $_SESSION['referralID'];
+if( isset($_POST["submitSenior"]) ){
 
+		$userID = $_POST["createcode"];
+		$fullname = $_POST["fullname"];
+		$contact = $_POST["contact"];
+		$email = $_POST["email"];
+		$address = $_POST['address'];	
+		$username = $_POST["username"];	    
+  		$password = md5($_POST['password']);
+   		$code = $_POST['referralID'];
+   		
+		
+		
+		$unique = uniqid('', true);
+		$uniq = substr($unique, strlen($unique) - 4, strlen($unique));
+		
+
+		$_SESSION['loginUser'] =$userID;
+		$_SESSION['fullname'] = $fullname;
+		$_SESSION['contact'] = $contact;
+		$_SESSION['email'] = $email;
+		$_SESSION['address'] = $address;	
+		$_SESSION['username'] = $username;
+		$_SESSION['password'] = $password;
+		$_SESSION['referralID'] = $code;
+		
+
+
+}
+
+
+$conn->close();
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +165,7 @@ $code = $_SESSION['referralID'];
 								 <p class="price"><i style="font-size: 30px;"></i>FREE</p>
 							</div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="signupPublic.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							  </div>
@@ -155,7 +187,7 @@ $code = $_SESSION['referralID'];
 								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="signupPublic.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							  </div>
@@ -176,7 +208,7 @@ $code = $_SESSION['referralID'];
 								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signup.php" method="POST">
+								  <form action="signupPublic.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							  </div>
