@@ -191,7 +191,7 @@ $conn = OpenCon();
 							<td style="width:12em;" >Username </td>
 							<td style="width:2em;">:</td>
 							<td style="width:40em;"> <input type="text" name="username" id="username" value="" class="form-control" 
-							oninput="checkdup()" placeholder="Username" required>
+							oninput="checkdupname()" placeholder="Username" required>
 							<small ><p id="duplabel"></p></small>
 						</td>
 						</tr>
@@ -207,9 +207,10 @@ $conn = OpenCon();
 							<td><input type="password" name="cpassword" id="cpassword" value="" class="form-control" placeholder="Confirmation Password" required></td>
 						</tr>
 						<tr>
-							<td>Referral Code</td>
+							<td>Referral Code <small>(optional)</small></td>
 							<td>:</td>
-							<td><input type="text" name="referralID" id="referralID" value="" class="form-control" placeholder="Referral Code"></td>
+							<td><input type="text" name="referralID" id="referralID" value="" class="form-control" oninput="checkdupref()" placeholder="Referral Code">
+							<small ><p id="duplabelref"></p></small></td>
 						</tr>
 
 
@@ -285,8 +286,11 @@ $conn = OpenCon();
 			var username = $("#username").val();
 			var password = $("#password").val();
 			var cpassword = $("#cpassword").val();
-			var clabel = document.getElementById("duplabel").textContent;
+			var refid = $("#referralID").val();
+			var namelabel = document.getElementById("duplabel").textContent;
 			var label = "Username is available";
+			var labelref = document.getElementById("duplabelref").textContent;
+			var reflabel = "Valid Reference code";
 			
 			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 			
@@ -298,7 +302,7 @@ $conn = OpenCon();
 				alert("please enter email format...!!!!!!");
 				return false;
 
-				} else if (!(clabel==label)) {
+				} else if (!(namelabel==label)) {
 				alert("Username has been used");
 				return false;
 				} else if ((password.length) < 8) {
@@ -307,17 +311,25 @@ $conn = OpenCon();
 				} else if (!(password==cpassword)) {
 				alert("Your passwords don't match. Try again?");
 				return false;
+				}else if (!(refid==null||refid=="")){
+				 if(!(labelref==reflabel)) {
+				alert("Invalid Reference Code");
+				$("#referralID").val("");
+				document.getElementById("duplabelref").textContent="";
+				
+				return false;
+				 }
 				}
 	
 		}
 	</script>
 
 <script>
-function checkdup() {
+function checkdupname() {
     var username = $("#username").val();
 	$.ajax({
         type: 'POST',
-        url: "ajax/checkdup.php",
+        url: "ajax/checkdupname.php",
         data: { username: username},
 
         error: function(data) {
@@ -326,8 +338,13 @@ function checkdup() {
         },
         success: function(data) {
 			if(data == "false"){
-			document.getElementById("duplabel").style.color = "green";
+			if((username.length)<5){
+			document.getElementById("duplabel").style.color = "red";
+			document.getElementById("duplabel").innerHTML = "Username must be more than 5 character";
+			}
+			else {document.getElementById("duplabel").style.color = "green";
 			document.getElementById("duplabel").innerHTML = "Username is available";}
+			}
 			else if(data == "true"){
 			document.getElementById("duplabel").style.color = "red";
 			document.getElementById("duplabel").innerHTML = "Username is not available";}
@@ -336,6 +353,32 @@ function checkdup() {
 	});
 	
 }
+function checkdupref() {
+    var refID = $("#referralID").val();
+	$.ajax({
+        type: 'POST',
+        url: "ajax/checkdupref.php",
+        data: { refID:refID},
+
+        error: function(data) {
+
+            alert(" Can't do because: " + data);
+        },
+        success: function(data) {
+			if((refID.length)===6){
+			if(data == "true"){
+			document.getElementById("duplabelref").style.color = "green";
+			document.getElementById("duplabelref").innerHTML = "Valid Reference code";}
+			}
+			else if(data == "false"){
+			document.getElementById("duplabelref").style.color = "red";
+			document.getElementById("duplabelref").innerHTML = "Invalid Reference code";}
+			
+        }
+	});
+	
+}
+
 </script>
 <script>
 function validatephone(phone) 

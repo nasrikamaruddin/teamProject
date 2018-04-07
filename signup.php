@@ -28,37 +28,43 @@ if(isset($_SESSION['loginUser'])) {
 		$imageData = $_SESSION['imageData'];
 		$imageType = $_SESSION['imageType'];
 
-
 		$unique = uniqid('', true);
 		$uniq = substr($unique, strlen($unique) - 4, strlen($unique));  
 
 if (!empty($code)) {
+
    $result = mysqli_query($conn, "SELECT codeCount FROM 1milliontraders WHERE userID = '$code'");
      while($res = mysqli_fetch_array($result)) {
-      
+		echo "my code is  $code ";
       $codeCount = $res['codeCount'];  
-
+	  echo "my codecount is  $codeCount ";
 
  if ($userType == 'Silver') {
+echo " silver with code";
 $sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType'); INSERT INTO referral (userID, code) VALUES ('$userID', '$code'); UPDATE 1milliontraders SET codeCount = codeCount+1 WHERE userID =  '$code';";
 } else if ($userType == 'Gold') {
+	echo " g with code";
 	$sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType, codeCount) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType', '10'); INSERT INTO referral (userID, code) VALUES ('$userID', '$code'); UPDATE 1milliontraders SET codeCount = codeCount+2 WHERE userID =  '$code';";
 } else if ($userType == 'Diamond') {
+	echo " d with code";
 		$sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType, codeCount) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType', '20'); INSERT INTO referral (userID, code) VALUES ('$userID', '$code'); UPDATE 1milliontraders SET codeCount = codeCount+10 WHERE userID =  '$code';";
 }
 
 } 
-} else if ($code == ""){ 
+} else if ($code == ""||$code == null){ 
 	 if ($userType == 'Silver') {
+		echo " silver without code";
 $sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType');";
 } else if ($userType == 'Gold') {
+	echo " g without code";
 	$sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType, codeCount) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType', '10');";
 } else if ($userType == 'Diamond') {
+	echo " d without code";
 		$sql = "INSERT INTO 1milliontraders (userID, fullname, contact, email, address, studentID, university, faculty, programme, classification, username, password, studentIDImg, userType) VALUES ('$userID', '$fullname', '$contact',  '$email', '$address', '$studentid', '$university', '$faculty', '$programme', '$classification', '$username', '$password', '$imageData', '$userType', '20');";
 }
 }
 
-
+else echo " no shit ";
 
 if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully ";
