@@ -42,7 +42,7 @@
                                 <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
                 <li class="active"><a href="sub1.php">Submission</a></li>
-				<li><a href="elements.php">Log In</a></li>
+				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
 			</ul>
 		</nav>
 	</header>
