@@ -13,7 +13,7 @@ if(isset($_SESSION['loginUser'])) {
   $userType = $_SESSION['userType'];
  $code = $_SESSION['referralID'];
 $pay = $_POST['chk1'];
-if (isset($_POST['payment'])) {
+
 
 if (!empty($code)) {
   $count = mysqli_query($conn, "SELECT codeCount FROM 1milliontraders WHERE userID = '$code'");
@@ -102,7 +102,7 @@ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BI
  // echo '<script>history.back();</script>';
   
 } 
-}
+
   ?>
   
   
