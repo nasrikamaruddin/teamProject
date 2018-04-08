@@ -9,10 +9,12 @@ if (isset($_GET['joiningteam'])) {
     
     if(isset($_SESSION['loginUser'])){
         $thisuser = $_SESSION['loginUser'];
-        echo $thisuser;
-        try{
+        
+        $sqlcheck = "select teamID from ydecparticipant where userID = $thisuser";
 
-            $sqljointeam = "UPDATE `ydecparticipant` SET `teamID` = $joiningteam WHERE userID = $thisuser";
+        if(mysqli_num_rows(mysqli_query($conn,$sqlcheck))==0){
+        try{
+             $sqljointeam = "UPDATE `ydecparticipant` SET `teamID` = $joiningteam WHERE userID = $thisuser";
         $run_jointeam= mysqli_query($conn,$sqljointeam);
 
         }
@@ -21,8 +23,11 @@ if (isset($_GET['joiningteam'])) {
         }
 
         $_SESSION['teamid']=$joiningteam;
-       header("Location: ../dashboard/index.php");
-
+        header("Location: ../dashboard/index.php");
+        }
+        else {
+            echo $_SESSION['username'].", you already joined a team, <a href='../dashboard/index.php' > click here to proceed to Homepage </a>";
+        }
     }
 
     else{

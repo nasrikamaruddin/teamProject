@@ -13,11 +13,11 @@ if(isset($_POST['teamname'])){
     
     $teamname = $_POST["teamname"];
     $title = $_POST["project"];
-    $on = "on";
+    $status = "active";
     
-    $teamid = getToken(7); 
+    $teamid =getunique(); 
     
-    $createnewteam = "INSERT INTO ydecteam (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$on');";
+    $createnewteam = "INSERT INTO ydecteam (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$status');";
     
     if (mysqli_query($conn,$createnewteam) === TRUE) {
         $updateuserteam = "UPDATE `ydecparticipant` SET `teamID` = $teamid WHERE `userID` = $loginuser";
@@ -52,9 +52,22 @@ function getToken($length)
         $token .= $codeAlphabet[crypto_rand_secure(0, $max-1)];
     }
 
+    
     return $token;
 }
 
+function getunique(){
+    $token= getToken(7);
+    global $conn;
+    if(mysqli_num_rows(mysqli_query($conn,"select teamid from ydecteam where teamid=380348"))==0){
+        return $token;
+    }
+    else {
+        $token= getunique();
+        return $token;
+
+    }
+}
 function crypto_rand_secure($min, $max)
 {
     $range = $max - $min;
