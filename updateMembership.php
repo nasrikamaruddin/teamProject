@@ -12,9 +12,9 @@ if(isset($_SESSION['loginUser'])) {
 
   $userType = $_SESSION['userType'];
  $code = $_SESSION['referralID'];
-$pay = $_POST['chk1'];
-if (isset($_POST['payment'])) {
 
+if (isset($_POST['payment'])) {
+$pay = $_POST['chk1'];
 if (!empty($code)) {
   $count = mysqli_query($conn, "SELECT codeCount FROM 1milliontraders WHERE userID = '$code'");
 
@@ -34,7 +34,7 @@ if (!empty($code)) {
 
 }
  
-}   else if (empty($code)) {
+}   else if (empty($code) || $code == '' || $code == null) {
   if ($userType == 'Silver') {
   header("Location: http://localhost/teamProject/signupsuccess.php");
 } else if ($userType == 'Gold') {
