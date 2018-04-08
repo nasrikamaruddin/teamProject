@@ -69,16 +69,12 @@ else echo " no shit ";
 if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully ";
 	session_start();
-	$_SESSION['loginUser'] =$userID;
+	$_SESSION['loginUser'] =$userID ;
 	$_SESSION['referralID'] = $code;
 	$_SESSION['userType'] = $userType;
 	echo 'session create'.$_SESSION['loginUser'];
-	if ($userType == 'Silver') {
-	header("Location: http://localhost/teamProject/updateMembership.php");
-} else if ($userType == 'Gold' || $userType == 'Diamond') {
-	header("Location: http://localhost/teamProject/checkout.php");
-}
-	
+	header("Location: http://localhost/teamProject/checkoutNonUPM.php");
+
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 //	echo"<script> alert('This email has been used')</script>";

@@ -12,7 +12,7 @@ if(isset($_SESSION['loginUser'])) {
 }
 
 $code = $_SESSION['referralID'];
-
+$userType = $_SESSION['userType'];
 ?>
 
 <!DOCTYPE html>
@@ -124,13 +124,13 @@ $code = $_SESSION['referralID'];
 		<div class="form-group">
 		<div class = "row" align="center" style="margin-left: 110px;">
 			<div class="column" style="margin-left: 70px;">
-				<label class="btn btn-primary"><img src="src/images/visa.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
-				<input type="radio" name="chk1" value="visa" required ></label>
+				<label class="btn btn-primary"><img src="src/images/fpx.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="fpx" required ></label>
 				</div>
 
 			<div class="column">
-				<label class="btn btn-primary"><img src="src/images/mastercard.jpg" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
-				<input type="radio" name="chk1" value="master" required></label>
+				<label class="btn btn-primary"><img src="src/images/rakyat.png" class="img-thumbnail img-check" style="width: 210px;height: 120px;">
+				<input type="radio" name="chk1" value="rakyat" required></label>
 			</div>
 			
 			<div class="column" >
