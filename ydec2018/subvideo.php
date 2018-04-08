@@ -106,12 +106,12 @@ $conn->close();
 						<tr>
 							<td style='width:12em;'>Team Name</td>
 							<td style='width:2em;'>:</td>
-							<td class="log1" style='width:40em;'>sdfsdf</td>
+							<td class="log1" style='width:40em;'></td>
 						</tr>
 						<tr>
 							<td>Member</td>
 							<td>:</td>
-							<td class="log1">sdfsdfs</td>
+							<td class="log1"></td>
 						</tr>
 						<tr>
 							<td>Document</td>
