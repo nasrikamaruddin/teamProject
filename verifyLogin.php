@@ -24,12 +24,14 @@
 			session_start();
 			$_SESSION['loginUser']= $loginid;
 			$_SESSION['username']= $_POST["loginUsername"]; 
+			if(isset($_SESSION['teamtojoin'])){
+				header("Location: ydec/ajax/jointeam.php");
+				}
+			else
 			header("Location: index-logged.php");
 
 		}		
-		if(isset($_SESSION['teamtojoin'])){
-		header("Location: ydec/ajax/jointeam.php");
-		}
+		
 			
 		}
 	}
