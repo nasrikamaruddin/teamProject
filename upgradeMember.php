@@ -13,6 +13,8 @@ if(isset($_SESSION['loginUser'])) {
 
 
 
+$username = $_SESSION['username'];
+
 $conn->close();
 
 ?>
@@ -95,7 +97,7 @@ $conn->close();
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
 									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
-									<li><a href="login.php" class="scroll">Log In</a></li>
+                                                                        <li><a href="login.php" class="scroll"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
 								</ul>
 							</nav>
 						</div>
