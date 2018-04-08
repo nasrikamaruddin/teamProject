@@ -74,31 +74,33 @@
 		<div class="container">
 			<div class="w3l-heading"> 
 
-				<h3>Submit Your Document</h3>
+				
+				<h3>Submit Your Pitching Video</h3>
 				<div class="log">
-                                    <?php 
-                                                                         if($_SESSION['logged']==true)
-                                                                          { 
-                        
-                                                                          echo '<a><span>Team: </a>';  echo $_SESSION[("username")];}
-                                                                         
-                                                                          ?> </div>
-                               <div class="log">
-                                    <?php 
-                                                                         if($_SESSION['logged']==true)
-                                                                          { 
-                        
-                                                                          echo '<a><span>User: </a>';  echo $_SESSION[("username")];}
-                                                                         
-                                                                          ?> </div>
-                                <div class="log">
-                                    <?php 
-                                                                         if($_SESSION['logged']==true)
-                                                                          { 
-                        
-                                                                          echo '<a><span>Document: </a>';  echo $_SESSION[("username")];}
-                                                                         
-                                                                          ?> </div>
+                                    <table class="log">
+                         
+						<tbody>
+						<tr>
+							<td style='width:12em;'>Team Name</td>
+							<td style='width:2em;'>:</td>
+							<td class="log1" style='width:40em;'>sdfsdf</td>
+						</tr>
+						<tr>
+							<td>Member</td>
+							<td>:</td>
+							<td class="log1">sdfsdfs</td>
+						</tr>
+						<tr>
+							<td>Document</td>
+							<td>:</td>
+							<td class="log1">Video</td>
+						</tr>
+						
+						</tbody>
+						
+						
+						
+					  </table>
 			</div>
 			
 		

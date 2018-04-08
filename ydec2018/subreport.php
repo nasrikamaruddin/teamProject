@@ -89,12 +89,7 @@
 						<tr>
 							<td>Document</td>
 							<td>:</td>
-							<td class="log1">sfsdfsd</td>
-						</tr>
-						<tr>
-							<td> Submission Status</td>
-							<td>:</td>
-							<td class="log2">sdfsdf</td>
+							<td class="log1">Proposal</td>
 						</tr>
 						
 						</tbody>
