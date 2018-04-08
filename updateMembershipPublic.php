@@ -37,39 +37,39 @@ if (!empty($code)) {
 }   else if (empty($code)) {
   if ($userType == 'Silver') {
   if ($pay == 'fpx') {
-  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=10.00&orderid=1MT-10-FPX&cur=MYR&vcode=64415d82a58f71e81fa3ea27e17f06a6&bill_desc=1+Million+Traders");
+  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=100.00&orderid=1MT-100-FPX&cur=MYR&vcode=08ca9c29df4ad6f12aded14c7891746c&bill_desc=1+Million+Traders");
 } else if ($pay == 'rakyat') {
- header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=10.00&orderid=1MT-10-BR&cur=MYR&vcode=6330d33a28ca8ad6aff82702cedbc653&bill_desc=1+Million+Traders");
+ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=100.00&orderid=1MT-100-BR&cur=MYR&vcode=99abffd760d70bb3b6e93d4ddab7b49d&bill_desc=1+Million+Traders");
 } else if ($pay == 'maybank') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=10.00&orderid=1MT-10-M2U&cur=MYR&vcode=2a92a167dd32c10185e770948495a48e&bill_desc=1+Million+Trader");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=100.00&orderid=1MT-100-M2U&cur=MYR&vcode=a4240c786d263ff3cb99173965ea3337&bill_desc=1+Million+Traders");
 } else if ($pay == 'cimb') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=10.00&orderid=1MT-10-CIMBC&cur=MYR&vcode=22f841384b574f731e5ce6d8bf0c6c6c&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=100.00&orderid=1MT-100-CIMBC&cur=MYR&vcode=e6aff1127cc493e7e9aa4e34d15a016c&bill_desc=1+Million+Traders");
 } else if ($pay == 'ism') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=10.00&orderid=1MT-10-BI&cur=MYR&vcode=a98e24f1e65e2c1883af896c98225a61&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=100.00&orderid=1MT-100-BI&cur=MYR&vcode=20a14a3e0e47e48d967675471cd9626b&bill_desc=1+Million+Traders");
 }
 } else if ($userType == 'Gold') {
   if ($pay == 'fpx') {
-  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=30.00&orderid=1MT-30-FPX&cur=MYR&vcode=efdc508fdaf5476d55c9f8151f49bd5e&bill_desc=1+Million+Traders");
+  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=200.00&orderid=1MT-200-FPX&cur=MYR&vcode=02b6fc040a2eb4ee072fc1b4cd1b7dcc&bill_desc=1+Million+Traders");
 } else if ($pay == 'rakyat') {
- header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=30.00&orderid=1MT-30-BR&cur=MYR&vcode=03b39e94b6a978764d49376a2d1bd4f1&bill_desc=1+Million+Traders");
+ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=200.00&orderid=1MT-200-BR&cur=MYR&vcode=2e3576e603e6612807a94f826f634153&bill_desc=1+Million+Traders");
 } else if ($pay == 'maybank') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=30.00&orderid=1MT-30-BI&cur=MYR&vcode=74128f1aac8a90371ff4d2e3d7040d15&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=200.00&orderid=1MT-200-M2U&cur=MYR&vcode=cc06af985b0e439405825fcf43ffc6ff&bill_desc=1+Million+Traders");
 } else if ($pay == 'cimb') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=30.00&orderid=1MT-30-CIMBC&cur=MYR&vcode=bc3e60e0753062c50b87beefb502a188&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=200.00&orderid=1MT-200-CIMB&cur=MYR&vcode=6402711c15a88d14c14f4a75bae90560&bill_desc=1+Million+Traders");
 } else if ($pay == 'ism') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=30.00&orderid=1MT-30-BI&cur=MYR&vcode=74128f1aac8a90371ff4d2e3d7040d15&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=200.00&orderid=1MT-200-BI&cur=MYR&vcode=d1334e1f9e7b05b9df00a7a443cda57f&bill_desc=1+Million+Traders");
 }
 } else if ($userType == 'Diamond') {
     if ($pay == 'fpx') {
-  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=50.00&orderid=1MT-50-FPX&cur=MYR&vcode=f697b83c2d59753d8a9c3006c8e51888&bill_desc=1+Million+Traders");
+  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=300.00&orderid=1MT-300-FPX&cur=MYR&vcode=f5dc2b46578933282681e4b650463dff&bill_desc=1+Million+Traders");
 } else if ($pay == 'rakyat') {
- header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=50.00&orderid=1MT-50-BR&cur=MYR&vcode=bb2ef6fc28a8b225204d5334529de45a&bill_desc=1+Million+Trader");
+ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=300.00&orderid=1MT-300-BR&cur=MYR&vcode=bf451269612b8f6770b483094e8db5aa&bill_desc=1+Million+Traders");
 } else if ($pay == 'maybank') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=50.00&orderid=1MT-50-M2U&cur=MYR&vcode=98ce9f0000868abc2c32d164f5a9defe&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=300.00&orderid=1MT-300-M2U&cur=MYR&vcode=6cc200b84e5c4fd2007b8f2410735541&bill_desc=1+Million+Traders");
 } else if ($pay == 'cimb') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=50.00&orderid=1MT-50-CIMBC&cur=MYR&vcode=d0ba03881f70cb8ae2ccb57e063fc06a&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=300.00&orderid=1MT-300-CIMB&cur=MYR&vcode=a526832f28516dec10911ec4e70e8167&bill_desc=1+Million+Traders");
 } else if ($pay == 'ism') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=50.00&orderid=1MT-50-BI&cur=MYR&vcode=059b27dcff633a44c175f849bde6ab6e&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=300.00&orderid=1MT-300-BI&cur=MYR&vcode=6544011abb3a88117683f2604bec058a&bill_desc=1+Million+Traders");
 }
 }
 }
@@ -80,39 +80,39 @@ if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully ";
    if ($userType == 'Silver') {
   if ($pay == 'fpx') {
-  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=10.00&orderid=1MT-10-FPX&cur=MYR&vcode=64415d82a58f71e81fa3ea27e17f06a6&bill_desc=1+Million+Traders");
+  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=100.00&orderid=1MT-100-FPX&cur=MYR&vcode=08ca9c29df4ad6f12aded14c7891746c&bill_desc=1+Million+Traders");
 } else if ($pay == 'rakyat') {
- header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=10.00&orderid=1MT-10-BR&cur=MYR&vcode=6330d33a28ca8ad6aff82702cedbc653&bill_desc=1+Million+Traders");
+ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=100.00&orderid=1MT-100-BR&cur=MYR&vcode=99abffd760d70bb3b6e93d4ddab7b49d&bill_desc=1+Million+Traders");
 } else if ($pay == 'maybank') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=10.00&orderid=1MT-10-M2U&cur=MYR&vcode=2a92a167dd32c10185e770948495a48e&bill_desc=1+Million+Trader");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=100.00&orderid=1MT-100-M2U&cur=MYR&vcode=a4240c786d263ff3cb99173965ea3337&bill_desc=1+Million+Traders");
 } else if ($pay == 'cimb') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=10.00&orderid=1MT-10-CIMBC&cur=MYR&vcode=22f841384b574f731e5ce6d8bf0c6c6c&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=100.00&orderid=1MT-100-CIMBC&cur=MYR&vcode=e6aff1127cc493e7e9aa4e34d15a016c&bill_desc=1+Million+Traders");
 } else if ($pay == 'ism') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=10.00&orderid=1MT-10-BI&cur=MYR&vcode=a98e24f1e65e2c1883af896c98225a61&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=100.00&orderid=1MT-100-BI&cur=MYR&vcode=20a14a3e0e47e48d967675471cd9626b&bill_desc=1+Million+Traders");
 }
 } else if ($userType == 'Gold') {
   if ($pay == 'fpx') {
-  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=30.00&orderid=1MT-30-FPX&cur=MYR&vcode=efdc508fdaf5476d55c9f8151f49bd5e&bill_desc=1+Million+Traders");
+  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=200.00&orderid=1MT-200-FPX&cur=MYR&vcode=02b6fc040a2eb4ee072fc1b4cd1b7dcc&bill_desc=1+Million+Traders");
 } else if ($pay == 'rakyat') {
- header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=30.00&orderid=1MT-30-BR&cur=MYR&vcode=03b39e94b6a978764d49376a2d1bd4f1&bill_desc=1+Million+Traders");
+ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=200.00&orderid=1MT-200-BR&cur=MYR&vcode=2e3576e603e6612807a94f826f634153&bill_desc=1+Million+Traders");
 } else if ($pay == 'maybank') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=30.00&orderid=1MT-30-BI&cur=MYR&vcode=74128f1aac8a90371ff4d2e3d7040d15&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=200.00&orderid=1MT-200-M2U&cur=MYR&vcode=cc06af985b0e439405825fcf43ffc6ff&bill_desc=1+Million+Traders");
 } else if ($pay == 'cimb') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=30.00&orderid=1MT-30-CIMBC&cur=MYR&vcode=bc3e60e0753062c50b87beefb502a188&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=200.00&orderid=1MT-200-CIMB&cur=MYR&vcode=6402711c15a88d14c14f4a75bae90560&bill_desc=1+Million+Traders");
 } else if ($pay == 'ism') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=30.00&orderid=1MT-30-BI&cur=MYR&vcode=74128f1aac8a90371ff4d2e3d7040d15&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=200.00&orderid=1MT-200-BI&cur=MYR&vcode=d1334e1f9e7b05b9df00a7a443cda57f&bill_desc=1+Million+Traders");
 }
 } else if ($userType == 'Diamond') {
     if ($pay == 'fpx') {
-  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=50.00&orderid=1MT-50-FPX&cur=MYR&vcode=f697b83c2d59753d8a9c3006c8e51888&bill_desc=1+Million+Traders");
+  header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/fpx.php?amount=300.00&orderid=1MT-300-FPX&cur=MYR&vcode=f5dc2b46578933282681e4b650463dff&bill_desc=1+Million+Traders");
 } else if ($pay == 'rakyat') {
- header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=50.00&orderid=1MT-50-BR&cur=MYR&vcode=bb2ef6fc28a8b225204d5334529de45a&bill_desc=1+Million+Trader");
+ header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BKRM.php?amount=300.00&orderid=1MT-300-BR&cur=MYR&vcode=bf451269612b8f6770b483094e8db5aa&bill_desc=1+Million+Traders");
 } else if ($pay == 'maybank') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=50.00&orderid=1MT-50-M2U&cur=MYR&vcode=98ce9f0000868abc2c32d164f5a9defe&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/MB2u.php?amount=300.00&orderid=1MT-300-M2U&cur=MYR&vcode=6cc200b84e5c4fd2007b8f2410735541&bill_desc=1+Million+Traders");
 } else if ($pay == 'cimb') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=50.00&orderid=1MT-50-CIMBC&cur=MYR&vcode=d0ba03881f70cb8ae2ccb57e063fc06a&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/CIMBCLICKS.php?amount=300.00&orderid=1MT-300-CIMB&cur=MYR&vcode=a526832f28516dec10911ec4e70e8167&bill_desc=1+Million+Traders");
 } else if ($pay == 'ism') {
-header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=50.00&orderid=1MT-50-BI&cur=MYR&vcode=059b27dcff633a44c175f849bde6ab6e&bill_desc=1+Million+Traders");
+header("Location: https://www.onlinepayment.com.my/MOLPay/pay/1milliontraders/BIMB.php?amount=300.00&orderid=1MT-300-BI&cur=MYR&vcode=6544011abb3a88117683f2604bec058a&bill_desc=1+Million+Traders");
 }
 }
   
