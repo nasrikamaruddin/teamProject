@@ -374,7 +374,7 @@ function checkdup() {
     var username = $("#username").val();
 	$.ajax({
         type: 'POST',
-        url: "ajax/checkdup.php",
+        url: "ajax/checkdupname.php",
         data: { username: username},
         error: function(data) {
             alert(" Can't do because: " + data);
