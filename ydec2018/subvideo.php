@@ -70,7 +70,7 @@ $conn->close();
                                 <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
                 <li class="active"><a href="sub1.php">Submission</a></li>
-				<li><a href="elements.php">Log In</a></li>
+				<li><a><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -116,13 +116,9 @@ $conn->close();
 						<tr>
 							<td>Document</td>
 							<td>:</td>
-							<td class="log1">sfsdfsd</td>
+							<td class="log1">Pitching Video</td>
 						</tr>
-						<tr>
-							<td> Submission Status</td>
-							<td>:</td>
-							<td class="log2">sdfsdf</td>
-						</tr>
+						
 						
 						</tbody>
 						
