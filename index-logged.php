@@ -114,7 +114,7 @@ $username = $_SESSION['username'];
 					</div>
                                     <!--Direct user to registration page-->
                                     <div class="w3-arrow bounce animated"><h2 style="color: white">Join Events</h2>
-						<a href="#events.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+						<a href="#events"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>
