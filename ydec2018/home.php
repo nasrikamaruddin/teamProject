@@ -120,7 +120,7 @@
 					</div>
 				</div>
 				<div class="text-center mt60">
-					<a href="" class="site-btn">Submit Now</a>
+					<a href="subreport.php" class="site-btn">Submit Now</a>
 				</div>
 				<!-- popup video -->
 				<div class="intro-video">
