@@ -42,7 +42,7 @@
                                 <li><a href="committe.php">Committee</a></li>
                                 <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
-                <li class="active"><a href="sub1.php">Submisiion</a></li>
+                <li class="active"><a href="sub1.php">Submission</a></li>
 				<li><a href="elements.php">Log In</a></li>
 			</ul>
 		</nav>
