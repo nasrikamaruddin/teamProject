@@ -30,7 +30,7 @@
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="logo">
-			<img src="img/logo.png" alt=""><!-- Logo -->
+			<img src="img/logo1.png" alt=""><!-- Logo -->
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fa fa-bars"></i></div>
@@ -40,7 +40,11 @@
                                 <li><a href="committe.php">Committee</a></li>
                                 <li><a href="rules.php">Rules & Regulation</a></li>
 				<li class="active"><a href="blog-post.php">Sponsorship</a></li>
+<<<<<<< HEAD
 				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
+=======
+				<li><a href="elements.php"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} else {echo "Log In";} ?></a></li>
+>>>>>>> b7f1d79e34133a3a579d6dae7c58e67d469220a6
 			</ul>
 		</nav>
 	</header>
@@ -72,6 +76,7 @@
 
 						<div class="post-content">
 							<h2 class="post-title">Call for Sponsorships</h2>
+                                                      <img src="img/Sponsorship-Packages 2.png">
 
                                                         <p><br>Good day,  and a warm welcome to the first ever joint program of <b>Universiti Putra Malaysia</b> and <b>PKT Logistics Group Sdn Bhd – The Young Digital Entrepreneurship Challenge (YDEC) 2018.</b> <br><br>
 

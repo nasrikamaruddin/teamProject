@@ -42,7 +42,11 @@
                                 <li><a href="committe.php">Committee</a></li>
 				<li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
+<<<<<<< HEAD
 				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
+=======
+				<li><a href="elements.php"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} else {echo "Log In";} ?></a></li>
+>>>>>>> b7f1d79e34133a3a579d6dae7c58e67d469220a6
 			</ul>
 		</nav>
 	</header>
@@ -116,7 +120,7 @@
 					</div>
 				</div>
 				<div class="text-center mt60">
-					<a href="" class="site-btn">Register Now</a>
+					<a href="" class="site-btn">Submit Now</a>
 				</div>
 				<!-- popup video -->
 				<div class="intro-video">
@@ -148,56 +152,42 @@
 						<!-- single testimonial -->
 						<div class="testimonial">
 							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
+							<p>To be announced soon</p>
 							<div class="client-info">
 								<div class="avatar">
 									<img src="img/avatar/01.jpg" alt="">
 								</div>
 								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
+									<h2>Mentor 1</h2>
+									<p>Mentor</p>
 								</div>
 							</div>
 						</div>
 						<!-- single testimonial -->
 						<div class="testimonial">
 							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
+							<p>To be announced soon</p>
 							<div class="client-info">
 								<div class="avatar">
 									<img src="img/avatar/02.jpg" alt="">
 								</div>
 								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
+									<h2>Mentor 2</h2>
+									<p>Mentor</p>
 								</div>
 							</div>
 						</div>
 						<!-- single testimonial -->
 						<div class="testimonial">
 							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
+							<p>To be announced soon</p>
 							<div class="client-info">
 								<div class="avatar">
 									<img src="img/avatar/01.jpg" alt="">
 								</div>
 								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
-								</div>
-							</div>
-						</div>
-						<!-- single testimonial -->
-						<div class="testimonial">
-							<span>‘​‌‘​‌</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-							<div class="client-info">
-								<div class="avatar">
-									<img src="img/avatar/02.jpg" alt="">
-								</div>
-								<div class="client-name">
-									<h2>Michael Smith</h2>
-									<p>CEO Company</p>
+									<h2>Mentor 3</h2>
+									<p>Mentor</p>
 								</div>
 							</div>
 						</div>
@@ -346,7 +336,7 @@
 				</div>
 				<div class="col-md-3">
 					<div class="promo-btn-area">
-						<a href="" class="site-btn btn-2">REGISTER NOW</a>
+						<a href="" class="site-btn btn-2">SUBMIT NOW</a>
 					</div>
 				</div>
 			</div>
@@ -376,7 +366,7 @@
                                 <div class="section-title left">
                                     <h2><span> YDEC FACULTY AMBASSADOR </span></h2>
                                 </div>
-                                    <p class="con-item">//request gambar <a href="https://1milliontraders.com/contacts/" target="blank">list of faculty ambassador</a> <br> from marketing team</p>
+                                    <img src="img/Faculty Ambassador 2.png">
 				</div>
 			</div>
 		</div>
