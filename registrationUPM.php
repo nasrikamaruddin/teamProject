@@ -401,12 +401,12 @@ function validatephone(phone)
 </script>
 <?php
 function createRandomPassword() {
-    $chars = "0123456789";
+    $chars = "abcdefghijklmnopqrstuvwxyz0123456789";
     srand((double)microtime()*1000000);
     $i = 0;
     $pass = '' ;
-    while ($i <= 5) {
-        $num = rand() % 6;
+    while ($i <= 8) {
+        $num = rand() % 33;
         $tmp = substr($chars, $num, 1);
         $pass = $pass . $tmp;
         $i++;

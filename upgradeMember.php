@@ -11,7 +11,7 @@ if(isset($_SESSION['loginUser'])) {
   echo "Your session is running " . $_SESSION['loginUser'];
 }
 
-$code = $_SESSION['referralID'];
+
 
 $username = $_SESSION['username'];
 
@@ -132,7 +132,7 @@ $conn->close();
 							</div>
 							
 							<div class="block-footer">
-								<form action="upgrade.php" method="POST">
+								<form action="checkoutUpgrade.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userTypeUp" id="userTypeUp" value="Gold">Upgrade Now</button>
 							</form>
 							</div>
@@ -147,7 +147,7 @@ $conn->close();
 							</div>
 							
 							<div class="block-footer">
-								<form action="upgrade.php" method="POST">
+								<form action="checkoutUpgrade.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userTypeUp" id="userTypeUp" value="Diamond">Upgrade Now</button>
 							</form>
 							</div>
