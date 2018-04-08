@@ -97,7 +97,6 @@ $username = $_SESSION['username'];
 										<ul>
 										<li><a href="profile.php">Profile</a></li>
 										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#" class="scroll">Setting</a></li>
 										<li><a href="logout.php">Logout</a></li>
 										</ul>
 									</li>                     
