@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +43,8 @@
                                 <li><a href="committe.php">Committee</a></li>
                                 <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
-                <li class="active"><a href="sub1.php">Submission</a></li>
-				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
+                <li class="active"><a href="sub1.php">Submisiion</a></li>
+				<li><a href="elements.php">Log In</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -89,7 +90,12 @@
 						<tr>
 							<td>Document</td>
 							<td>:</td>
-							<td class="log1">Proposal</td>
+							<td class="log1">sfsdfsd</td>
+						</tr>
+						<tr>
+							<td> Submission Status</td>
+							<td>:</td>
+							<td class="log2">sdfsdf</td>
 						</tr>
 						
 						</tbody>
@@ -101,14 +107,14 @@
 			
 		
 			<div class="agile-form">
-                                    <form action="subprocess.php" method ="post">
+                            <form action="subprocess.php" method ="POST" enctype="multipart/form-data">
 					<ul1 class="field-list">
 						
                     <li> 
 						
                                                 
 						<div class="form-group "><label>Submit Proposal Report</label>
-                                                    <input type="file" name="documentName" class="form-control" required>
+                                                    <input type="file" name="file" class="form-control" required>
                                                     <small class="text-danger"> *pdf only</small><br><br></div>
                                                     
 						</li> 
@@ -117,7 +123,7 @@
 						
 					</ul1>
 					<div class="submit_btn">
-						<input type="submit"  value="Submit">
+						<input type="submit" name="submit"  value="Submit">
 					</div>
 				</form>	
                             
