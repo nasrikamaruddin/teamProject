@@ -6,7 +6,17 @@ $conn = OpenCon();
 //echo "Connected Successfully";
 
 session_start();
+
+if(isset($_SESSION['loginUser'])) {
+  echo "Your session is running " . $_SESSION['loginUser'];
+  }
+$userID = $_SESSION['loginUser'];
+$query22 = mysqli_query($conn,"select * from 1milliontraders where userID='$userID'");						
+$row22 = mysqli_fetch_array($query22);
+$username = $row22['username'];
+
 $username = $_SESSION['username'];
+
 ?>
 
 <!DOCTYPE html>
@@ -128,7 +138,7 @@ $username = $_SESSION['username'];
 					  <table class="table table-user-information">
 
 <?php
-$username = $_SESSION['loginUser'];
+$userID = $_SESSION['loginUser'];
 $get_info= "select * from 1milliontraders where username='$username'";
 	
 	$run_info= mysqli_query($conn,$get_info);

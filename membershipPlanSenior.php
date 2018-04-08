@@ -165,7 +165,7 @@ $conn->close();
 								 <p class="price"><i style="font-size: 30px;"></i>FREE</p>
 							</div>
 							  <div class="block-footer">
-								  <form action="signupPublic.php" method="POST">
+								  <form action="signupSenior.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Silver">Subscribe Now</a>
 							</form>
 							  </div>
@@ -187,7 +187,7 @@ $conn->close();
 								  <p class="price"><i style="font-size: 30px;">RM</i>30<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signupPublic.php" method="POST">
+								  <form action="signupSenior.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Gold">Subscribe Now</a>
 							</form>
 							  </div>
@@ -208,7 +208,7 @@ $conn->close();
 								  <p class="price"><i style="font-size: 30px;">RM</i>50<sub><small class="renew-price">for Lifetime</small></sub></p>
 							  </div>
 							  <div class="block-footer">
-								  <form action="signupPublic.php" method="POST">
+								  <form action="signupSenior.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userType" id="userType" value="Diamond">Subscribe Now</a>
 							</form>
 							  </div>
