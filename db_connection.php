@@ -3,8 +3,8 @@
 function OpenCon()
  {
  $dbhost = "localhost";
- $dbuser = "milliont_main";
- $dbpass = "VDhg8mtIsUi?";
+ $dbuser = "root";
+ $dbpass = "";
  $db = "milliont_main";
 
 
