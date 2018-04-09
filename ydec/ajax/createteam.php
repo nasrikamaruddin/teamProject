@@ -17,19 +17,23 @@ if(isset($_POST['teamname'])){
     
     $teamid =getunique(); 
     
+    $runcheck = "SELECT * FROM `ydecparticipant` WHERE `userID` LIKE '$loginuser';";
+    if(mysqli_num_rows(mysqli_query($conn,$runcheck))==0){
+        echo " You are not YDEC participant ";}
+    else {
     $createnewteam = "INSERT INTO ydecteam (`teamID`, `teamName`, `projecttitle`,`status`) VALUES ('$teamid', '$teamname','$title','$status');";
     
     if (mysqli_query($conn,$createnewteam) === TRUE) {
-        $updateuserteam = "UPDATE `ydecparticipant` SET `teamID` = $teamid WHERE `userID` = $loginuser";
+        $updateuserteam = "UPDATE `ydecparticipant` SET `teamID` = $teamid WHERE `userID` like '$loginuser'";
         $run_updateuserteam= mysqli_query($conn,$updateuserteam);
         if (!$run_updateuserteam) {
-            echo "Error: no you are not ydec participant", mysqli_error($conn);
+            echo "Error ,". mysqli_error($conn);
             }
 
         else{
             
         $_SESSION['teamid']=$teamid;
-        
+        echo "team creation sucess";
             }
     }
 
@@ -37,9 +41,10 @@ if(isset($_POST['teamname'])){
             echo "Error: " . $createnewteam . "<br>" . $conn->error;
            
         }
-echo "team creation sucess";
+
 }
-else echo "failed to get parameter";
+}
+else "echo no parameter found" ;
 
 function getToken($length)
 {
