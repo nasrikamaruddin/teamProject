@@ -1,3 +1,31 @@
+
+<?php
+if (isset($_POST['submit'])){
+ $teamID=$_SESSION['username'];
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname=milliont_main;
+$conn =new mysqli($servername,$username,$password,$dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$url=$_POST['link'];
+$mysql="INSERT INTO YDECPitchingVideo(videoID,link,teamID) VALUES ( '','$url','$teamID')";
+
+   if ($conn->query($mysql) === TRUE) {
+    header("Location: home.php?uploadsuccess"); 
+} else {
+    echo "Error: " . $mysql . "<br>" . $conn->error;
+
+    }
+
+$conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,11 +70,7 @@
                                 <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
                 <li class="active"><a href="sub1.php">Submission</a></li>
-<<<<<<< HEAD
-				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
-=======
-				<li><a href="elements.php"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} else {echo "Log In";} ?></a></li>
->>>>>>> b7f1d79e34133a3a579d6dae7c58e67d469220a6
+				<li><a><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -76,34 +100,35 @@
 
 				<h3>Submit Your Document</h3>
 				<div class="log">
-                                    <?php 
-                                                                         if($_SESSION['logged']==true)
-                                                                          { 
-                        
-                                                                          echo '<a><span>Team: </a>';  echo $_SESSION[("username")];}
-                                                                         
-                                                                          ?> </div>
-                               <div class="log">
-                                    <?php 
-                                                                         if($_SESSION['logged']==true)
-                                                                          { 
-                        
-                                                                          echo '<a><span>User: </a>';  echo $_SESSION[("username")];}
-                                                                         
-                                                                          ?> </div>
-                                <div class="log">
-                                    <?php 
-                                                                         if($_SESSION['logged']==true)
-                                                                          { 
-                        
-                                                                          echo '<a><span>Document: </a>';  echo $_SESSION[("username")];}
-                                                                         
-                                                                          ?> </div>
+                                    <table class="log">
+                         
+						<tbody>
+						<tr>
+							<td style='width:12em;'>Team Name</td>
+							<td style='width:2em;'>:</td>
+							<td class="log1" style='width:40em;'></td>
+						</tr>
+						<tr>
+							<td>Member</td>
+							<td>:</td>
+							<td class="log1"></td>
+						</tr>
+						<tr>
+							<td>Document</td>
+							<td>:</td>
+							<td class="log1">Pitching Video</td>
+						</tr>
+						
+						
+						</tbody>
+						
+						
+						
+					  </table>
 			</div>
-			
 		
 			<div class="agile-form">
-                                    <form action="subprocess.php" method ="post">
+                                    <form action="subvideo.php" method ="post">
 					<ul1 class="field-list">
 						
 						
@@ -118,7 +143,7 @@
 						
 					</ul1>
 					<div class="submit_btn">
-						<input type="submit"  value="Submit">
+						<input type="submit" name="submit" value="Submit">
 					</div>
 				</form>	
                             

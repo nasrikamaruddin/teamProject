@@ -1,5 +1,5 @@
 <?php
-$vkey ="ab6b6268b90de057c2cb9361b20ec7b3" ; //Replace xxxxxxxxxxxx with your MOLPay Secret_Key
+$vkey ="801a932f6c8aab145d7f855db9ecd53d" ; //Replace xxxxxxxxxxxx with your MOLPay Secret_Key
 /********************************
 *Don't change below parameters
 ********************************/
@@ -33,6 +33,17 @@ if( $skey != $key1 ) $status= -1; // Invalid transaction.
 // Merchant might issue a requery to MOLPay to double check payment status with MOLPay.
 if ( $status == "00" ) {
 echo "return ok";
+session_start();
+$userID = $_SESSION['loginUser'];
+include 'db_connection.php';
+$conn = OpenCon();
+
+$sqlmemberfee = " INSERT INTO membershipfees (transID,feeStatus, userID) VALUES ('$tranID', 'status','$userID' ) ";
+mysqli_query($conn,$sqlmemberfee);
+
+header("location:https://1milliontraders.com.my/signupsuccess.php");
+
+//header("location:http://localhost/teamProject/signupsuccess.php");
 } else {
 	echo "return fail";
 // failure action. Write your script here .....
@@ -41,15 +52,4 @@ echo "return ok";
 }
 // Merchant is recommended to implement IPN once received the payment status
 // regardless the status to acknowledge MOLPay system
-session_start();
-echo "session: ".$_SESSION['loginUser'];
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<p>some text</p>
-</body>
-</html>

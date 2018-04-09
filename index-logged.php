@@ -97,7 +97,6 @@ $username = $_SESSION['username'];
 										<ul>
 										<li><a href="profile.php">Profile</a></li>
 										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#" class="scroll">Setting</a></li>
 										<li><a href="logout.php">Logout</a></li>
 										</ul>
 									</li>                     
@@ -114,8 +113,8 @@ $username = $_SESSION['username'];
 						<h2> __ </h2>
 					</div>
                                     <!--Direct user to registration page-->
-                                    <div class="w3-arrow bounce animated"><h2 style="color: white">Register Now</h2>
-						<a href="registrationCategory.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                    <div class="w3-arrow bounce animated"><h2 style="color: white">Join Events</h2>
+						<a href="#events"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>

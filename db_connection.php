@@ -1,10 +1,10 @@
 <?php
-
+//using this as temporary connection,sorry if clash.  by tee
 function OpenCon()
  {
  $dbhost = "localhost";
- $dbuser = "root";
- $dbpass = "";
+ $dbuser = "milliont_main";
+ $dbpass = "VDhg8mtIsUi?";
  $db = "milliont_main";
 
 
