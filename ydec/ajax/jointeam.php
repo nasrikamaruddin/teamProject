@@ -32,7 +32,7 @@ if (isset($_GET['joiningteam'])) {
 
     else{
        $_SESSION['teamtojoin']=$joiningteam;
-       header("Location: ../../login.php"); //redirect to login first
+       header("Location: ../../ydec2018/ydeclogin.php"); //redirect to login first
     }
 
 } 
@@ -42,7 +42,7 @@ else if(isset($_SESSION['teamtojoin'])){
         $thisuser = $_SESSION['loginUser'];
         $sqljointeam = "UPDATE `ydecparticipant` SET `teamID` = $joiningteam WHERE userID = $thisuser";
     $run_jointeam= mysqli_query($conn,$sqljointeam);
-    header("Location: ../dashboard/index.php");
+    header("Location: ../home-logged.php");
     }
     catch(Exception $e){
         echo $e;

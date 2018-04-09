@@ -6,8 +6,13 @@ $conn = OpenCon();
 //echo "Connected Successfully";
 
 session_start();
-
-$username = $_SESSION['username'];
+if(isset($_SESSION['loginUser'])){
+	$loginuser = $_SESSION['loginUser'];
+	$username = $_SESSION['username'];
+}
+else {
+	header("Location: index.php");//prevent unlogged user to acces this page
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
