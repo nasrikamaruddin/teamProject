@@ -329,7 +329,7 @@ $username = $_SESSION['username'];
 							<div class="block-footer">
 							<?php 
 							$loginuser = $_SESSION['loginUser'];
-							$result2 = mysqli_query($conn, "SELECT userType FROM 1milliontraders WHERE userID =$loginuser ");
+							$result2 = mysqli_query($conn, "SELECT userType FROM 1milliontraders WHERE userID like '$loginuser'; ");
 							$res = mysqli_fetch_array($result2);
 							$usertype = $res['userType'];
 							
