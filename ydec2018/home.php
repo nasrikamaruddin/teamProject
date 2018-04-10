@@ -54,7 +54,15 @@ if(isset($_SESSION['loginUser'])){
                                 <li><a href="committe.php">Committee</a></li>
 				<li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
+<<<<<<< HEAD
+
+				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
+
+				<li><a href="elements.php"><?php if(isset($_SESSION['username'])){echo $_SESSION['username'];} else {echo "Log In";} ?></a></li>
+
+=======
 				<li><a href="ydeclogin.php">Login</a></li>
+>>>>>>> fb4efbce968467e1687d573880882eb9742e80e4
 			</ul>
 		</nav>
 	</header>

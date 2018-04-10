@@ -1,4 +1,9 @@
 <?php
+if(isset($_SESSION['loginUser'])){
+session_destroy();}
+?>
+
+<?php
 include 'db_connection.php';
 $conn = OpenCon();
 //echo "Connected Successfully";

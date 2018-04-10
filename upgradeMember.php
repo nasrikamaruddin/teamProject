@@ -134,6 +134,9 @@ $conn->close();
 							<div class="block-footer">
 								<form action="checkoutUpgrade.php" method="POST">
 								<button type="submit" class="subscribe-now" name="userTypeUp" id="userTypeUp" value="Gold">Upgrade Now</button>
+
+
+								
 							</form>
 							</div>
 						</div>
