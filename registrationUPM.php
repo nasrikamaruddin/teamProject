@@ -1,7 +1,8 @@
 <?php
-
-session_destroy();
+if(isset($_SESSION['loginUser'])){
+session_destroy();}
 ?>
+
 <?php
 
 include 'db_connection.php';
