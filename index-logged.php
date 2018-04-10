@@ -177,7 +177,7 @@ else {
 							<div class="w3_tab_img">
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
-										<a href="ydec.php">
+										<a href="ydec2018/home-logged.php">
                                                                                     <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>

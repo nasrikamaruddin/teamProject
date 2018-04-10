@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION)){
+if(isset($_SESSION($_SESSION['loginUser'])){
 session_destroy();}
 ?>
 <?php
