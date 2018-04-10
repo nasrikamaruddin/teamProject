@@ -44,7 +44,8 @@ $conn->close();
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="css/flaticon.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.css"/>
-    <link rel="stylesheet" href="css/sub.css"/>
+	<link rel="stylesheet" href="css/sub.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
     
 
 
