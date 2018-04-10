@@ -1,6 +1,6 @@
 <?php
-//create team . by tee
-include '../connection/db_connection.php';
+
+include '../db_connection.php';
 
 $conn = OpenCon();
 session_start();
