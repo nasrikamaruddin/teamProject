@@ -1,5 +1,5 @@
 <?php
-include '../db_connection.php';
+include 'connection/db_connection.php';
 
 $conn = OpenCon();
 

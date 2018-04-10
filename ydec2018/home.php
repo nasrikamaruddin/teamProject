@@ -1,6 +1,6 @@
 <?php
 
-include '../db_connection.php';
+include 'connection/db_connection.php';
 
 $conn = OpenCon();
 session_start();
@@ -54,6 +54,7 @@ if(isset($_SESSION['loginUser'])){
                                 <li><a href="committe.php">Committee</a></li>
 				<li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
+				<li><a href="team2.php">Team</a></li>
 				<li><a href="ydeclogin.php">Login</a></li>
 			</ul>
 		</nav>

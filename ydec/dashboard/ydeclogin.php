@@ -88,6 +88,7 @@ if(isset($_SESSION['loginUser'])){
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 							<h1> YDEC login page </h1>
+							<a href="../registrationCategory.php"><h3>Register</h3></a>
 						</div>
 						<!-- /.navbar-collapse -->
 					</nav>
