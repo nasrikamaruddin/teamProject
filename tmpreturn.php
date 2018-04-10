@@ -1,8 +1,8 @@
 <?php
-$vkey ="ab6b6268b90de057c2cb9361b20ec7b3" ; //Replace xxxxxxxxxxxx with your MOLPay Secret_Key
-/************
+$vkey ="801a932f6c8aab145d7f855db9ecd53d" ; //Replace xxxxxxxxxxxx with your MOLPay Secret_Key
+/********************************
 *Don't change below parameters
-************/
+********************************/
 $tranID = $_POST['tranID'];
 $orderid = $_POST['orderid'];
 $status = $_POST['status'];
@@ -12,9 +12,9 @@ $currency = $_POST['currency'];
 $appcode = $_POST['appcode'];
 $paydate = $_POST['paydate'];
 $skey = $_POST['skey'];
-/*********************
+/***********************************************************
 * To verify the data integrity sending by MOLPay
-********************/
+************************************************************/
 echo "tranID: ".$tranID;
 echo "orderid: ".$orderid;
 echo "status: ".$status;
@@ -41,7 +41,7 @@ $conn = OpenCon();
 $sqlmemberfee = " INSERT INTO membershipfees (transID,feeStatus, userID) VALUES ('$tranID', 'status','$userID' ) ";
 mysqli_query($conn,$sqlmemberfee);
 
-header("location:http://localhost/teamProject/signupsuccess.php");
+header("location:https://1milliontraders.com.my/signupsuccess.php");
 
 //header("location:http://localhost/teamProject/signupsuccess.php");
 } else {

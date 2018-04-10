@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,19 +80,19 @@
 						<tr>
 							<td style='width:12em;'>Team Name</td>
 							<td style='width:2em;'>:</td>
-							<td class="log1" style='width:40em;'>sdfsdf</td>
+							<td class="log1" style='width:40em;'></td>
 						</tr>
 						<tr>
 							<td>Member</td>
 							<td>:</td>
-							<td class="log1">sdfsdfs</td>
+							<td class="log1"></td>
 						</tr>
 						<tr>
 							<td>Document</td>
 							<td>:</td>
 							<td class="log1">Proposal</td>
 						</tr>
-						
+							
 						</tbody>
 						
 						
@@ -101,14 +102,14 @@
 			
 		
 			<div class="agile-form">
-                                    <form action="subprocess.php" method ="post">
+                            <form action="subprocess.php" method ="POST" enctype="multipart/form-data">
 					<ul1 class="field-list">
 						
                     <li> 
 						
                                                 
 						<div class="form-group "><label>Submit Proposal Report</label>
-                                                    <input type="file" name="documentName" class="form-control" required>
+                                                    <input type="file" name="file" class="form-control" required>
                                                     <small class="text-danger"> *pdf only</small><br><br></div>
                                                     
 						</li> 
@@ -117,7 +118,7 @@
 						
 					</ul1>
 					<div class="submit_btn">
-						<input type="submit"  value="Submit">
+						<input type="submit" name="submit"  value="Submit">
 					</div>
 				</form>	
                             

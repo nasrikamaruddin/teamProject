@@ -1,0 +1,328 @@
+/*--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+body a{
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+  }
+  
+ 
+  
+  html, body{
+	  font-size: 100%;
+	  font-family: 'Roboto Condensed', sans-serif;
+  }
+  body{
+	  background:#FFFFFF;
+  }
+  .banner{
+	  background: url(../images/webbanner.jpg) no-repeat;
+
+  }
+  .agileinfo-dot{
+	  background: url(../images/dott.png)repeat 0px 0px;
+	  background-size: 2px;
+	  -webkit-background-size: 2px;
+	  -moz-background-size: 2px;
+	  -o-background-size: 2px;
+	  -ms-background-size: 2px;
+	  padding: 1em 0;
+  }
+  .jarallax {
+	  position: relative;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: 50% 50%;
+  }
+  /*-- banner --*/
+  /*-- header --*/
+  .header {
+	  margin: 2em 0 0 0;
+  }
+   /*-- dropdown list--*/
+  ul li ul li{
+	  display: none;
+  }
+  ul li:hover ul li{
+	  display: block;
+  }
+  ul li a{
+	  color:white;
+  }
+  ul li ul li a:hover, ul li ul li a:focus {
+	color: #ffffff;
+	
+	background: none;
+		
+}
+/*-- dropdown list finish--*/
+  
+  .agileits-logo h1{
+	  margin:0;
+  }
+  .agileits-logo h1 a{
+	  font-size: 0.6em;
+	  text-transform: uppercase;
+	  color: #FFFFFF;
+	  text-decoration: none;
+	  font-weight: 700;
+	  padding: .2em .5em;
+	  font-family: 'Josefin Sans', sans-serif;
+	  letter-spacing: 3px;
+  }
+  .agileits-logo h1 a img{
+	  width: 13%;
+  }
+  /*-- social-icons --*/
+  .agileinfo-social-grids{
+	  float: left;
+	  margin-left: 0;
+  }
+  .agileinfo-social-grids ul{
+	  padding:0;
+	  margin:0;
+  }
+  .agileinfo-social-grids ul li{
+	  display: inline-block;
+  }
+  .agileinfo-social-grids ul li a {
+	  color: #FFFFFF;
+	  text-align: center;
+	  
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-facebook,.agileinfo-social-grids ul li a i.fa.fa-twitter,.agileinfo-social-grids ul li a i.fa.fa-rss,.agileinfo-social-grids ul li a i.fa.fa-vk{
+	  transition: 0.5s all;
+	  -webkit-transition: 0.5s all;
+	  -moz-transition: 0.5s all;
+	  -o-transition: 0.5s all;
+	  -ms-transition: 0.5s all;
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-facebook:hover {
+	  color: #3b5998;
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-twitter{
+	  margin:0 1em;
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-twitter:hover{
+	  color: #55acee;
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-rss{
+	  margin:0 1em 0 0;
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-rss:hover{
+	  color: #f26522;
+  }
+  .agileinfo-social-grids ul li a i.fa.fa-vk:hover{
+	  color: #45668e;
+  }
+  .agileinfo-social-grids ul li:nth-child(2){
+	  margin:.5em 0;
+  }
+  .agileinfo-social-grids ul li:nth-child(3){
+	  margin:0 0 .5em 0;
+  }
+  /*-- //social-icons --*/
+  .navbar-default {
+	  background: none;
+	  border: none;
+  }
+  .navbar {
+	  margin-bottom: 0;
+  }
+  .navbar-collapse {
+	  padding: 0;
+	  box-shadow: none;
+  }
+  .navbar-default .navbar-brand {
+	  color: #fff;
+  }
+  .navbar-nav {
+	  float: right;
+	  margin: 0;
+          
+  }
+  .navbar-default .navbar-nav > li > a {
+	  color: #fff;
+	  border: solid 4px rgba(255, 255, 255, 0);
+  }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	  color: #ffffff;
+	  border: solid 4px #ffffff;
+	  background: none;
+  }
+  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	  color: #ffffff;
+  }
+  .navbar-nav > li > a {
+	  font-size: 1em;
+	  padding: .5em 1em;
+	  margin-right: 5px;
+  }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	  color: #ffffff;
+	  border: solid 4px #ffffff;
+	  background: none;
+  }
+  /*-- //header --*/
+  /*-- w3layouts-banner-info --*/
+  .w3layouts-banner-info {
+	  padding: 8em 0 2em 0;
+  }
+  .w3ls-text{
+	  padding: 2em;
+	  width: 67%;
+	  height:60%;
+	  margin: 0 auto;
+	  text-align: center;
+	  border: solid transparent;
+  }
+  .w3ls-text h2{
+	  margin: 0;
+	  font-size: 5em;
+	  font-family: 'Josefin Sans', sans-serif;
+	  text-transform: uppercase;
+	  color: transparent;
+	  font-weight: 700;
+	  letter-spacing: 4px;
+          text-align: centre;
+  }
+  .w3ls-text h1{
+	  margin: 0;
+	  font-size: 36px;
+	  font-family: 'Josefin Sans', sans-serif;
+	  text-transform: uppercase;
+	  color: transparent;
+	  font-weight: 700;
+	  letter-spacing: 4px;
+          text-align: centre;
+           margin: 0;
+   }
+  
+  .w3-arrow{
+	  text-align: center;
+	  margin: 4em 0 0 0;
+  }
+  .w3-arrow a i.fa.fa-angle-up{
+	  color: #FFFFFF;
+	  font-size: 2em;
+	  border: solid 1px #FFFFFF;
+	  width: 50px;
+	  height: 50px;
+	  padding: .25em 0 0 0;
+	  border-radius: 50%;
+	  -webkit-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  -o-border-radius: 50%;
+	  -moz-border-radius: 50%;
+  }
+  .bounce.animated {
+	  -webkit-animation-duration: 3s;
+	  -moz-animation-duration: 3s;
+	  -o-animation-duration: 3s;
+	  -ms-animation-duration: 3s;
+	  animation-duration: 3s;
+  }
+  .bounce {
+	  -moz-animation: bounce 2s infinite;
+	  -webkit-animation: bounce 2s infinite;
+	  -o-animation: bounce 2s infinite;
+	  -ms-animation: bounce 2s infinite;
+	  animation: bounce 2s infinite;
+  }
+  /*-- //w3layouts-banner-info --*/
+  /*-- introduction --*/
+  .introduction,.about,.gallery,.team-dot,.news,.contact,.profiles{
+	  padding:4em 0;
+  }
+  .w3l-heading h3{
+	  text-align: center;
+	  color: #D28D0D;
+	  font-family: 'Josefin Sans', sans-serif;
+	  font-size: 2em;
+	  font-weight: 700;
+	  text-transform: uppercase;
+	  margin: 0;
+	  letter-spacing: 2px;
+  }
+  .w3l-heading h2{
+	  text-align: center;
+	  color: black;
+	  font-family: 'Josefin Sans', sans-serif;
+	  font-size: 1.0em;
+	  font-weight: 700;
+	  text-transform: uppercase;
+	  margin-top:15px;
+	  letter-spacing: 1px;
+  }
+  
+  .w3ls-border{
+	  background: #000000;
+	  width: 7%;
+	  margin: 3em auto 0;
+	  height: 2px;
+  }
+  
+  /*-- //introduction --*/
+  /*-- about --*/
+  
+  /*-- footer --*/
+  footer{
+	  padding:1em 0;
+	  background: #403F45;
+	  text-align:center;
+          
+            bottom:0;
+           width:100%;
+     
+
+          
+  }
+  footer p{
+	  color:#FFFFFF;
+	  font-size:.9em;
+	  margin:0;
+       
+  }
+  footer p a{
+	  color:#000000;
+	  text-decoration:none;
+  }
+  footer p a:hover{
+	  color:#FFFFFF;
+  }
+  /*-- //footer --*/
+  /*-- to-top --*/
+  #toTop {
+	  display: none;
+	  text-decoration: none;
+	  position: fixed;
+	  bottom: 20px;
+	  right: 2%;
+	  overflow: hidden;
+	  z-index: 999; 
+	  width: 40px;
+	  height: 40px;
+	  border: none;
+	  text-indent: 100%;
+	  background: url(../images/arrow.png) no-repeat 0px 0px;
+  }
+  #toTopHover {
+	  width: 40px;
+	  height: 40px;
+	  display: block;
+	  overflow: hidden;
+	  float: right;
+	  opacity: 0;
+	  -moz-opacity: 0;
+	  filter: alpha(opacity=0);
+  }
+  /*-- //to-top --*/
+ 
+
+  /*-- //responsive --*/

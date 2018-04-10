@@ -1,5 +1,5 @@
 <?php
-
+//using this as temporary connection,sorry if clash.  by tee
 function OpenCon()
  {
  $dbhost = "localhost";

@@ -1,3 +1,14 @@
+<?php
+include 'db_connection.php';
+
+$conn = OpenCon();
+session_start();
+if(isset($_SESSION['loginUser'])){
+	header("Location: index-logged.php"); 
+} 
+	
+	
+	?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

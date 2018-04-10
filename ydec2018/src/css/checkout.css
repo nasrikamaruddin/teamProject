@@ -1,0 +1,22 @@
+
+.check
+{
+    opacity:0.5;
+	color:#996;
+}
+.box{
+    margin-bottom:5px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

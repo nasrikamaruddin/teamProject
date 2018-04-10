@@ -6,8 +6,13 @@ $conn = OpenCon();
 //echo "Connected Successfully";
 
 session_start();
-
-$username = $_SESSION['username'];
+if(isset($_SESSION['loginUser'])){
+	$loginuser = $_SESSION['loginUser'];
+	$username = $_SESSION['username'];
+}
+else {
+	header("Location: index.php");//prevent unlogged user to acces this page
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,8 +118,8 @@ $username = $_SESSION['username'];
 						<h2> __ </h2>
 					</div>
                                     <!--Direct user to registration page-->
-                                    <div class="w3-arrow bounce animated"><h2 style="color: white">Register Now</h2>
-						<a href="registrationCategory.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                    <div class="w3-arrow bounce animated"><h2 style="color: white">Join Events</h2>
+						<a href="ydec2018/home-logged.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>
@@ -329,7 +334,7 @@ $username = $_SESSION['username'];
 							<div class="block-footer">
 							<?php 
 							$loginuser = $_SESSION['loginUser'];
-							$result2 = mysqli_query($conn, "SELECT userType FROM 1milliontraders WHERE userID =$loginuser ");
+							$result2 = mysqli_query($conn, "SELECT userType FROM 1milliontraders WHERE userID like '$loginuser'; ");
 							$res = mysqli_fetch_array($result2);
 							$usertype = $res['userType'];
 							

@@ -1,0 +1,80 @@
+.col-lg-4{ padding: 0 !important;}
+.blocks{ border:1px solid #EEEEEE;}
+.blocks:hover{box-shadow:0px 0px 10px #D9E0DB;}
+.block-header{ 
+    height: 95px; 
+    text-align: center; 
+    width: 100%; 
+    padding: 8%; 
+    background: white; 
+    color: #333333;
+}
+.block-container p:hover{background:white;}
+.block-header h4{ font-weight: bold; vertical-align: center;}
+.block-container{ 
+    text-align: center;
+}
+.block-container p{ 
+    border-bottom:1px solid #ffffff; 
+    margin: 0; padding: 2%; 
+}
+.block-container p:last-child{ border-bottom:none;}
+.price{font-size: 50px; font-family: PT Serif; color: #FF592D; font-weight: bold;}
+.renew-price{font-size: 12px; color: #333333; font-style: italic; font-weight: normal;}
+.block-footer{text-align: center; padding: 10%;}
+.subscribe-now{border: 1px solid #FF592D; padding: 15px; border-radius: 4%; color:#333333; font-weight: bold; }
+.subscribe-now:hover{text-decoration: none; background: #FF592D; color: #fff;}
+.active-block { box-shadow:0px 0px 10px white;}
+.active-block .block-header{ 
+    background: #D28D0D;
+    color: #fff;
+}
+.active-block .price{ 
+    color:#D28D0D;
+}
+.active-block .block-footer a{
+    background: #D28D0D; 
+    color: white; 
+    border:none;
+}
+.active-block .block-footer a:hover{ 
+    background: #EEEEEE; 
+    color: #333333; 
+    border:1px solid #D28D0D;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
