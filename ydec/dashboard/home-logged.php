@@ -68,7 +68,7 @@ else {
 	<!-- Intro Section -->
 	<div class="hero-section">
 		<!-- slider -->
-			<div class="item  hero-item" data-bg="../img/03.jpg"></div>
+			<div class="item  hero-item" data-bg="../img/2.jpg"></div>
 	</div>
 	<!-- Intro Section -->
 

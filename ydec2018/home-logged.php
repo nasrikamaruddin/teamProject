@@ -1,4 +1,6 @@
 <?php
+//create team . by tee
+
 
 include 'connection/db_connection.php';
 
@@ -66,7 +68,7 @@ if(isset($_SESSION['loginUser'])){
 	<!-- Intro Section -->
 	<div class="hero-section">
 		<!-- slider -->
-			<div class="item  hero-item" data-bg="img/03.jpg"></div>
+			<div class="item  hero-item" data-bg="img/2.jpg"></div>
 	</div>
 	<!-- Intro Section -->
 

@@ -119,7 +119,7 @@ else {
 					</div>
                                     <!--Direct user to registration page-->
                                     <div class="w3-arrow bounce animated"><h2 style="color: white">Join Events</h2>
-						<a href="#events"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+						<a href="ydec2018/home-logged.php"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>
@@ -177,7 +177,7 @@ else {
 							<div class="w3_tab_img">
 								<div class="col-sm-3 w3_tab_img_left">
 									<div class="demo">
-										<a href="ydec.php">
+										<a href="ydec2018/home-logged.php">
                                                                                     <figure class="imghvr-shutter-in-out-diag-2"><img src="src/images/webposterydec.jpg" alt=" " class="img-responsive" />
 										  </figure>
 										</a>

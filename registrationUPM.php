@@ -1,7 +1,12 @@
 <?php
-if(isset($_SESSION)){
+<<<<<<< HEAD
+if(isset($_SESSION($_SESSION['loginUser'])){
+=======
+if(isset($_SESSION['loginUser'])){
+>>>>>>> a3bfe9dc66cad5d5b6819aa56dc64ff8433f217c
 session_destroy();}
 ?>
+
 <?php
 
 include 'db_connection.php';
