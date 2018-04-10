@@ -1,5 +1,7 @@
 <?php
 //create team . by tee
+
+
 include '../db_connection.php';
 
 $conn = OpenCon();
@@ -55,7 +57,11 @@ if(isset($_SESSION['loginUser'])){
                                 <li><a href="committe.php">Committee</a></li>
 				<li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
-				<li><a href="ydeclogin.php">Login</a></li>
+				<li><?php 
+										if($_SESSION['loginUser']==true){ 
+											echo $username;
+										}
+                                    ?> </li>
 			</ul>
 		</nav>
 	</header>
@@ -65,7 +71,7 @@ if(isset($_SESSION['loginUser'])){
 	<!-- Intro Section -->
 	<div class="hero-section">
 		<!-- slider -->
-			<div class="item  hero-item" data-bg="img/03.jpg"></div>
+			<div class="item  hero-item" data-bg="img/2.jpg"></div>
 	</div>
 	<!-- Intro Section -->
 

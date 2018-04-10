@@ -1,4 +1,16 @@
+<?php
+include '../db_connection.php';
 
+$conn = OpenCon();
+
+//echo "Connected Successfully";
+
+session_start();
+if(isset($_SESSION['loginUser'])){
+	header("Location: home-logged.php"); //prevent logged user to come here
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,15 +86,10 @@
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-							<nav>
-								<ul class="nav navbar-nav">
-									<li><a href="index.php">About</a></li>
-									<li><a href="index.php">Events</a></li>
-									<li><a href="index.php">Membership Registration</a></li>
-									<li><a href="index.php">News</a></li>
-									<li><a href="login.php">Log In</a></li>
-								</ul>
-							</nav>
+						<h1>YDEC 2018 Login </h1>
+							
+						<a href="../registrationCategory.php"><h3>Register</h3></a>
+							
 						</div>
 						<!-- /.navbar-collapse -->
 					</nav>
