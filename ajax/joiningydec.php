@@ -11,7 +11,7 @@ if(isset($_SESSION['loginUser'])){
 
 if(isset($_POST['studentid'])){
     
-   $checktype = "select * from 1milliontraders where userID = $loginuser";
+   $checktype = "select * from 1milliontraders where userID = '$loginuser'";
    $run_check= mysqli_query($conn,$checktype);
    $row_check=mysqli_fetch_array($run_check);
        $type = $row_check['userType'];

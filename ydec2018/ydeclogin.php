@@ -80,16 +80,17 @@ if(isset($_SESSION['loginUser'])){
 								<span class="icon-bar"></span>
 							</button>
 							<div class="agileits-logo">
-								<h1><a href="index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
+								<h1><a href="../index.php"><img src="src/images/logo1.png" alt="" /> 1 Million Traders </a></h1>
 							</div>
 						</div>
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-						<h1>YDEC 2018 Login </h1>
-							
-						<a href="../registrationCategory.php"><h3>Register</h3></a>
-							
+							<nav>
+								<ul class="nav navbar-nav">
+										<li><a href="../registrationCategory.php">Register</a></li>
+								</ul>
+							</nav>
 						</div>
 						<!-- /.navbar-collapse -->
 					</nav>
@@ -108,7 +109,7 @@ if(isset($_SESSION['loginUser'])){
 			<!-- multistep form -->
 			<form id="msform" action="ydecverifyLogin.php" method="post">                  
 				<fieldset>
-					<h2 class="fs-title">Login</h2>
+					<h2 class="fs-title">YDEC 2018 Login</h2>
 					<h3 class="fs-subtitle">Login into system</h3>
 					<input type="text" name="loginUsername" placeholder="Username" required>
 					<input type="password" name="loginPassword" placeholder="Password" required>

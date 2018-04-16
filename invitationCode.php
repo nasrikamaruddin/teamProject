@@ -93,19 +93,19 @@ $userID = $row22['userID'];
 									<li><a href="index-logged.php">Events</a></li>
 									<li><a href="index-logged.php">News</a></li>
 									<li><a href="index-logged.php">Plan & Upgrade</a></li>
-									<li><a class="scroll">
-                                                                         
-									<?php 
-										if($_SESSION['loginUser']==true){ 
-											echo $username;
-										}
-                                    ?> <span class="fa fa-caret-down"></span></a>
-										<ul>
-										<li><a href="profile.php">Profile</a></li>
-										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#">Setting</a></li>
-										<li><a href="logout.php">Logout</a></li>
-										</ul>
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" >
+										<?php										
+											if($_SESSION['loginUser']==true){ 
+												echo $username;
+											} 
+										?>
+										<span class="caret"></span></a>
+										<ul class="dropdown-menu" > 
+											<li><a href="profile.php">Profile</a></li>
+											<li class="active"><a href="invitationCode.php" >Invitation Code</a></li>
+											<li><a href="logout.php">Logout</a></li>
+										</ul> 
 									</li>
 								</ul>
 							</nav>

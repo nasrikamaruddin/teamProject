@@ -8,7 +8,7 @@ $conn = OpenCon();
 session_start();
 
 if(isset($_SESSION['loginUser'])) {
-  echo "Your session is running " . $_SESSION['loginUser'];
+  //echo "Your session is running " . $_SESSION['loginUser'];
   }
 $userID = $_SESSION['loginUser'];
 $query22 = mysqli_query($conn,"select * from 1milliontraders where userID='$userID'");						
@@ -97,19 +97,19 @@ $username = $_SESSION['username'];
 									<li><a href="index-logged.php">Events</a></li>
 									<li><a href="index-logged.php">News</a></li>
 									<li><a href="index-logged.php">Plan & Upgrade</a></li>
-									<li><a class="scroll">
-                                                                         
-									<?php 
-										if($_SESSION['loginUser']==true){ 
-											echo $username;
-										}
-                                    ?> <span class="fa fa-caret-down"></span></a>
-										<ul>
-										<li><a href="profile.php">Profile</a></li>
-										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#" class="scroll">Setting</a></li>
-										<li><a href="logout.php">Logout</a></li>
-										</ul>
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" >
+										<?php										
+											if($_SESSION['loginUser']==true){ 
+												echo $username;
+											} 
+										?>
+										<span class="caret"></span></a>
+										<ul class="dropdown-menu" > 
+											<li class="active"><a href="profile.php">Profile</a></li>
+											<li><a href="invitationCode.php" >Invitation Code</a></li>
+											<li><a href="logout.php">Logout</a></li>
+										</ul> 
 									</li>                     
 								</ul>
 							</nav>

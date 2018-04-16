@@ -53,12 +53,23 @@ if(isset($_SESSION['loginUser'])){
 		<div class="responsive"><i class="fa fa-bars"></i></div>
 		<nav>
 			<ul class="menu-list">
-				<li class="active"><a href="home.php">About</a></li>
-                                <li><a href="committe.php">Committee</a></li>
-				<li><a href="rules.php">Rules & Regulation</a></li>
+                <li class="active"><a href="home.php">About</a></li>
+                <li><a href="committe.php">Committee</a></li>
+                <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
-				<li><a href="team2.php">Team</a></li>
-				<li><a href="ydeclogin.php">Login</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle"  href="ydeclogin.php" data-toggle="dropdown" >
+					<?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];
+					echo '
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu" > 
+					  <li><a href="team2.php">Create Team</a></li>
+					  <li><a href="subreport.php">Submission</a></li>
+					  <li><a href="../index-logged.php">1 Million Traders</a></li>
+					  <li><a href="#">Log Out</a></li>
+					</ul> ';
+					} else{echo '</a><a  href="ydeclogin.php">login</a>';} ?>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -131,9 +142,7 @@ if(isset($_SESSION['loginUser'])){
                                                 <b style="font-size: 16px">Applications for YDEC 2018 will be open from 9th April to 13 May, 2018.</b></p>
 					</div>
 				</div>
-				<div class="text-center mt60">
-					<a href="subreport.php" class="site-btn">Submit Now</a>
-				</div>
+				
 				<!-- popup video -->
 				<div class="intro-video">
 					<div class="row">

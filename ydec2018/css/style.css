@@ -291,7 +291,7 @@ ul {
 	display: inline;
 }
 
-.header-section .menu-list li a {
+li a {
 	display: inline-block;
 	padding: 35px 15px;
 	margin-right: 15px;
@@ -477,7 +477,7 @@ ul {
 .lab-card:hover h2,
 .lab-card:hover p,
 .lab-card:hover .icon {
-	color: #fff;
+	color: #0b1033;
 }
 
 /* About contant */
@@ -1743,3 +1743,4 @@ ul {
 		margin-bottom: 20px;
 	}
 }
+

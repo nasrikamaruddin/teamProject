@@ -4,11 +4,11 @@ include 'db_connection.php';
 
 $conn = OpenCon();
 
-echo "Connected Successfully";
+//echo "Connected Successfully";
 
 session_start();
 if(isset($_SESSION['loginUser'])) {
-  echo "Your session is running " . $_SESSION['loginUser'];
+  //echo "Your session is running " . $_SESSION['loginUser'];
 }
 
 
@@ -97,7 +97,21 @@ $conn->close();
 									<li><a href="#events" class="scroll">Events</a></li>
 									<li><a href="#news" class="scroll">News</a></li>
 									<li><a href="#news" class="scroll">Plan & Upgrade</a></li>
-                                                                        <li><a href="login.php" class="scroll"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
+                                    <li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" >
+										<?php										
+											if($_SESSION['loginUser']==true){ 
+												echo $username;
+											} 
+										?>
+										<span class="caret"></span></a>
+										<ul class="dropdown-menu" > 
+										  <li><a href="profile.php">Profile</a></li>
+											<li><a href="invitationCode.php" >Invitation Code</a></li>
+											<li><a href="#">Setting</a></li>
+											<li><a href="logout.php">Logout</a></li>
+										</ul> 
+									</li>
 								</ul>
 							</nav>
 						</div>

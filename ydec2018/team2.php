@@ -75,17 +75,29 @@ header("Location: home.php");
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="logo">
-			<img src="../img/logo1.png" alt=""><!-- Logo -->
+                    <img src="img/logo1.png" alt=""><!-- Logo -->
 		</div>
 		<!-- Navigation -->
 		<div class="responsive"><i class="fa fa-bars"></i></div>
 		<nav>
 			<ul class="menu-list">
-                                <li><a href="home.php">About</a></li>
-                                <li class="active"><a href="committe.php">Committee</a></li>
-                                <li><a href="rules.php">Rules & Regulation</a></li>
+                <li><a href="home.php">About</a></li>
+                <li><a href="committe.php">Committee</a></li>
+                <li><a href="rules.php">Rules & Regulation</a></li>
 				<li><a href="blog-post.php">Sponsorship</a></li>
-				<li><a href="elements.php"><?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];} else{echo "login";} ?></a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle"  href="ydeclogin.php" data-toggle="dropdown" >
+					<?php if(isset($_SESSION['loginUser'])){echo $_SESSION['username'];
+					echo '
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu" > 
+					  <li class="active"><a href="team2.php">Create Team</a></li>
+					  <li><a href="subreport.php">Submission</a></li>
+					  <li><a href="../index-logged.php">1 Million Traders</a></li>
+					  <li><a href="#">Log Out</a></li>
+					</ul> ';
+					} else{echo '</a><a  href="ydeclogin.php">login</a>';} ?>
+				</li>
 			</ul>
 		</nav>
 	</header>

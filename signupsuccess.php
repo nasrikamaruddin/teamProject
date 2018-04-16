@@ -8,8 +8,8 @@ $conn = OpenCon();
 
 session_start();
 if(isset($_SESSION['loginUser'])) {
- echo "Your session is running " . $_SESSION['loginUser'];
- echo $_SESSION['email'];
+ //echo "Your session is running " . $_SESSION['loginUser'];
+ //echo $_SESSION['email'];
 }
 ?>
 

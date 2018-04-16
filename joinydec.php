@@ -92,19 +92,19 @@ $username = $row22['username'];
 									<li><a href="index-logged.php">Events</a></li>
 									<li><a href="index-logged.php">News</a></li>
 									<li><a href="index-logged.php">Plan & Upgrade</a></li>
-									<li><a class="scroll">
-                                                                         
-									<?php 
-										if($_SESSION['loginUser']==true){ 
-											echo $username;
-										}
-                                    ?> <span class="fa fa-caret-down"></span></a>
-										<ul>
-										<li><a href="profile.php">Profile</a></li>
-										<li><a href="invitationCode.php" >Invitation Code</a></li>
-										<li><a href="#">Setting</a></li>
-										<li><a href="logout.php">Logout</a></li>
-										</ul>
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" >
+										<?php										
+											if($_SESSION['loginUser']==true){ 
+												echo $username;
+											} 
+										?>
+										<span class="caret"></span></a>
+										<ul class="dropdown-menu" > 
+										  <li><a href="profile.php">Profile</a></li>
+											<li><a href="invitationCode.php" >Invitation Code</a></li>
+											<li><a href="logout.php">Logout</a></li>
+										</ul> 
 									</li>
 								</ul>
 							</nav>
@@ -157,7 +157,7 @@ $username = $row22['username'];
 									<tr>
 <?php 
 	if(isset($loginuser)){
-	$get_info= " select * from 1milliontraders where userID = $loginuser";
+	$get_info= " select * from 1milliontraders where userID = '$loginuser'";
     $run_info= mysqli_query($conn,$get_info);
     $row_info=mysqli_fetch_array($run_info);
         $name = $row_info['fullname'];
@@ -167,7 +167,7 @@ $username = $row22['username'];
 									  <td id='1mtname'>$name</td>
 									  <td id='1mtstudentid'>$matric</td>
 									  <td id='1mtmembertype'>$membertype</td> ";
-		$get_info2= " select * from ydecparticipant where userID = $loginuser";
+		$get_info2= " select * from ydecparticipant where userID = '$loginuser'";
 		$run_info2= mysqli_query($conn,$get_info2);
 		
 		if(mysqli_num_rows($run_info2)==0){
@@ -177,7 +177,7 @@ $username = $row22['username'];
 									  ";
 		}
 		else
-		 echo"<td>JOINED</td>";
+		 echo"<td><a href='ydec2018/home-logged.php'><button class='btn btn-success'>YDEC PAGE</button></a></td>";
 	}
 ?>
 									  

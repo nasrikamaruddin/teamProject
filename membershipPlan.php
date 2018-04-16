@@ -3,7 +3,7 @@ include 'db_connection.php';
 
 $conn = OpenCon();
 
-echo "Connected Successfully";
+//echo "Connected Successfully";
 
 
 if( isset($_POST["submitStudentUPM"]) ){
@@ -134,7 +134,6 @@ $conn->close();
 									<li><a href="index.php">Events</a></li>
 									<li><a href="index.php">Membership Registration</a></li>
 									<li><a href="index.php">News</a></li>
-									<li><a href="login.php">Log In</a></li>
 								</ul>
 							</nav>
 						</div>

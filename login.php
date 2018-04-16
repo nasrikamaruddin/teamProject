@@ -87,7 +87,15 @@ if(isset($_SESSION['loginUser'])){
 
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-							<a href="../registrationCategory.php"><h3>Register</h3></a>
+							<nav>
+								<ul class="nav navbar-nav">
+									<li><a href="index.php">About</a></li>
+									<li><a href="index.php">Events</a></li>
+									<li><a href="index.php">Membership Registration</a></li>
+									<li><a href="index.php">News</a></li>
+									<li><a href="registrationCategory.php">Register</a></li>
+								</ul>
+							</nav>
 						</div>
 						<!-- /.navbar-collapse -->
 					</nav>

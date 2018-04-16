@@ -120,7 +120,7 @@ $conn = OpenCon();
 							<tr>
 							<td>User ID</td>
 							<td>:</td>
-							<td><input type="text" id="createcode" name="createcode" class="form-control" readonly value= "<?php echo createRandomPassword();?>"><small class="text-danger">User ID for Log In session. Take note your User ID!</small></td>
+							<td><input type="text" id="createcode" name="createcode" class="form-control" readonly value= "<?php echo createRandomPassword();?>"></td>
 						</tr>
 						<tr>
 							<td style="width:12em;">Name</td>

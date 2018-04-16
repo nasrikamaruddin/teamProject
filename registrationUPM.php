@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
-if(isset($_SESSION($_SESSION['loginUser'])){
-=======
 if(isset($_SESSION['loginUser'])){
->>>>>>> a3bfe9dc66cad5d5b6819aa56dc64ff8433f217c
 session_destroy();}
 ?>
 
@@ -128,7 +124,7 @@ $conn = OpenCon();
 						<tr>
 							<td>User ID</td>
 							<td>:</td>
-							<td><input type="text" id="createcode" name="createcode" class="form-control" readonly value= "<?php echo createRandomPassword();?>"><small class="text-danger">User ID for Log In session. Take note your User ID!</small></td>
+							<td><input type="text" id="createcode" name="createcode" class="form-control" readonly value= "<?php echo createRandomPassword();?>"></td>
 						</tr>
 
 						<tr>
